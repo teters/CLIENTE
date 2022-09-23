@@ -1,26 +1,14 @@
 package com.example.PrimerProyectoTIC1;
 
 import com.google.gson.Gson;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
-import kong.unirest.ObjectMapper;
 import kong.unirest.Unirest;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
-
-
-import java.io.IOException;
 
 public class DatosUsuarioController{
 
@@ -80,8 +68,8 @@ public class DatosUsuarioController{
         }
 
         Gson gson=new Gson();
-        Persona persona=new Persona(nombre,direccion,tel);
-        String body= gson.toJson(persona);
+        User user =new User(nombre,direccion,tel);
+        String body= gson.toJson(user);
 
         HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/persona/").header("Content-Type","application/json").body(new JsonNode(body)).asJson();
         //
