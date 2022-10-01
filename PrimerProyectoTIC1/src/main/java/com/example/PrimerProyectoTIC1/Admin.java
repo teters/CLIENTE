@@ -2,13 +2,11 @@ package com.example.PrimerProyectoTIC1;
 
 public class Admin {
     private String mail;
-    private String nombre;
-    private Long telefono;
+    private String contrasena;
 
-    public Admin(String mail, String nombre, Long telefono) {
+    public Admin(String mail, String contrasena) {
         this.mail = mail;
-        this.nombre = nombre;
-        this.telefono = telefono;
+        this.contrasena = contrasena;
     }
 
     public String getMail() {
@@ -19,19 +17,11 @@ public class Admin {
         this.mail = mail;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Long getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(Long telefono) {
-        this.telefono = telefono;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 }

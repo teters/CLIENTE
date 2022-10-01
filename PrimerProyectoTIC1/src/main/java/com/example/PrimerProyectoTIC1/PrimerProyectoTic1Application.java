@@ -16,7 +16,7 @@ public class PrimerProyectoTic1Application {
 	//private static ConfigurableApplicationContext context;
 
 	public static void main(String[] args) {
-		Admin admin=new Admin("eduardo@correo.com","Eduardo",0100L );
+		Admin admin=new Admin("eduardo@correo.com","Eduardo");
 		Gson gson=new Gson();
 		String administrator=gson.toJson(admin);
 

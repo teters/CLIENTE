@@ -16,6 +16,7 @@ public class DatosUsuarioController{
 
     @FXML
     private Button guardarBut;
+
     @FXML
     private ImageView imagen;
     @FXML

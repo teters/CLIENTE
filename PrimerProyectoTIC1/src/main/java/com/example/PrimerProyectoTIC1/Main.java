@@ -22,8 +22,8 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         //fxmlLoader.setControllerFactory(PrimerProyectoTic1Application.getContext()::getBean);
-        root = fxmlLoader.load(Main.class.getResourceAsStream("datos-usuario.fxml"));
-        stage.setTitle("Registro usuario");
+        root = fxmlLoader.load(Main.class.getResourceAsStream("Main.fxml"));
+        stage.setTitle("Login usuario");
         stage.setScene(new Scene(root));
         stage.show();
     }
