@@ -28,7 +28,7 @@ public class LoginController {
     private Button loginBtn;
 
     @FXML
-    private TextField textoError;
+    private Label textoError;
 
     @FXML
     private Button salirBtn;

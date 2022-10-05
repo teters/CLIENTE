@@ -21,7 +21,7 @@ public class PrimerProyectoTic1Application {
 		String administrator=gson.toJson(admin);
 
 
-		HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/persona/").header("Content-Type","application/json").body(new JsonNode(administrator)).asJson();
+		//HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/persona/").header("Content-Type","application/json").body(new JsonNode(administrator)).asJson();
 		Application.launch(Main.class,args);
 	}
 

@@ -12,7 +12,7 @@
    <top>
       <AnchorPane prefHeight="118.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="196.0" layoutY="59.0" text="FITNESS APP">
+            <Label layoutX="201.0" layoutY="50.0" minHeight="-Infinity" minWidth="-Infinity" text="Fitness App">
                <font>
                   <Font name="Berlin Sans FB Demi Bold" size="36.0" />
                </font>
