@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import kong.unirest.HttpResponse;
@@ -14,6 +16,9 @@ public class DatosUsuarioController{
 
     @FXML
     private Button guardarBut;
+
+    @FXML
+    private ImageView imagen;
     @FXML
     private Button cancelarBut;
     @FXML
@@ -21,7 +26,7 @@ public class DatosUsuarioController{
     @FXML
     private TextField telefonoID;
     @FXML
-    private TextField direccionID;
+    private TextField correoID;
     @FXML
     private Label textoSup;
 
@@ -52,7 +57,7 @@ public class DatosUsuarioController{
     private void guardarDatos(){
         String nombre = nombreID.getText();
         String telefono = telefonoID.getText();
-        String direccion = direccionID.getText();
+        String direccion = correoID.getText();
         Long tel= Long.parseLong(telefono);
         if ((nombre.isEmpty() || telefono.isEmpty() || direccion.isEmpty())){
             textoSup.setText("Datos incompletos, por favor ingréselos");

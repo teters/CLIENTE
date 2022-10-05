@@ -16,7 +16,7 @@ public class PrimerProyectoTic1Application {
 	//private static ConfigurableApplicationContext context;
 
 	public static void main(String[] args) {
-		Admin admin=new Admin("eduardo@correo.com","Eduardo",0100L );
+		Admin admin=new Admin("eduardo@correo.com","Eduardo");
 		Gson gson=new Gson();
 		String administrator=gson.toJson(admin);
 		//try {
@@ -26,6 +26,10 @@ public class PrimerProyectoTic1Application {
 		//}
 
 
+<<<<<<< HEAD
+=======
+		//HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/persona/").header("Content-Type","application/json").body(new JsonNode(administrator)).asJson();
+>>>>>>> 878a7e41d91fc6ab2878e2664f085b3a00ecfa39
 		Application.launch(Main.class,args);
 	}
 

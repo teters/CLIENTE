@@ -23,7 +23,8 @@ dependencies {
 }
 javafx{
 	version = "18.0.2"
-	modules= ['javafx.controls','javafx.fxml']
+	modules= ['javafx.controls','javafx.fxml','javafx.swing', 'javafx.media', 'javafx.graphics']
+
 }
 
 tasks.named('test') {
