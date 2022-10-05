@@ -71,7 +71,7 @@ public class DatosUsuarioController{
         User user =new User(nombre,direccion,tel);
         String body= gson.toJson(user);
 
-        HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/persona/").header("Content-Type","application/json").body(new JsonNode(body)).asJson();
+        HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/user/").header("Content-Type","application/json").body(new JsonNode(body)).asJson();
         //
     }
 }

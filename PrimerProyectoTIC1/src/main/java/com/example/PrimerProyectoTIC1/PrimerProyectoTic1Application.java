@@ -19,9 +19,13 @@ public class PrimerProyectoTic1Application {
 		Admin admin=new Admin("eduardo@correo.com","Eduardo",0100L );
 		Gson gson=new Gson();
 		String administrator=gson.toJson(admin);
+		//try {
+			//HttpResponse<JsonNode> jsonNodeHttpResponse1= Unirest.get("http://localhost:8080/admins/").asJson();
+		//}catch (Exception e){
+			//HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/admins/").header("Content-Type","application/json").body(new JsonNode(administrator)).asJson();
+		//}
 
 
-		HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/persona/").header("Content-Type","application/json").body(new JsonNode(administrator)).asJson();
 		Application.launch(Main.class,args);
 	}
 
