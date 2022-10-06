@@ -26,10 +26,9 @@ public class PrimerProyectoTic1Application {
 		//}
 
 
-<<<<<<< HEAD
-=======
+
 		//HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/persona/").header("Content-Type","application/json").body(new JsonNode(administrator)).asJson();
->>>>>>> 878a7e41d91fc6ab2878e2664f085b3a00ecfa39
+
 		Application.launch(Main.class,args);
 	}
 
