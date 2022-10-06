@@ -5,27 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62221472-56e0-4437-a9ca-4cbcbd497ead" name="Changes" comment="&quot;ni idea&quot;">
-      <change afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/Empresa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_media_win_18_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_swing_win_18_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/DatosUsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/DatosUsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/PrimerProyectoTic1Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/PrimerProyectoTic1Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/resources/main/com/example/PrimerProyectoTIC1/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/resources/main/com/example/PrimerProyectoTIC1/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/resources/main/com/example/PrimerProyectoTIC1/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/AdminP/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/CentroDepController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/CentroDeportivoP/CentroDepController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/EmpresaP/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/EmpresaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/EmpresaP/EmpresaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/MostrarCentroDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/CentroDeportivoP/MostrarCentroDep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/MostrarEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/EmpresaP/MostrarEmpresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/PrimerProyectoTic1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/PrimerProyectoTic1Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/resources/com/example/PrimerProyectoTIC1/empresa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/resources/com/example/PrimerProyectoTIC1/empresa.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +101,7 @@
       <module name="PrimerProyectoTIC1.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.PrimerProyectoTIC1.*" />
+          <option name="PATTERN" value="com.example.PrimerProyectoTIC1.AdminP.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,7 +140,8 @@
       <workItem from="1664983496646" duration="210000" />
       <workItem from="1664994943809" duration="16000" />
       <workItem from="1664995998147" duration="1775000" />
-      <workItem from="1665066851101" duration="2392000" />
+      <workItem from="1665066851101" duration="2741000" />
+      <workItem from="1665079310095" duration="851000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;ni idea&quot;">
       <created>1665002304072</created>

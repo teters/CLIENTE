@@ -1,4 +1,4 @@
-package com.example.PrimerProyectoTIC1;
+package com.example.PrimerProyectoTIC1.AdminP;
 
 public class Admin {
     private String mail;

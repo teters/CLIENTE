@@ -1,5 +1,6 @@
 package com.example.PrimerProyectoTIC1;
 
+import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.google.gson.Gson;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,7 +13,7 @@ import javafx.stage.Stage;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
-import javafx.scene.Node;
+
 import java.io.IOException;
 
 
@@ -81,8 +82,9 @@ public class LoginController {
     HttpResponse<JsonNode> response=Unirest.get("http://localhost:8080/empresa/listaDeEmpresas").header("Content-Type","application/json").asJson();// aca en response se va a guardar una lista de empresas teoricamente
     String nombre=null;//esto tendria que ser los datos que le pasa el administrador
     Long tel=null;
+    String dir=null;
     Gson gson=new Gson();
-    Empresa empresa =new Empresa(tel,nombre);
+    Empresa empresa =new Empresa(tel,nombre,dir);
     String body= gson.toJson(empresa);
     HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/empresa/agregarEmpresa").header("Content-Type","application/json").body(new JsonNode(body)).asJson();//esto te crea y te manda al servidor la empresa
 

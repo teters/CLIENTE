@@ -1,4 +1,4 @@
-package com.example.PrimerProyectoTIC1;
+package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 import javafx.event.ActionEvent;
 

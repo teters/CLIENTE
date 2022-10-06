@@ -1,14 +1,9 @@
 package com.example.PrimerProyectoTIC1;
 
+import com.example.PrimerProyectoTIC1.AdminP.Admin;
 import com.google.gson.Gson;
 import javafx.application.Application;
-import javafx.scene.Scene;
-import kong.unirest.HttpResponse;
-import kong.unirest.JsonNode;
-import kong.unirest.Unirest;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class PrimerProyectoTic1Application {
