@@ -10,16 +10,5 @@ public class Empresa {
         this.nombre = nombre;
         this.direccion=direccion;
     }
-
-    public Long getTelefono() {
-        return telefono;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
 }
+

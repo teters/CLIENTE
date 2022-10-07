@@ -39,5 +39,12 @@ public class DosBotonesController {
         stage.show();
     }
 
+    public void crearEmpresaPane(ActionEvent actionEvent){
+
+    }
+
+    public void crearCentroDepPane(ActionEvent a){
+
+    }
 
 }
