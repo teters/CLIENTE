@@ -8,6 +8,8 @@ import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 
+import java.util.List;
+
 public class CrearCentroDepController {
     @FXML
     private TextField nombreCentroDep;
@@ -21,8 +23,14 @@ public class CrearCentroDepController {
         CentroDeportivo centroDeportivo = new CentroDeportivo(nombreCentroDep.getText(),direccionCentroDep.getText());
         Gson gson=new Gson();
         String body= gson.toJson(centroDeportivo);
-        //HttpResponse<JsonNode> response= Unirest.post(("http://localhost:8080/empresa/listaDeCentrosDeportivos").header("Content-Type","application/json").body(new JsonNode(body)).asJson());
+        HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/centrodeportivo/crearcentrodeportivo").header("Content-Type","application/json").body(new JsonNode(body)).asJson();
 
+    }
+    public List<CentroDeportivo> listaDeCentrosDeportivos(){
+        HttpResponse<JsonNode> response=Unirest.get("http://localhost:8080/centrodeportivo/listaDeCentrosDeportivos").header("Content-Type","application/json").asJson();
+        String lista=response.getBody().toString();
+        List<CentroDeportivo> centroslist=null;
+        return centroslist;
     }
 
 }
