@@ -1,5 +1,6 @@
 package com.example.PrimerProyectoTIC1;
 
+import com.example.PrimerProyectoTIC1.AdminP.Admin;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.google.gson.Gson;
 import javafx.event.ActionEvent;
@@ -39,11 +40,12 @@ public class LoginController {
     private Parent root;
 
     public void adminAceptado(ActionEvent e) throws IOException {
+        Admin admin=new Admin("eduardo@correo.com","Eduardo");
         String mail = username.getText();
         String passwordLogin = password.getText();
-        if (mail =="eduardo@correo.com" && passwordLogin == "Eduardo") {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("option-pane.fxml"));
-            Parent root = loader.load();
+        if (mail ==admin.getMail() && passwordLogin == admin.getContrasena()) {
+            FXMLLoader loader = new FXMLLoader();
+            Parent root = loader.load(getClass().getResource("option-pane.fxml"));
             Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);

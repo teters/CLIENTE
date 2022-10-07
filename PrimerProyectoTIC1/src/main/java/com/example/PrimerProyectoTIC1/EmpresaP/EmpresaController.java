@@ -44,7 +44,7 @@ public class EmpresaController implements Initializable {
         colDireccionE.setCellValueFactory(new PropertyValueFactory<>("direccion"));
 
         empresaTabla.setItems(listaEmpresas);
-        Gson gson=new Gson();
+       // Gson gson=new Gson();
         //String body= gson.toJson(empresa);
         //HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/empresa/agregarEmpresa").header("Content-Type","application/json").body(new JsonNode(body)).asJson();//esto te crea y te manda al servidor la empresa
     }
