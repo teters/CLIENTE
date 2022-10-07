@@ -70,7 +70,9 @@ public class LoginController {
 
     }
     HttpResponse<JsonNode> response=Unirest.get("http://localhost:8080/empresa/listaDeEmpresas").header("Content-Type","application/json").asJson();// aca en response se va a guardar una lista de empresas teoricamente
+    HttpResponse<JsonNode> response=Unirest.get("http://localhost:8080/empresa/listaDeCentrosDeportivos").header("Content-Type","application/json").asJson();
     String nombre=null;//esto tendria que ser los datos que le pasa el administrador
+
     Long tel=null;
     String dir=null;
     Gson gson=new Gson();

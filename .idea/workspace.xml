@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62221472-56e0-4437-a9ca-4cbcbd497ead" name="Changes" comment="&quot;ni idea&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_media_win_18_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_swing_win_18_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/AdminP/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/CentroDepController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/CentroDeportivoP/CentroDepController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/EmpresaP/Empresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/EmpresaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/EmpresaP/EmpresaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/MostrarCentroDep.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/CentroDeportivoP/MostrarCentroDep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/MostrarEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/EmpresaP/MostrarEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/PrimerProyectoTic1Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/PrimerProyectoTic1Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/resources/com/example/PrimerProyectoTIC1/empresa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/resources/com/example/PrimerProyectoTIC1/empresa.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +73,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SERVIDOR" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -141,7 +126,9 @@
       <workItem from="1664994943809" duration="16000" />
       <workItem from="1664995998147" duration="1775000" />
       <workItem from="1665066851101" duration="2741000" />
-      <workItem from="1665079310095" duration="851000" />
+      <workItem from="1665079310095" duration="999000" />
+      <workItem from="1665087918472" duration="15000" />
+      <workItem from="1665158431830" duration="702000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;ni idea&quot;">
       <created>1665002304072</created>
