@@ -43,7 +43,7 @@ public class LoginController {
         Admin admin=new Admin("eduardo@correo.com","Eduardo");
         String mail = username.getText();
         String passwordLogin = password.getText();
-        if (mail ==admin.getMail() && passwordLogin == admin.getContrasena()) {
+        if (mail == admin.getMail() && passwordLogin == admin.getContrasena()) {
             FXMLLoader loader = new FXMLLoader();
             Parent root = loader.load(getClass().getResource("option-pane.fxml"));
             Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();

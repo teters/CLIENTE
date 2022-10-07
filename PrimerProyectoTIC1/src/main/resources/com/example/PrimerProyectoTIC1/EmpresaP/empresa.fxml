@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
@@ -38,9 +37,6 @@
          <children>
             <Button layoutX="70.0" layoutY="63.0" mnemonicParsing="false" onAction="#agregarEmpresa" text="Agregar" />
             <Button layoutX="462.0" layoutY="63.0" mnemonicParsing="false" text="Salir" />
-            <TextField layoutX="70.0" layoutY="2.0" promptText="Telefono" />
-            <TextField layoutX="388.0" layoutY="2.0" promptText="Direccion" />
-            <TextField layoutX="226.0" layoutY="2.0" promptText="Nombre" />
          </children>
       </AnchorPane>
    </center>

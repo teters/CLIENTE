@@ -19,11 +19,14 @@ public class DosBotonesController {
     @FXML
     private Button centroDepBtn;
 
+    @FXML
+    private Scene scene;
+
 
 
     public void empresaPane(ActionEvent event) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("empresa.fxml"));
-        Parent root = loader.load();
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(getClass().getResource("empresa.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -31,19 +34,30 @@ public class DosBotonesController {
     }
 
     public void centroDepPane(ActionEvent e) throws Exception{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("centro-deportivo.fxml"));
-        Parent root = loader.load();
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(getClass().getResource("centro-dep.fxml"));
         Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void crearEmpresaPane(ActionEvent actionEvent){
-
+    public void crearEmpresaPane(ActionEvent actionEvent) throws Exception{
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(getClass().getResource("crear-empresa.fxml"));
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void crearCentroDepPane(ActionEvent a){
+    public void crearCentroDepPane(ActionEvent a) throws Exception{
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(getClass().getResource("crear-centro-dep.fxml"));
+        Stage stage = (Stage)((Node)a.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
