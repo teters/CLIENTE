@@ -54,25 +54,15 @@ public class LoginController {
         }
     }
 
-    public void eligioEmpresa(ActionEvent actionEvent){
-        //CAMBIAR A ESCENARIO 3
-    }
-
-    public void eligioCentroDep(ActionEvent actionEvent){
-        //CAMBIAR A ESCENARIO 4
-    }
-
     public void closeWindow(ActionEvent event){
         exitWindow();
     }
-
 
     private void exitWindow(){
         Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
         alerta.setTitle("Salir");
         alerta.setHeaderText("¿Estás seguro que quieres salir?");
         if (alerta.showAndWait().get() == ButtonType.OK){
-
             stage = (Stage) salirBtn.getScene().getWindow();
             System.out.println("Has salido exitosamente.");
             stage.close();
