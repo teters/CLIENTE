@@ -31,9 +31,8 @@ public class EmpresaController implements Initializable {
     private TableColumn<Empresa, String> colDireccionE;
 
 
-
-
-    public void agregarEmpresa(ActionEvent actionEvent){
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         List<Empresa> items = Unirest.get("http://localhost:8080/empresa/listaDeEmpresas")
                 .asObject(new GenericType<List<Empresa>>(){})
                 .getBody();
@@ -44,16 +43,17 @@ public class EmpresaController implements Initializable {
         colDireccionE.setCellValueFactory(new PropertyValueFactory<>("direccion"));
 
         empresaTabla.setItems(listaEmpresas);
-       // Gson gson=new Gson();
+        //Gson gson=new Gson();
         //String body= gson.toJson(empresa);
         //HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/empresa/agregarEmpresa").header("Content-Type","application/json").body(new JsonNode(body)).asJson();//esto te crea y te manda al servidor la empresa
     }
 
-    //HttpResponse<JsonNode> response= Unirest.get("http://localhost:8080/empresa/listaDeEmpresas").header("Content-Type","application/json").asJson();// aca en response se va a guardar una lista de empresas teoricamente
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void agregarEmpresa(ActionEvent actionEvent){
 
     }
+
+    //HttpResponse<JsonNode> response= Unirest.get("http://localhost:8080/empresa/listaDeEmpresas").header("Content-Type","application/json").asJson();// aca en response se va a guardar una lista de empresas teoricamente
+
 
 
     //

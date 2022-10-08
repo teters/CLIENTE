@@ -14,12 +14,16 @@ import kong.unirest.GenericType;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class CentroDepController implements Initializable{
+
+    @Autowired
+
 
     @FXML
     private TableView<CentroDeportivo> centroDepTabla;
@@ -31,8 +35,8 @@ public class CentroDepController implements Initializable{
     private TableColumn<CentroDeportivo,String> colDireccion;
 
 
-
-    public void guardarCentroDep(ActionEvent actionEvent) {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         List<CentroDeportivo> items = Unirest.get("http://localhost:8080/empresa/listaDeCentrosDeportivos")
                 .asObject(new GenericType<List<CentroDeportivo>>(){})
                 .getBody();
@@ -46,8 +50,8 @@ public class CentroDepController implements Initializable{
         centroDepTabla.setItems(listaCentroDep);
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        //
+    public void guardarCentroDep(ActionEvent actionEvent) {
+
     }
+
 }
