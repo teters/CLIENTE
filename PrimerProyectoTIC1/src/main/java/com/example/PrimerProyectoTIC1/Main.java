@@ -18,26 +18,19 @@ import java.util.List;
 
 public class Main extends Application {
 
-    private Parent root;
-
-
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        //fxmlLoader.setControllerFactory(PrimerProyectoTic1Application.getContext()::getBean);
-        root = fxmlLoader.load(Main.class.getResourceAsStream("Main.fxml"));
+        fxmlLoader.setControllerFactory(PrimerProyectoTic1Application.getContext()::getBean);
+        Parent root = fxmlLoader.load(Main.class.getResourceAsStream("Main.fxml"));
         Scene scene = new Scene(root);
         stage.setResizable(false);
-        stage.setTitle("Login usuario");
+        stage.setTitle("Login admin");
         stage.setScene(scene);
         stage.show();
     }
 
 
-//        Scene scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.show();
 
 }
 
-//getClass().getResource("datos-usuario.fxml")

@@ -4,11 +4,12 @@ import com.example.PrimerProyectoTIC1.AdminP.Admin;
 import com.google.gson.Gson;
 import javafx.application.Application;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class PrimerProyectoTic1Application {
 
-	//private static ConfigurableApplicationContext context;
+	private static ConfigurableApplicationContext context;
 
 	public static void main(String[] args) {
 		Admin admin=new Admin("eduardo@correo.com","Eduardo");
@@ -27,5 +28,6 @@ public class PrimerProyectoTic1Application {
 		Application.launch(Main.class,args);
 	}
 
-	//public static ConfigurableApplicationContext getContext() {return context; }
+
+    public static ConfigurableApplicationContext getContext() {return context; }
 }
