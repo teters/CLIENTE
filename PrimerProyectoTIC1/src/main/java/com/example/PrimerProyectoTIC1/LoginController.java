@@ -44,7 +44,12 @@ public class LoginController {
         String mail = username.getText();
         String passwordLogin = password.getText();
         if (mail == admin.getMail() && passwordLogin == admin.getContrasena()) {
-
+            FXMLLoader loader = new FXMLLoader();
+            Parent root = loader.load(getClass().getResource("option-pane.fxml"));
+            Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
         else {
             textoError.setText("Usuario o contraseña incorrectos");
@@ -68,12 +73,7 @@ public class LoginController {
     }
 
 
-/*FXMLLoader loader = new FXMLLoader();
-            Parent root = loader.load(getClass().getResource("option-pane.fxml"));
-            Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();*/
+
 
 
 }

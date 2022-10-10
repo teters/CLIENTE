@@ -4,28 +4,44 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.OptionPaneController">
-   <top>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+   <center>
+      <AnchorPane prefHeight="356.0" prefWidth="452.0" styleClass="rest" stylesheets="@option.css" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <VBox prefHeight="400.0" prefWidth="169.0" styleClass="rest" stylesheets="@option.css" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="201.0" layoutY="50.0" prefHeight="50.0" prefWidth="199.0" text="Fitness App">
+            <Button mnemonicParsing="false" onAction="#crearEmpresaPane" prefHeight="29.0" prefWidth="169.0" styleClass="boton" stylesheets="@option.css" text="Crear empresa" textFill="WHITE">
                <font>
-                  <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+                  <Font name="Corbel" size="14.0" />
+               </font></Button>
+            <Button fx:id="empresaBtn" mnemonicParsing="false" onAction="#empresaPane" prefHeight="31.0" prefWidth="169.0" styleClass="boton" stylesheets="@option.css" text="Ver empresa" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#crearCentroDepPane" prefHeight="31.0" prefWidth="173.0" styleClass="boton" stylesheets="@option.css" text="Crear centro deportivo" textFill="WHITE">
+               <font>
+                  <Font name="Corbel" size="14.0" />
+               </font></Button>
+            <Button fx:id="centroDepBtn" mnemonicParsing="false" onAction="#centroDepPane" prefHeight="30.0" prefWidth="171.0" styleClass="boton" stylesheets="@option.css" text="Ver centro deportivo" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <AnchorPane prefHeight="90.0" prefWidth="600.0" styleClass="top" stylesheets="@option.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="202.0" layoutY="24.0" prefHeight="42.0" prefWidth="196.0" text="Fitness App" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold Italic" size="36.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
    </top>
-   <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="empresaBtn" layoutX="125.0" layoutY="88.0" mnemonicParsing="false" onAction="#empresaPane" text="Ver empresa" />
-            <Button fx:id="centroDepBtn" layoutX="348.0" layoutY="88.0" mnemonicParsing="false" onAction="#centroDepPane" text="Ver centro deportivo" />
-            <Button layoutX="120.0" layoutY="2.0" mnemonicParsing="false" onAction="#crearEmpresaPane" text="Crear empresa" />
-            <Button layoutX="338.0" layoutY="2.0" mnemonicParsing="false" onAction="#crearCentroDepPane" text="Crear centro deportivo" />
-         </children>
-      </AnchorPane>
-   </center>
 </BorderPane>
