@@ -5,8 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62221472-56e0-4437-a9ca-4cbcbd497ead" name="Changes" comment="&quot;ni idea&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_media_win_18_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_media_win_18_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_swing_win_18_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_openjfx_javafx_swing_win_18_0_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/PrimerProyectoTIC1.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/CentroDeportivoP/CrearCentroDepController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/CentroDeportivoP/CrearCentroDepController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/7.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/CentroDeportivoP/CentroDepController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/CentroDeportivoP/CentroDepController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/CentroDeportivoP/CentroDepController.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/CentroDeportivoP/CentroDepController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/CentroDeportivoP/CrearCentroDepController.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/CentroDeportivoP/CrearCentroDepController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/EmpresaP/CrearEmpresaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/EmpresaP/CrearEmpresaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/EmpresaP/EmpresaController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/EmpresaP/EmpresaController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/EmpresaP/EmpresaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/EmpresaP/EmpresaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/PrimerProyectoTic1Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/classes/java/main/com/example/PrimerProyectoTIC1/PrimerProyectoTic1Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/resources/main/com/example/PrimerProyectoTIC1/CentroDeportivoP/centro-dep.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/resources/main/com/example/PrimerProyectoTIC1/CentroDeportivoP/centro-dep.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/resources/main/com/example/PrimerProyectoTIC1/EmpresaP/empresa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/resources/main/com/example/PrimerProyectoTIC1/EmpresaP/empresa.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/resources/main/com/example/PrimerProyectoTIC1/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/resources/main/com/example/PrimerProyectoTIC1/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/resources/main/com/example/PrimerProyectoTIC1/option-pane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/resources/main/com/example/PrimerProyectoTIC1/option-pane.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/EmpresaP/CrearEmpresaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/EmpresaP/CrearEmpresaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/OptionPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PrimerProyectoTIC1/src/main/java/com/example/PrimerProyectoTIC1/OptionPaneController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +112,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Usuario\Documents\Teo semestre 4\lab tic 1\CLIENTE\PrimerProyectoTIC1\src\main\resources\com\example\PrimerProyectoTIC1\EmpresaP" />
+      <recent name="C:\Users\Usuario\Documents\Teo semestre 4\lab tic 1\CLIENTE\PrimerProyectoTIC1\src\main\resources\com\example\PrimerProyectoTIC1" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.PrimerProyectoTic1Application">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.PrimerProyectoTIC1.Main" />
@@ -95,7 +132,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimerProyectoTic1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="PrimerProyectoTic1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="PrimerProyectoTIC1.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.PrimerProyectoTIC1.PrimerProyectoTic1Application" />
       <method v="2">
@@ -104,6 +141,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.PrimerProyectoTic1Application" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -130,7 +168,9 @@
       <workItem from="1665079310095" duration="999000" />
       <workItem from="1665087918472" duration="15000" />
       <workItem from="1665158431830" duration="1484000" />
-      <workItem from="1665173478860" duration="877000" />
+      <workItem from="1665173478860" duration="1672000" />
+      <workItem from="1665246516051" duration="609000" />
+      <workItem from="1665574535810" duration="3693000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;ni idea&quot;">
       <created>1665002304072</created>
