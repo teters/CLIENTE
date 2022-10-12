@@ -11,10 +11,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import kong.unirest.GenericType;
-import kong.unirest.HttpResponse;
-import kong.unirest.JsonNode;
-import kong.unirest.Unirest;
+import kong.unirest.*;
 
 import java.net.URL;
 import java.util.List;
@@ -33,9 +30,11 @@ public class EmpresaController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        List<Empresa> items = Unirest.get("http://localhost:8080/empresa/listaDeEmpresas")
-                .asObject(new GenericType<List<Empresa>>(){})
-                .getBody();
+        List<Empresa> items= Unirest.get("http://localhost:8080/empresas/listaDeEmpresas").
+                header("Content-Type","application/jason").
+                asObject(new GenericType<List<Empresa>>(){}).getBody();
+
+
 
         ObservableList<Empresa> listaEmpresas = FXCollections.observableArrayList(items);
         colTelefono.setCellValueFactory(new PropertyValueFactory<>("telefono"));
