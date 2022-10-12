@@ -45,11 +45,6 @@
                   <Font name="System Italic" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="error" layoutX="276.0" layoutY="-8.0" textFill="#eb0000">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
             <Button fx:id="salirBtn" layoutX="302.0" layoutY="165.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="27.0" prefWidth="73.0" text="Salir" textFill="WHITE">
                <styleClass>
                   <String fx:value="boxShape" />
