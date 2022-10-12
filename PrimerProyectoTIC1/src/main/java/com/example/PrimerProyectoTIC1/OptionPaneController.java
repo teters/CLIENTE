@@ -24,7 +24,7 @@ public class OptionPaneController {
 
     public void empresaPane(ActionEvent event) throws Exception {
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(getClass().getResource("empresa.fxml"));
+        Parent root = loader.load(getClass().getResource("EmpresaP/empresa.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -33,7 +33,7 @@ public class OptionPaneController {
 
     public void centroDepPane(ActionEvent e) throws Exception{
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(getClass().getResource("centro-dep.fxml"));
+        Parent root = loader.load(getClass().getResource("CentroDeportivoP/centro-dep.fxml"));
         Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -51,7 +51,7 @@ public class OptionPaneController {
 
     public void crearCentroDepPane(ActionEvent a) throws Exception{
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(getClass().getResource("crear-centro-dep.fxml"));
+        Parent root = loader.load(getClass().getResource("CentroDeportivoP/crear-centro-dep.fxml"));
         Stage stage = (Stage)((Node)a.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
