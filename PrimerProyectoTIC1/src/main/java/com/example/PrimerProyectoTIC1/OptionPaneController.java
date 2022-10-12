@@ -17,8 +17,7 @@ public class OptionPaneController {
     @FXML
     private Button centroDepBtn;
 
-    @FXML
-    private Scene scene;
+
 
 
 
