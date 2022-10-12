@@ -42,7 +42,7 @@ public class OptionPaneController {
 
     public void crearEmpresaPane(ActionEvent actionEvent) throws Exception{
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(getClass().getResource("crear-empresa.fxml"));
+        Parent root = loader.load(getClass().getResource("EmpresaP/crear-empresa.fxml"));
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
