@@ -47,13 +47,10 @@ public class EmpresaController implements Initializable {
         //HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/empresa/agregarEmpresa").header("Content-Type","application/json").body(new JsonNode(body)).asJson();//esto te crea y te manda al servidor la empresa
     }
 
-    public void agregarEmpresa(ActionEvent actionEvent){
-
-    }
 
     //HttpResponse<JsonNode> response= Unirest.get("http://localhost:8080/empresa/listaDeEmpresas").header("Content-Type","application/json").asJson();// aca en response se va a guardar una lista de empresas teoricamente
 
 
 
-    //
+
 }
