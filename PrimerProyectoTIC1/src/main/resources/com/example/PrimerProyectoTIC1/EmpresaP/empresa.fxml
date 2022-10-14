@@ -23,7 +23,7 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="300.0" layoutY="218.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="63.0" styleClass="boton" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+            <Button fx:id="salirBEmp" layoutX="300.0" layoutY="218.0" mnemonicParsing="false" onAction="#salirEmp" prefHeight="29.0" prefWidth="63.0" styleClass="boton" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font></Button>
@@ -35,7 +35,7 @@
                 <TableColumn fx:id="colDireccionE" prefWidth="148.0" text="Direccion" />
               </columns>
             </TableView>
-            <Button layoutX="233.0" layoutY="218.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="67.0" styleClass="boton" stylesheets="@../option.css" text="Ver" textFill="WHITE">
+            <Button layoutX="233.0" layoutY="218.0" mnemonicParsing="false" onAction="#volverEmp" prefHeight="29.0" prefWidth="67.0" styleClass="boton" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font>

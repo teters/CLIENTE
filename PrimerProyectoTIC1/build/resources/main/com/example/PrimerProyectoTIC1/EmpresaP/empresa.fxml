@@ -10,7 +10,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpresaP.EmpresaController">
    <top>
-      <AnchorPane prefHeight="113.0" prefWidth="600.0" styleClass="top" stylesheets="@../EmpleadoP/values.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="113.0" prefWidth="600.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="201.0" layoutY="32.0" prefHeight="50.0" prefWidth="199.0" text="Fitness App" textFill="WHITE">
                <font>
@@ -23,7 +23,7 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="300.0" layoutY="218.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="63.0" styleClass="boton" stylesheets="@../EmpleadoP/values.css" text="Salir" textFill="WHITE">
+            <Button fx:id="salirBEmp" layoutX="300.0" layoutY="218.0" mnemonicParsing="false" onAction="#salirEmp" prefHeight="29.0" prefWidth="63.0" styleClass="boton" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font></Button>
@@ -35,7 +35,7 @@
                 <TableColumn fx:id="colDireccionE" prefWidth="148.0" text="Direccion" />
               </columns>
             </TableView>
-            <Button layoutX="233.0" layoutY="218.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="67.0" styleClass="boton" stylesheets="@../EmpleadoP/values.css" text="Ver" textFill="WHITE">
+            <Button layoutX="233.0" layoutY="218.0" mnemonicParsing="false" onAction="#volverEmp" prefHeight="29.0" prefWidth="67.0" styleClass="boton" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font>

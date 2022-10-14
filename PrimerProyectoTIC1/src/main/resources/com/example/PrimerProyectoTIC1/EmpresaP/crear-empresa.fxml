@@ -39,7 +39,7 @@
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="320.0" layoutY="224.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="53.0" styleClass="boton" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+            <Button fx:id="salirBCEmp" layoutX="320.0" layoutY="224.0" mnemonicParsing="false" onAction="#salir" prefHeight="29.0" prefWidth="53.0" styleClass="boton" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font>

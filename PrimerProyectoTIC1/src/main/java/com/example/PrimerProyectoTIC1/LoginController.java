@@ -51,6 +51,7 @@ public class LoginController {
             stage.setScene(scene);
             stage.show();
         }
+
         else {
             textoError.setText("Usuario o contraseña incorrectos");
         }

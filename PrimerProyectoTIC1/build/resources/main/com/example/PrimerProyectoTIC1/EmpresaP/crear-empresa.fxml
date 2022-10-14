@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpresaP.CrearEmpresaController">
    <center>
       <AnchorPane prefHeight="304.0" prefWidth="600.0" BorderPane.alignment="CENTER">
@@ -27,20 +26,20 @@
                   <Font name="Corbel Italic" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="telefonoID" layoutX="226.0" layoutY="54.0" promptText="Telefono" />
-            <TextField fx:id="nombreEmpID" layoutX="226.0" layoutY="111.0" promptText="Nombre" />
-            <TextField fx:id="direccionEmpID" layoutX="226.0" layoutY="164.0" promptText="Direccion" />
-            <Button layoutX="193.0" layoutY="224.0" mnemonicParsing="false" onAction="#agregarEmpresa" styleClass="boton" stylesheets="@../EmpleadoP/values.css" text="Agregar" textFill="WHITE">
+            <TextField fx:id="telefonoID" layoutX="226.0" layoutY="54.0" promptText="Telefono" styleClass="boxShape" stylesheets="@../option.css" />
+            <TextField fx:id="nombreEmpID" layoutX="226.0" layoutY="111.0" promptText="Nombre" styleClass="boxShape" stylesheets="@../option.css" />
+            <TextField fx:id="direccionEmpID" layoutX="226.0" layoutY="164.0" promptText="Direccion" styleClass="boxShape" stylesheets="@../option.css" />
+            <Button layoutX="193.0" layoutY="224.0" mnemonicParsing="false" onAction="#agregarEmpresa" styleClass="boton" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="260.0" layoutY="224.0" mnemonicParsing="false" onAction="#volver" styleClass="boton" stylesheets="@../EmpleadoP/values.css" text="Volver" textFill="WHITE">
+            <Button layoutX="260.0" layoutY="224.0" mnemonicParsing="false" onAction="#volver" styleClass="boton" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="320.0" layoutY="224.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="53.0" styleClass="boton" stylesheets="@../EmpleadoP/values.css" text="Salir" textFill="WHITE">
+            <Button fx:id="salirBCEmp" layoutX="320.0" layoutY="224.0" mnemonicParsing="false" onAction="#salir" prefHeight="29.0" prefWidth="53.0" styleClass="boton" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font>
@@ -49,7 +48,7 @@
       </AnchorPane>
    </center>
    <top>
-      <AnchorPane prefHeight="106.0" prefWidth="600.0" styleClass="top" stylesheets="@../EmpleadoP/values.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="106.0" prefWidth="600.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="213.0" layoutY="38.0" text="Fitness App" textFill="WHITE">
                <font>
