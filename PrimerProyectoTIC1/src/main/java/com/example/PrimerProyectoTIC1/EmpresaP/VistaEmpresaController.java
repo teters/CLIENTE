@@ -1,9 +1,9 @@
-package com.example.PrimerProyectoTIC1.EmpleadoP;
+package com.example.PrimerProyectoTIC1.EmpresaP;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class EmpleadoController {
+public class VistaEmpresaController {
 
     @FXML
     private Label nameTag;

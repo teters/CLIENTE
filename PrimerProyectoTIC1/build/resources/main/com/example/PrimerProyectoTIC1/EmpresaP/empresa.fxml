@@ -10,33 +10,36 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpresaP.EmpresaController">
    <top>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="113.0" prefWidth="600.0" styleClass="top" stylesheets="@../EmpleadoP/values.css" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="202.0" layoutY="24.0" prefHeight="50.0" prefWidth="199.0" text="Fitness App">
+            <Label layoutX="201.0" layoutY="32.0" prefHeight="50.0" prefWidth="199.0" text="Fitness App" textFill="WHITE">
                <font>
-                  <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+                  <Font name="Corbel Bold Italic" size="36.0" />
                </font>
             </Label>
-            <Label layoutX="237.0" layoutY="74.0" text="Agregar empresa">
-               <font>
-                  <Font name="Calibri" size="18.0" />
-               </font>
-            </Label>
-            <TableView fx:id="empresaTabla" layoutX="66.0" layoutY="107.0" prefHeight="200.0" prefWidth="472.0">
-              <columns>
-                <TableColumn fx:id="colTelefono" prefWidth="160.0" text="Telefono" />
-                  <TableColumn fx:id="colNombreE" prefWidth="163.0" text="Nombre" />
-                <TableColumn fx:id="colDireccionE" prefWidth="148.0" text="Direccion" />
-              </columns>
-            </TableView>
          </children>
       </AnchorPane>
    </top>
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="70.0" layoutY="63.0" mnemonicParsing="false" onAction="#agregarEmpresa" text="Agregar" />
+            <Button layoutX="300.0" layoutY="218.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="63.0" styleClass="boton" stylesheets="@../EmpleadoP/values.css" text="Salir" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font></Button>
             <Button layoutX="462.0" layoutY="63.0" mnemonicParsing="false" text="Salir" />
+            <TableView fx:id="empresaTabla" layoutX="70.0" prefHeight="200.0" prefWidth="472.0">
+              <columns>
+                <TableColumn fx:id="colTelefono" prefWidth="160.0" text="Telefono" />
+                 <TableColumn fx:id="colNombreE" prefWidth="163.0" text="Nombre" />
+                <TableColumn fx:id="colDireccionE" prefWidth="148.0" text="Direccion" />
+              </columns>
+            </TableView>
+            <Button layoutX="233.0" layoutY="218.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="67.0" styleClass="boton" stylesheets="@../EmpleadoP/values.css" text="Ver" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </center>

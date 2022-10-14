@@ -33,8 +33,7 @@ public class EmpresaController implements Initializable {
         List<Empresa> items= Unirest.get("http://localhost:8080/empresas/listaDeEmpresas").
                 header("Content-Type","application/jason").
                 asObject(new GenericType<List<Empresa>>(){}).getBody();
-
-
+        System.out.println("hola");
 
         ObservableList<Empresa> listaEmpresas = FXCollections.observableArrayList(items);
         colTelefono.setCellValueFactory(new PropertyValueFactory<>("telefono"));
@@ -42,9 +41,7 @@ public class EmpresaController implements Initializable {
         colDireccionE.setCellValueFactory(new PropertyValueFactory<>("direccion"));
 
         empresaTabla.setItems(listaEmpresas);
-        //Gson gson=new Gson();
-        //String body= gson.toJson(empresa);
-        //HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/empresa/agregarEmpresa").header("Content-Type","application/json").body(new JsonNode(body)).asJson();//esto te crea y te manda al servidor la empresa
+
     }
 
 
