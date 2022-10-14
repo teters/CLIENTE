@@ -38,7 +38,7 @@ public class CrearEmpresaController {
         Empresa empresa = new Empresa(Long.parseLong(telefonoID.getText()),nombreEmpID.getText(), direccionEmpID.getText());
         Gson gson=new Gson();
         String body= gson.toJson(empresa);
-        HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/empresas/agregarEmpresa").header("Content-Type","application/json").body(new JsonNode(body)).asJson();//esto te crea y te manda al servidor la empresa
+        HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/empresas/").header("Content-Type","application/json").body(new JsonNode(body)).asJson();//esto te crea y te manda al servidor la empresa
         System.out.println(jsonNodeHttpResponse.getStatus());
         //HttpResponse<String> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/empresa/agregarEmpresa").header("Content-Type","application/json").body(new JsonNode(body)).asString();
     }
