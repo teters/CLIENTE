@@ -20,3 +20,9 @@
     -fx-background-color: #1479b0;
     -fx-border-color: #111111;
 }
+
+.actividad-fondo{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30;
+
+}
