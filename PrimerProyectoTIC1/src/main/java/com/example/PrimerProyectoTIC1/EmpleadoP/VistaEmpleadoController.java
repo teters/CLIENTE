@@ -33,7 +33,7 @@ public class VistaEmpleadoController implements Initializable {
         for (int i=0;i<20;i++){
             actividad = new Actividad();
             actividad.setNombreAct("Futbol");
-            //actividad.setImg("/imagenes/soccer ball hit into a goal.jpg");
+            //actividad.setImg("/imagenes/futbol.jpg");
             actividades.add(actividad);
         }
 

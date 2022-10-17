@@ -1,6 +1,7 @@
 package com.example.PrimerProyectoTIC1;
 
 import com.example.PrimerProyectoTIC1.AdminP.Admin;
+import com.example.PrimerProyectoTIC1.EmpleadoP.Empleado;
 import com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.google.gson.Gson;
@@ -12,11 +13,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import kong.unirest.GenericType;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 
 import java.io.IOException;
+import java.util.List;
 
 
 public class LoginController {
@@ -41,22 +44,42 @@ public class LoginController {
     private Parent root;
 
     public void adminAceptado(ActionEvent e) throws IOException {
+        boolean login = false;
         Admin admin=new Admin("eduardo@correo.com","Eduardo");
         String mail = username.getText();
         String passwordLogin = password.getText();
+        List<Empleado> empleados= Unirest.get("http://localhost:8080/empleado/").
+                header("Content-Type","application/json").
+                asObject(new GenericType<List<Empleado>>(){}).getBody();
+
         if (mail.equals(admin.getMail())  && passwordLogin.equals(admin.getContrasena()) ) {
+            login = true;
             FXMLLoader loader = new FXMLLoader();
-            //Parent root = loader.load(getClass().getResource("option-pane.fxml"));
-            Parent root = loader.load(VistaEmpleadoController.class.getResource("vista-empleado.fxml"));
+            Parent root = loader.load(getClass().getResource("option-pane.fxml"));
             Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
         }
 
-        else {
+        for (int i=0;i<empleados.size();i++){
+            if (empleados.get(i).getMail() == mail){
+                if (empleados.get(i).getPassword() == passwordLogin){
+                    login = true;
+                    FXMLLoader loader = new FXMLLoader();
+                    Parent root = loader.load(VistaEmpleadoController.class.getResource("vista-empleado.fxml"));
+                    Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+                    Scene scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                }
+            }
+        }
+        if (login==false){
             textoError.setText("Usuario o contraseña incorrectos");
         }
+
+
     }
 
     public void closeWindow(ActionEvent event){
