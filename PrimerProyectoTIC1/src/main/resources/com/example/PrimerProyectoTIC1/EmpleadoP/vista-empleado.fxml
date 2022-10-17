@@ -6,15 +6,14 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController">
    <left>
       <VBox prefHeight="470.0" prefWidth="129.0" stylesheets="@../option.css" BorderPane.alignment="CENTER" />
    </left>
    <center>
       <ScrollPane fx:id="scroll" prefHeight="438.0" prefWidth="484.0" BorderPane.alignment="CENTER">
          <content>
-            <GridPane fx:id="grid" prefHeight="472.0" prefWidth="562.0">
+            <GridPane fx:id="grid" prefHeight="470.0" prefWidth="561.0">
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
