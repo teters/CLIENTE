@@ -1,6 +1,7 @@
 package com.example.PrimerProyectoTIC1;
 
 import com.example.PrimerProyectoTIC1.AdminP.Admin;
+import com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.google.gson.Gson;
 import javafx.event.ActionEvent;
@@ -45,7 +46,8 @@ public class LoginController {
         String passwordLogin = password.getText();
         if (mail.equals(admin.getMail())  && passwordLogin.equals(admin.getContrasena()) ) {
             FXMLLoader loader = new FXMLLoader();
-            Parent root = loader.load(getClass().getResource("option-pane.fxml"));
+            //Parent root = loader.load(getClass().getResource("option-pane.fxml"));
+            Parent root = loader.load(VistaEmpleadoController.class.getResource("vista-empleado.fxml"));
             Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);

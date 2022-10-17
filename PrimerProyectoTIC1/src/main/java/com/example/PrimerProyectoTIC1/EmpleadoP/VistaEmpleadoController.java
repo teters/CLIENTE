@@ -5,9 +5,12 @@ import com.example.PrimerProyectoTIC1.LoginController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +33,7 @@ public class VistaEmpleadoController implements Initializable {
         for (int i=0;i<20;i++){
             actividad = new Actividad();
             actividad.setNombreAct("Futbol");
-            actividad.setImg("/imagenes/soccer ball hit into a goal.jpg");
+            //actividad.setImg("/imagenes/soccer ball hit into a goal.jpg");
             actividades.add(actividad);
         }
 
@@ -39,12 +42,32 @@ public class VistaEmpleadoController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        for (int i=0;i< actividades.size();i++){
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(VentanaActividadController.class.getResource("ventana-actividad.fxml"));
+        actividades.addAll(getData());
+        int column = 0;
+        int row = 0;
+        try{
+            for (int i=0;i< actividades.size();i++) {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(VentanaActividadController.class.getResource("ventana-actividad.fxml"));
+                BorderPane borderPane = fxmlLoader.load();
 
+
+                VentanaActividadController ventanaActividadController = fxmlLoader.getController();
+                ventanaActividadController.setData(actividades.get(i));
+
+                if (column == 3){
+                    column =0;
+                    row++;
+                }
+
+                grid.add(borderPane, column++, row);
+                GridPane.setMargin(borderPane,new Insets(10));
+            }
+        } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
 
     }
-}
+

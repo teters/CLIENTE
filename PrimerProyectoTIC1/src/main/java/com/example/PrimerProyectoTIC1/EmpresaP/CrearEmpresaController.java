@@ -34,6 +34,11 @@ public class CrearEmpresaController {
     private Button salirBCEmp;
 
 
+
+    public void crearBossEmpresa(){}
+
+
+
     public void agregarEmpresa(ActionEvent actionEvent) throws IOException {
         Empresa empresa = new Empresa(Long.parseLong(telefonoID.getText()),nombreEmpID.getText(), direccionEmpID.getText());
         Gson gson=new Gson();

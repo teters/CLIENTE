@@ -24,5 +24,12 @@
 .actividad-fondo{
     -fx-background-color: #FFFFFF;
     -fx-background-radius: 30;
-
 }
+
+.title{
+    -fx-background-color: rgba(132, 236, 134, 0.59);
+    -fx-background-radius: 30;
+}
+
+
+

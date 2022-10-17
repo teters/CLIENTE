@@ -12,11 +12,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="330.0" styleClass="actividad-fondo" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.VentanaActividadController">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="330.0" styleClass="actividad-fondo" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.VentanaActividadController">
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="imgAct" fitHeight="175.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgAct" fitHeight="189.0" fitWidth="331.0" pickOnBounds="true" preserveRatio="true" styleClass="actividad-fondo">
                <image>
                   <Image url="@../../../../imagenes/soccer%20ball%20hit%20into%20a%20goal.jpg" />
                </image>
@@ -62,4 +62,36 @@
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
-   
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="3.0" layoutY="71.0" prefHeight="17.0" prefWidth="53.0" text="Label" />
+            <Label layoutY="177.0" text="Label" />
+            <SplitMenuButton layoutX="-9.0" layoutY="119.0" mnemonicParsing="false" text="SplitMenuButton">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </SplitMenuButton>
+            <SplitMenuButton layoutX="-9.0" layoutY="14.0" mnemonicParsing="false" text="SplitMenuButton">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </SplitMenuButton>
+            <Label fx:id="nombreAct" alignment="CENTER" layoutX="-16.0" layoutY="-26.0" prefHeight="39.0" prefWidth="107.0" styleClass="title" stylesheets="@../option.css" text="Futbol">
+               <font>
+                  <Font name="Cambria Bold" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
