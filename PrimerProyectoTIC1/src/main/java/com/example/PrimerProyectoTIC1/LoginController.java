@@ -4,6 +4,7 @@ import com.example.PrimerProyectoTIC1.AdminP.Admin;
 import com.example.PrimerProyectoTIC1.EmpleadoP.Empleado;
 import com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.google.gson.Gson;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,12 +14,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import kong.unirest.GenericType;
-import kong.unirest.HttpResponse;
-import kong.unirest.JsonNode;
-import kong.unirest.Unirest;
+import kong.unirest.*;
 
+import javax.swing.*;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -48,9 +48,16 @@ public class LoginController {
         Admin admin=new Admin("eduardo@correo.com","Eduardo");
         String mail = username.getText();
         String passwordLogin = password.getText();
-        List<Empleado> empleados= Unirest.get("http://localhost:8080/empleado/").
+        Empleado empleado1=new Empleado(mail,passwordLogin);
+        Gson gson=new Gson();
+        String body= gson.toJson(empleado1);
+        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/empleado/iniciosesion").
                 header("Content-Type","application/json").
-                asObject(new GenericType<List<Empleado>>(){}).getBody();
+                body(new JsonNode(body)).asJson();
+
+        com.fasterxml.jackson.databind.ObjectMapper mapper= new com.fasterxml.jackson.databind.ObjectMapper();
+        Empleado empleado=mapper.readValue(response.getBody().toString(),new TypeReference<Empleado>(){});
+        System.out.println(response.getBody().toString());
 
         if (mail.equals(admin.getMail())  && passwordLogin.equals(admin.getContrasena()) ) {
             login = true;
@@ -61,20 +68,16 @@ public class LoginController {
             stage.setScene(scene);
             stage.show();
         }
-
-        for (int i=0;i<empleados.size();i++){
-            if (empleados.get(i).getMail() == mail){
-                if (empleados.get(i).getPassword() == passwordLogin){
-                    login = true;
-                    FXMLLoader loader = new FXMLLoader();
-                    Parent root = loader.load(VistaEmpleadoController.class.getResource("vista-empleado.fxml"));
-                    Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-                    Scene scene = new Scene(root);
-                    stage.setScene(scene);
-                    stage.show();
-                }
-            }
+        if (empleado.getMail().equals(mail) && empleado.getPassword().equals(passwordLogin)){
+            login=true;
+            FXMLLoader loader = new FXMLLoader();
+            Parent root = loader.load(VistaEmpleadoController.class.getResource("vista-empleado.fxml"));
+            Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
+
         if (login==false){
             textoError.setText("Usuario o contraseña incorrectos");
         }

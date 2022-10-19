@@ -9,17 +9,21 @@ public class Empleado {
     private String mail;
     private String password;
     private Long saldo;
-    private LocalDate fechaNacimiento;
+    private String fechaVenc;
     private Long empresaID;
 
-    public Empleado(Long id, String nombre, Long telefono, String mail, String password, Long saldo, LocalDate fechaNacimiento, Long empresaID) {
+    public Empleado(){
+
+    }
+
+    public Empleado(Long id, String nombre, Long telefono, String mail, String password, Long saldo, String fechaVenc, Long empresaID) {
         this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;
         this.mail = mail;
         this.password = password;
         this.saldo = saldo;
-        this.fechaNacimiento = fechaNacimiento;
+        this.fechaVenc = fechaVenc;
         this.empresaID = empresaID;
     }
 
@@ -72,12 +76,17 @@ public class Empleado {
         this.saldo = saldo;
     }
 
-    public LocalDate getFechaNacimiento() {
-        return fechaNacimiento;
+    public String getFechaVenc() {
+        return fechaVenc;
     }
 
-    public void setFechaNacimiento(LocalDate fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public Empleado(String mail, String password) {
+        this.mail = mail;
+        this.password = password;
+    }
+
+    public void setFechaVenc(String fechaNacimiento) {
+        this.fechaVenc = fechaNacimiento;
     }
 
     public Long getEmpresaID() {
