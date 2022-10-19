@@ -9,6 +9,7 @@ import javafx.geometry.Insets;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -26,15 +27,26 @@ public class VistaEmpleadoController implements Initializable {
 
     private List<Actividad> actividades = new ArrayList<>();
 
+    private Stage stage;
+
     private List<Actividad> getData(){
         List<Actividad> actividades = new ArrayList<>();
         Actividad actividad;
 
         for (int i=0;i<20;i++){
             actividad = new Actividad();
+
             actividad.setNombreAct("Futbol");
-            //actividad.setImg("/imagenes/futbol.jpg");
+            actividad.setImg("/imagenes/futbol.jpg");
             actividades.add(actividad);
+
+            actividad.setNombreAct("Basketball");
+            actividad.setImg("/imagenes/basketball.jpg");
+            actividades.add(actividad);
+
+
+
+
         }
 
         return actividades;
@@ -43,8 +55,11 @@ public class VistaEmpleadoController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         actividades.addAll(getData());
+        if (actividades.size() > 0){
+
+        }
         int column = 0;
-        int row = 0;
+        int row = 1;
         try{
             for (int i=0;i< actividades.size();i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();

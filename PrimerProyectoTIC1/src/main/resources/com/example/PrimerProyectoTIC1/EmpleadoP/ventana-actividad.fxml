@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,26 +12,33 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="330.0" styleClass="actividad-fondo" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.VentanaActividadController">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="317.0" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.VentanaActividadController">
    <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="169.0" prefWidth="317.0" styleClass="image" stylesheets="@../option.css" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="imgAct" fitHeight="189.0" fitWidth="331.0" pickOnBounds="true" preserveRatio="true" styleClass="actividad-fondo">
-               <image>
-                  <Image url="@../../../../imagenes/soccer%20ball%20hit%20into%20a%20goal.jpg" />
-               </image>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin></ImageView>
+            <AnchorPane prefHeight="183.0" prefWidth="317.0" styleClass="image" stylesheets="@../option.css">
+               <children>
+                  <ImageView fx:id="imgAct" fitHeight="170.0" fitWidth="317.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                     <image>
+                        <Image url="@../../../../imagenes/futbol.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="nombreAct" alignment="CENTER" layoutX="107.0" layoutY="129.0" prefHeight="32.0" prefWidth="107.0" styleClass="title" stylesheets="@../option.css" text="Futbol">
+                     <font>
+                        <Font name="Cambria Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
          </children>
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="301.0" prefWidth="116.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="209.0" prefWidth="116.0" BorderPane.alignment="CENTER">
          <children>
             <HBox prefHeight="53.0" prefWidth="116.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="116.0" text="Lugar:" textAlignment="JUSTIFY">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="116.0" text="Lugar:" textAlignment="JUSTIFY">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
@@ -58,7 +65,7 @@
             </HBox>
             <HBox prefHeight="52.0" prefWidth="116.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="65.0" prefWidth="134.0" text="Descripción:">
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="116.0" text="Descripción:">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
@@ -69,29 +76,22 @@
       </VBox>
    </left>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="276.0" prefWidth="214.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="3.0" layoutY="71.0" prefHeight="17.0" prefWidth="53.0" text="Label" />
-            <Label layoutY="177.0" text="Label" />
-            <SplitMenuButton layoutX="-9.0" layoutY="119.0" mnemonicParsing="false" text="SplitMenuButton">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-            </SplitMenuButton>
-            <SplitMenuButton layoutX="-9.0" layoutY="14.0" mnemonicParsing="false" text="SplitMenuButton">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-              </items>
-            </SplitMenuButton>
-            <Label fx:id="nombreAct" alignment="CENTER" layoutX="-16.0" layoutY="-26.0" prefHeight="39.0" prefWidth="107.0" styleClass="title" stylesheets="@../option.css" text="Futbol">
+            <Label fx:id="ubicacionCentroDep" layoutX="6.0" layoutY="70.0" prefHeight="17.0" prefWidth="53.0" text="Label" />
+            <Label alignment="TOP_LEFT" layoutY="169.0" lineSpacing="1.5" prefHeight="64.0" prefWidth="197.0" text="Label" textAlignment="JUSTIFY" wrapText="true" />
+            <Button fx:id="reservar" layoutY="232.0" mnemonicParsing="false" onAction="#reserva" prefHeight="32.0" prefWidth="76.0" text="Reservar">
                <font>
-                  <Font name="Cambria Bold" size="31.0" />
+                  <Font name="Corbel" size="15.0" />
                </font>
-            </Label>
+            </Button>
+            <ChoiceBox fx:id="centroDepAct" layoutX="1.0" layoutY="14.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="horarioAct" layoutX="1.0" layoutY="120.0" prefHeight="24.0" prefWidth="150.0" />
          </children>
       </AnchorPane>
    </center>
+   <styleClass>
+      <String fx:value="actividad-fondo" />
+      <String fx:value="shadow" />
+   </styleClass>
 </BorderPane>

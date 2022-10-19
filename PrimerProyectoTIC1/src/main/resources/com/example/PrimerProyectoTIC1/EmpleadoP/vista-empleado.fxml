@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.GridPane?>
@@ -8,10 +9,10 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController">
    <left>
-      <VBox prefHeight="470.0" prefWidth="129.0" stylesheets="@../option.css" BorderPane.alignment="CENTER" />
+      <VBox prefHeight="575.0" prefWidth="147.0" styleClass="left-bar" stylesheets="@../option.css" BorderPane.alignment="CENTER" />
    </left>
    <center>
-      <ScrollPane fx:id="scroll" prefHeight="438.0" prefWidth="484.0" BorderPane.alignment="CENTER">
+      <ScrollPane fx:id="scroll" prefHeight="575.0" prefWidth="1100.0" stylesheets="@../option.css" BorderPane.alignment="CENTER">
          <content>
             <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
               <rowConstraints>
@@ -19,6 +20,10 @@
               </rowConstraints>
             </GridPane>
          </content>
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="color-fondo" />
+         </styleClass>
       </ScrollPane>
    </center>
 </BorderPane>

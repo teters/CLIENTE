@@ -11,35 +11,40 @@
    <center>
       <AnchorPane prefHeight="304.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="145.0" layoutY="56.0" text="Telefono:">
+            <Label layoutX="146.0" layoutY="33.0" text="Telefono:">
                <font>
                   <Font name="Corbel Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="148.0" layoutY="113.0" text="Nombre:">
+            <Label layoutX="149.0" layoutY="90.0" text="Nombre:">
                <font>
                   <Font name="Corbel Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="141.0" layoutY="166.0" prefHeight="22.0" prefWidth="77.0" text="Direccion:">
+            <Label layoutX="142.0" layoutY="147.0" prefHeight="22.0" prefWidth="77.0" text="Direccion:">
                <font>
                   <Font name="Corbel Italic" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="telefonoID" layoutX="226.0" layoutY="54.0" promptText="Telefono" styleClass="boxShape" stylesheets="@../option.css" />
-            <TextField fx:id="nombreEmpID" layoutX="226.0" layoutY="111.0" promptText="Nombre" styleClass="boxShape" stylesheets="@../option.css" />
-            <TextField fx:id="direccionEmpID" layoutX="226.0" layoutY="164.0" promptText="Direccion" styleClass="boxShape" stylesheets="@../option.css" />
-            <Button layoutX="193.0" layoutY="224.0" mnemonicParsing="false" onAction="#agregarEmpresa" styleClass="boton" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
+            <TextField fx:id="telefonoID" layoutX="226.0" layoutY="31.0" promptText="Telefono" styleClass="boxShape" stylesheets="@../option.css" />
+            <TextField fx:id="nombreEmpID" layoutX="226.0" layoutY="88.0" promptText="Nombre" styleClass="boxShape" stylesheets="@../option.css" />
+            <TextField fx:id="direccionEmpID" layoutX="226.0" layoutY="146.0" promptText="Direccion" styleClass="boxShape" stylesheets="@../option.css" />
+            <Button layoutX="202.0" layoutY="232.0" mnemonicParsing="false" onAction="#agregarEmpresa" styleClass="boton" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="260.0" layoutY="224.0" mnemonicParsing="false" onAction="#volver" styleClass="boton" stylesheets="@../option.css" text="Volver" textFill="WHITE">
+            <Button layoutX="271.0" layoutY="232.0" mnemonicParsing="false" onAction="#volver" styleClass="boton" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="salirBCEmp" layoutX="320.0" layoutY="224.0" mnemonicParsing="false" onAction="#salir" prefHeight="29.0" prefWidth="53.0" styleClass="boton" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+            <Button fx:id="salirBCEmp" layoutX="331.0" layoutY="232.0" mnemonicParsing="false" onAction="#salir" prefHeight="29.0" prefWidth="55.0" styleClass="boton" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="194.0" layoutY="187.0" mnemonicParsing="false" styleClass="boton" stylesheets="@../option.css" text="Para crear boss, haz clic aqui" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="14.0" />
                </font>
