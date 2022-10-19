@@ -3,8 +3,10 @@ package com.example.PrimerProyectoTIC1.EmpleadoP;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -16,10 +18,12 @@ import kong.unirest.GenericType;
 import kong.unirest.Unirest;
 
 import java.io.ByteArrayInputStream;
+import java.net.URL;
 import java.util.Base64;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class VentanaActividadController {
+public class VentanaActividadController implements Initializable {
 
 
     @FXML
@@ -60,6 +64,11 @@ public class VentanaActividadController {
 
             }
         }*/
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+     //   centroDepAct.setItems();
     }
 
 
