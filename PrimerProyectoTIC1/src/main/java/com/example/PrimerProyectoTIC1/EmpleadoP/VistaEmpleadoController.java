@@ -34,13 +34,13 @@ public class VistaEmpleadoController implements Initializable {
         Actividad actividad;
 
         for (int i=0;i<20;i++){
-            actividad = new Actividad();
 
-            actividad.setNombreAct("Futbol");
+
+            actividad.setNombre("Futbol");
             actividad.setImg("/imagenes/futbol.jpg");
             actividades.add(actividad);
 
-            actividad.setNombreAct("Basketball");
+            actividad.setNombre("Basketball");
             actividad.setImg("/imagenes/basketball.jpg");
             actividades.add(actividad);
 
@@ -70,7 +70,7 @@ public class VistaEmpleadoController implements Initializable {
                 VentanaActividadController ventanaActividadController = fxmlLoader.getController();
                 ventanaActividadController.setData(actividades.get(i));
 
-                if (column == 3){
+                if (column == 2){
                     column =0;
                     row++;
                 }

@@ -51,7 +51,7 @@ public class VentanaActividadController implements Initializable {
 
     public void setData(Actividad actividad){
         this.actividad = actividad;
-        nombreAct.setText(actividad.getNombreAct());
+        nombreAct.setText(actividad.getNombre());
 
 
 
