@@ -47,11 +47,11 @@ public class VentanaActividadController implements Initializable {
     @FXML
     private Button reservar;
 
-    private Actividad actividad;
+    private String actividad;
 
-    public void setData(Actividad actividad){
+    public void setData(String actividad){
         this.actividad = actividad;
-        nombreAct.setText(actividad.getNombre());
+        nombreAct.setText(actividad);
 
 
 

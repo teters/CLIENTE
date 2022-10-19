@@ -3,6 +3,7 @@ package com.example.PrimerProyectoTIC1.EmpleadoP;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.example.PrimerProyectoTIC1.LoginController;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -12,11 +13,14 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import kong.unirest.GenericType;
+import kong.unirest.HttpResponse;
+import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -28,38 +32,46 @@ public class VistaEmpleadoController implements Initializable {
     @FXML
     private GridPane grid;
 
-    private List<Actividad> actividades = new ArrayList<>();
+    private List<String> actividades = new ArrayList<>();
 
     private Stage stage;
 
-    private List<Actividad> getData(){
-        List<Actividad> actividades= Unirest.get("http://localhost:8080/actividad/").
-                header("Content-Type","application/json").
-                asObject(new GenericType<List<Actividad>>(){}).getBody();
+    private List<String> getData(){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/todas").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        List<String> actividades1=null;
+        try {
+            String[] nombres=mapper.readValue(response.getBody().toString(),String[].class);
+            actividades1= Arrays.asList(nombres);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-        Actividad actividad;
+
+        for (int i = 0; i < actividades1.size(); i++) {
+            VentanaActividadController ventanaActividadController=new VentanaActividadController();
+            ventanaActividadController.setData(actividades1.get(i));
+
+        }
 
         for (int i=0;i<20;i++){
-
-<<<<<<< HEAD
-            actividad.setNombreAct(actividades.get(0).getNombreAct());
-=======
-
+            /*actividad.setNombreAct(actividades.get(0).getNombreAct());
             actividad.setNombre("Futbol");
->>>>>>> c65273f1f6835a3fc175ee25fa2f53b497a94fcd
+
             actividad.setImg("/imagenes/futbol.jpg");
             actividades.add(actividad);
 
             actividad.setNombre("Basketball");
             actividad.setImg("/imagenes/basketball.jpg");
-            actividades.add(actividad);
+            actividades.add(actividad);*/
 
 
 
 
         }
 
-        return actividades;
+        return actividades1;
     }
 
     @Override
@@ -78,7 +90,7 @@ public class VistaEmpleadoController implements Initializable {
 
 
                 VentanaActividadController ventanaActividadController = fxmlLoader.getController();
-                ventanaActividadController.setData(actividades.get(i));
+                //ventanaActividadController.setData(actividades.get(i));
 
                 if (column == 2){
                     column =0;
