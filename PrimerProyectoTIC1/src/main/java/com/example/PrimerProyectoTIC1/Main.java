@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationContext;
@@ -15,6 +16,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 public class Main extends Application {
 
@@ -23,8 +25,8 @@ public class Main extends Application {
         //FXMLLoader fxmlLoader = new FXMLLoader();
         //fxmlLoader.setControllerFactory(PrimerProyectoTic1Application.getContext()::getBean);
         Parent root = FXMLLoader.load(Main.class.getResource("Main.fxml"));
+        stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/logo-fit.png"))));
         Scene scene = new Scene(root);
-        stage.setResizable(false);
         stage.setTitle("Login admin");
         stage.setScene(scene);
         stage.show();
