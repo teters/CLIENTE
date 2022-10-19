@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,18 +12,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="317.0" styleClass="actividad-fondo" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.VentanaActividadController">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="317.0" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.VentanaActividadController">
    <top>
-      <HBox prefHeight="202.0" prefWidth="330.0" styleClass="image" stylesheets="@../option.css" BorderPane.alignment="CENTER">
+      <HBox prefHeight="169.0" prefWidth="317.0" styleClass="image" stylesheets="@../option.css" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane prefHeight="202.0" prefWidth="331.0">
+            <AnchorPane prefHeight="183.0" prefWidth="317.0" styleClass="image" stylesheets="@../option.css">
                <children>
-                  <ImageView fx:id="imgAct" fitHeight="176.0" fitWidth="331.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                  <ImageView fx:id="imgAct" fitHeight="170.0" fitWidth="317.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
                      <image>
                         <Image url="@../../../../imagenes/futbol.jpg" />
                      </image>
                   </ImageView>
-                  <Label fx:id="nombreAct" alignment="CENTER" layoutX="112.0" layoutY="176.0" prefHeight="32.0" prefWidth="107.0" styleClass="title" stylesheets="@../option.css" text="Futbol">
+                  <Label fx:id="nombreAct" alignment="CENTER" layoutX="107.0" layoutY="129.0" prefHeight="32.0" prefWidth="107.0" styleClass="title" stylesheets="@../option.css" text="Futbol">
                      <font>
                         <Font name="Cambria Bold" size="31.0" />
                      </font>
@@ -33,11 +34,11 @@
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="300.0" prefWidth="116.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="209.0" prefWidth="116.0" BorderPane.alignment="CENTER">
          <children>
             <HBox prefHeight="53.0" prefWidth="116.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="116.0" text="Lugar:" textAlignment="JUSTIFY">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="116.0" text="Lugar:" textAlignment="JUSTIFY">
                      <font>
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
@@ -77,22 +78,20 @@
    <center>
       <AnchorPane prefHeight="276.0" prefWidth="214.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="ubicacionCentroDep" layoutX="6.0" layoutY="75.0" prefHeight="17.0" prefWidth="53.0" text="Label" />
-            <Label alignment="TOP_LEFT" layoutX="6.0" layoutY="165.0" lineSpacing="1.5" prefHeight="77.0" prefWidth="203.0" text="Label" textAlignment="JUSTIFY" wrapText="true" />
-            <SplitMenuButton fx:id="horarioAct" layoutX="-6.0" layoutY="121.0" mnemonicParsing="false" text="SplitMenuButton">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-            </SplitMenuButton>
-            <SplitMenuButton fx:id="centroDepAct" layoutX="-9.0" layoutY="20.0" mnemonicParsing="false" text="SplitMenuButton">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-              </items>
-            </SplitMenuButton>
+            <Label fx:id="ubicacionCentroDep" layoutX="6.0" layoutY="70.0" prefHeight="17.0" prefWidth="53.0" text="Label" />
+            <Label alignment="TOP_LEFT" layoutY="169.0" lineSpacing="1.5" prefHeight="64.0" prefWidth="197.0" text="Label" textAlignment="JUSTIFY" wrapText="true" />
+            <Button fx:id="reservar" layoutY="232.0" mnemonicParsing="false" onAction="#reserva" prefHeight="32.0" prefWidth="76.0" text="Reservar">
+               <font>
+                  <Font name="Corbel" size="15.0" />
+               </font>
+            </Button>
+            <ChoiceBox fx:id="centroDepAct" layoutX="1.0" layoutY="14.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="horarioAct" layoutX="1.0" layoutY="120.0" prefHeight="24.0" prefWidth="150.0" />
          </children>
       </AnchorPane>
    </center>
+   <styleClass>
+      <String fx:value="actividad-fondo" />
+      <String fx:value="shadow" />
+   </styleClass>
 </BorderPane>

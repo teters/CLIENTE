@@ -35,10 +35,18 @@ public class VistaEmpleadoController implements Initializable {
 
         for (int i=0;i<20;i++){
             actividad = new Actividad();
-            actividad.setNombreAct("Futbol");
 
-            //actividad.setImg("/imagenes/futbol.jpg");
+            actividad.setNombreAct("Futbol");
+            actividad.setImg("/imagenes/futbol.jpg");
             actividades.add(actividad);
+
+            actividad.setNombreAct("Basketball");
+            actividad.setImg("/imagenes/basketball.jpg");
+            actividades.add(actividad);
+
+
+
+
         }
 
         return actividades;
@@ -47,8 +55,11 @@ public class VistaEmpleadoController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         actividades.addAll(getData());
+        if (actividades.size() > 0){
+
+        }
         int column = 0;
-        int row = 0;
+        int row = 1;
         try{
             for (int i=0;i< actividades.size();i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
