@@ -1,6 +1,7 @@
 package com.example.PrimerProyectoTIC1.EmpleadoP;
 
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
+import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.example.PrimerProyectoTIC1.LoginController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +11,8 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import kong.unirest.GenericType;
+import kong.unirest.Unirest;
 
 import java.io.IOException;
 import java.net.URL;
@@ -30,13 +33,16 @@ public class VistaEmpleadoController implements Initializable {
     private Stage stage;
 
     private List<Actividad> getData(){
-        List<Actividad> actividades = new ArrayList<>();
+        List<Actividad> actividades= Unirest.get("http://localhost:8080/actividad/").
+                header("Content-Type","application/json").
+                asObject(new GenericType<List<Actividad>>(){}).getBody();
+
         Actividad actividad;
 
         for (int i=0;i<20;i++){
             actividad = new Actividad();
 
-            actividad.setNombreAct("Futbol");
+            actividad.setNombreAct(actividades.get(0).getNombreAct());
             actividad.setImg("/imagenes/futbol.jpg");
             actividades.add(actividad);
 
