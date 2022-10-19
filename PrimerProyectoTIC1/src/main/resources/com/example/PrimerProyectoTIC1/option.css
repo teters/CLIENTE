@@ -46,3 +46,7 @@
 .left-bar{
     -fx-background-color: #d3d3d3;
 }
+
+.button-shape{
+    -fx-background-radius: 50;
+}

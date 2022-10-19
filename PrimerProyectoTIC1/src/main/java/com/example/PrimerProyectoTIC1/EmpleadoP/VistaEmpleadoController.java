@@ -40,13 +40,17 @@ public class VistaEmpleadoController implements Initializable {
         Actividad actividad;
 
         for (int i=0;i<20;i++){
-            actividad = new Actividad();
 
+<<<<<<< HEAD
             actividad.setNombreAct(actividades.get(0).getNombreAct());
+=======
+
+            actividad.setNombre("Futbol");
+>>>>>>> c65273f1f6835a3fc175ee25fa2f53b497a94fcd
             actividad.setImg("/imagenes/futbol.jpg");
             actividades.add(actividad);
 
-            actividad.setNombreAct("Basketball");
+            actividad.setNombre("Basketball");
             actividad.setImg("/imagenes/basketball.jpg");
             actividades.add(actividad);
 
@@ -76,7 +80,7 @@ public class VistaEmpleadoController implements Initializable {
                 VentanaActividadController ventanaActividadController = fxmlLoader.getController();
                 ventanaActividadController.setData(actividades.get(i));
 
-                if (column == 3){
+                if (column == 2){
                     column =0;
                     row++;
                 }
