@@ -82,7 +82,7 @@ public class VentanaActividadController implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-     //   centroDepAct.setItems();
+        //centroDepAct.setItems();
     }
 
 

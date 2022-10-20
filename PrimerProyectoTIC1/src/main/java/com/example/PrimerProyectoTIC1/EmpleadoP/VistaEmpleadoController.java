@@ -19,10 +19,7 @@ import kong.unirest.Unirest;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class VistaEmpleadoController implements Initializable {
 
@@ -49,27 +46,11 @@ public class VistaEmpleadoController implements Initializable {
         }
 
 
-        for (int i = 0; i < actividades1.size(); i++) {
+        /*for (int i = 0; i < Objects.requireNonNull(actividades1).size(); i++) {
             VentanaActividadController ventanaActividadController=new VentanaActividadController();
             ventanaActividadController.setData(actividades1.get(i));
 
-        }
-
-        for (int i=0;i<20;i++){
-            /*actividad.setNombreAct(actividades.get(0).getNombreAct());
-            actividad.setNombre("Futbol");
-
-            actividad.setImg("/imagenes/futbol.jpg");
-            actividades.add(actividad);
-
-            actividad.setNombre("Basketball");
-            actividad.setImg("/imagenes/basketball.jpg");
-            actividades.add(actividad);*/
-
-
-
-
-        }
+        }*/
 
         return actividades1;
     }
@@ -77,9 +58,6 @@ public class VistaEmpleadoController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         actividades.addAll(getData());
-        if (actividades.size() > 0){
-
-        }
         int column = 0;
         int row = 1;
         try{
@@ -88,9 +66,9 @@ public class VistaEmpleadoController implements Initializable {
                 fxmlLoader.setLocation(VentanaActividadController.class.getResource("ventana-actividad.fxml"));
                 BorderPane borderPane = fxmlLoader.load();
 
+                VentanaActividadController ventana = fxmlLoader.getController();
+                ventana.setData(actividades.get(i));
 
-                VentanaActividadController ventanaActividadController = fxmlLoader.getController();
-                //ventanaActividadController.setData(actividades.get(i));
 
                 if (column == 2){
                     column =0;

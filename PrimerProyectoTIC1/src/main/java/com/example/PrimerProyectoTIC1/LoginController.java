@@ -62,7 +62,7 @@ public class LoginController {
         if (mail.equals(admin.getMail())  && passwordLogin.equals(admin.getContrasena()) ) {
             login = true;
             FXMLLoader loader = new FXMLLoader();
-            Parent root = loader.load(VistaEmpleadoController.class.getResource("vista-empleado.fxml"));
+            Parent root = loader.load(OptionPaneController.class.getResource("option-pane.fxml"));
             //Parent root = loader.load(getClass().getResource("option-pane.fxml"));
             Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
