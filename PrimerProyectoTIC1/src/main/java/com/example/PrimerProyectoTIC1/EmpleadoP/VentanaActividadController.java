@@ -51,6 +51,7 @@ public class VentanaActividadController implements Initializable {
 
     public void setData(String actividad){
         this.actividad = actividad;
+        this.nombreAct=new Label();
         nombreAct.setText(actividad);
 
 
