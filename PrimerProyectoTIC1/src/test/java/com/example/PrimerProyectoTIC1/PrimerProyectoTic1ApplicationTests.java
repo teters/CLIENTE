@@ -21,5 +21,11 @@ class PrimerProyectoTic1ApplicationTests {
 		List<String> centros=vent.nombreDeCentrosDeportivos("futbol");
 		assertEquals(2,centros.size());
 	}
+	@Test
+	void obtenerHorariosDeAct(){
+		VentanaActividadController vent=new VentanaActividadController();
+		List<String> horarios=vent.horariosDeActividad("hockey");
+		assertEquals(1,horarios.size());
+	}
 
 }
