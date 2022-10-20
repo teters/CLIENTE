@@ -3,6 +3,7 @@ package com.example.PrimerProyectoTIC1.EmpleadoP;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,10 +16,14 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import kong.unirest.GenericType;
+import kong.unirest.HttpResponse;
+import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.Base64;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -53,10 +58,6 @@ public class VentanaActividadController implements Initializable {
         this.actividad = actividad;
         this.nombreAct=new Label();
         nombreAct.setText(actividad);
-
-
-
-
     }
     public void reserva(ActionEvent event){
         String centroDep = centroDepAct.getValue();
@@ -66,7 +67,19 @@ public class VentanaActividadController implements Initializable {
             }
         }*/
     }
-
+    public List<String> nombreDeCentrosDeportivos(String nombredeactividad){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/"+nombredeactividad+"/centros").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        List<String> centros=null;
+        try {
+            String[] nombres=mapper.readValue(response.getBody().toString(),String[].class);
+            centros= Arrays.asList(nombres);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return centros;
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
      //   centroDepAct.setItems();
