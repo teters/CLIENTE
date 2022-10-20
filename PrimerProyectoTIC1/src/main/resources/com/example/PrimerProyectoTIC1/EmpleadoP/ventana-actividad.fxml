@@ -23,11 +23,7 @@
                         <Image url="@../../../../imagenes/futbol.jpg" />
                      </image>
                   </ImageView>
-                  <Label fx:id="nombreAct" alignment="CENTER" layoutX="107.0" layoutY="129.0" prefHeight="39.0" prefWidth="118.0" styleClass="title" stylesheets="@../option.css">
-                     <font>
-                        <Font name="Cambria Bold" size="31.0" />
-                     </font>
-                  </Label>
+                  <Label fx:id="nombreAct" layoutX="145.0" layoutY="138.0" text="Label" />
                </children>
             </AnchorPane>
          </children>
