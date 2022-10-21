@@ -76,6 +76,7 @@ public class LoginController {
             Parent root = loader.load(VistaEmpleadoController.class.getResource("vista-empleado.fxml"));
             Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
+            stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
         }

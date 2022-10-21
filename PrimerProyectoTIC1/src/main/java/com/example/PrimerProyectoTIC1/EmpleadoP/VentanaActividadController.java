@@ -60,8 +60,10 @@ public class VentanaActividadController {
         this.nombreAct=new Label();
         nombreAct.setText(actividad);
         System.out.println("hola");
-       /* ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad));
-        centroDepAct.setItems(centrosDeportivos);*/
+        ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad));
+        centroDepAct.setItems(centrosDeportivos);
+        this.ubicacionCentroDep = new Label();
+
 
     }
 
