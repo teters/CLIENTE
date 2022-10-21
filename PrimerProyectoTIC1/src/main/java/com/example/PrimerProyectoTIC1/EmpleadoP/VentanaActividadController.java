@@ -85,6 +85,20 @@ public class VentanaActividadController implements Initializable {
         }
         return centros;
     }
+    public List<String> horariosDeActividad(String nombredeact){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/"+nombredeact+"/horarios").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        List<String> horarios=null;
+        try {
+            String[] horariosArray=mapper.readValue(response.getBody().toString(),String[].class);
+            horarios= Arrays.asList(horariosArray);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return horarios;
+
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
