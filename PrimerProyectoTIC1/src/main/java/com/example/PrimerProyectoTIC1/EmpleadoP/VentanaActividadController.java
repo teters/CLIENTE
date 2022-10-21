@@ -98,8 +98,21 @@ public class VentanaActividadController {
             e.printStackTrace();
         }
         return horarios;
-
     }
+    public List<String> obtenerHorarioConNombreCentroYNombreActividad(String actividad,String centro){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/"+actividad+"/"+centro+"/horarios").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        List<String> horarios=null;
+        try {
+            String[] horariosArray=mapper.readValue(response.getBody().toString(),String[].class);
+            horarios= Arrays.asList(horariosArray);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return horarios;
+    }
+
 
 
 

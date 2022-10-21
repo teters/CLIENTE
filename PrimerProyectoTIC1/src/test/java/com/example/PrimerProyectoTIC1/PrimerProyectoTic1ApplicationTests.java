@@ -27,5 +27,11 @@ class PrimerProyectoTic1ApplicationTests {
 		List<String> horarios=vent.horariosDeActividad("hockey");
 		assertEquals(1,horarios.size());
 	}
+	@Test
+	void obtenerHorariosActividadConNombreCentro(){
+		VentanaActividadController vent=new VentanaActividadController();
+		List<String> horarios=vent.obtenerHorarioConNombreCentroYNombreActividad("hockey","Nautico");
+		assertEquals("10 horas",horarios.get(0));
+	}
 
 }
