@@ -69,7 +69,6 @@ public class VistaEmpleadoController implements Initializable {
                 VentanaActividadController ventana = fxmlLoader.getController();
                 ventana.setData(actividades.get(i));
 
-
                 if (column == 2){
                     column =0;
                     row++;

@@ -29,7 +29,7 @@ import java.util.Base64;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class VentanaActividadController implements Initializable {
+public class VentanaActividadController {
 
 
     @FXML
@@ -55,15 +55,16 @@ public class VentanaActividadController implements Initializable {
 
     private String actividad;
 
-
-
     public void setData(String actividad){
         this.actividad = actividad;
         this.nombreAct=new Label();
         nombreAct.setText(actividad);
+        System.out.println("hola");
        /* ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad));
         centroDepAct.setItems(centrosDeportivos);*/
+
     }
+
     public void reserva(ActionEvent event){
         String centroDep = centroDepAct.getValue();
         /*for (int i=0;i<listaCentroDep.size();i++){
@@ -99,10 +100,7 @@ public class VentanaActividadController implements Initializable {
         return horarios;
 
     }
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
 
-    }
 
 
 /*  byte[] decodedBytes = Base64.getDecoder().decode(actividad.getImg());
