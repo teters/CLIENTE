@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
@@ -12,24 +15,40 @@
       <AnchorPane prefHeight="356.0" prefWidth="452.0" styleClass="rest" stylesheets="@option.css" BorderPane.alignment="CENTER" />
    </center>
    <left>
-      <VBox prefHeight="400.0" prefWidth="169.0" styleClass="rest" stylesheets="@option.css" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="169.0" styleClass="btnColor" stylesheets="@option.css" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#crearEmpresaPane" prefHeight="29.0" prefWidth="169.0" styleClass="boton" stylesheets="@option.css" text="Crear empresa" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#crearEmpresaPane" prefHeight="56.0" prefWidth="167.0" stylesheets="@option.css" text="Crear empresa" textFill="WHITE">
                <font>
                   <Font name="Corbel" size="14.0" />
-               </font></Button>
-            <Button fx:id="empresaBtn" mnemonicParsing="false" onAction="#empresaPane" prefHeight="31.0" prefWidth="169.0" styleClass="boton" stylesheets="@option.css" text="Ver empresa" textFill="WHITE">
+               </font>
+               <styleClass>
+                  <String fx:value="azul" />
+                  <String fx:value="button" />
+               </styleClass></Button>
+            <Button fx:id="empresaBtn" mnemonicParsing="false" onAction="#empresaPane" prefHeight="56.0" prefWidth="167.0" stylesheets="@option.css" text="Ver empresa" textFill="WHITE">
                <font>
                   <Font size="14.0" />
-               </font></Button>
-            <Button mnemonicParsing="false" onAction="#crearCentroDepPane" prefHeight="31.0" prefWidth="173.0" styleClass="boton" stylesheets="@option.css" text="Crear centro deportivo" textFill="WHITE">
+               </font>
+               <styleClass>
+                  <String fx:value="azul" />
+                  <String fx:value="button" />
+               </styleClass></Button>
+            <Button mnemonicParsing="false" onAction="#crearCentroDepPane" prefHeight="56.0" prefWidth="167.0" stylesheets="@option.css" text="Crear centro deportivo" textFill="WHITE">
                <font>
                   <Font name="Corbel" size="14.0" />
-               </font></Button>
-            <Button fx:id="centroDepBtn" mnemonicParsing="false" onAction="#centroDepPane" prefHeight="30.0" prefWidth="171.0" styleClass="boton" stylesheets="@option.css" text="Ver centro deportivo" textFill="WHITE">
+               </font>
+               <styleClass>
+                  <String fx:value="azul" />
+                  <String fx:value="button" />
+               </styleClass></Button>
+            <Button fx:id="centroDepBtn" mnemonicParsing="false" onAction="#centroDepPane" prefHeight="56.0" prefWidth="167.0" stylesheets="@option.css" text="Ver centro deportivo" textFill="WHITE">
                <font>
                   <Font size="14.0" />
-               </font></Button>
+               </font>
+               <styleClass>
+                  <String fx:value="azul" />
+                  <String fx:value="button" />
+               </styleClass></Button>
          </children>
       </VBox>
    </left>
@@ -41,6 +60,11 @@
                   <Font name="Corbel Bold Italic" size="36.0" />
                </font>
             </Label>
+            <ImageView fitHeight="82.0" fitWidth="88.0" layoutX="405.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagenes/logo-fit.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </top>

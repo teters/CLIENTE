@@ -3,6 +3,10 @@
     -fx-border-color: #111111;
 }
 
+.azul{
+    -fx-background-color: #1479b0;
+}
+
 .top{
     -fx-background-color: #054c75;
     -fx-border-color: #111111;
@@ -49,4 +53,9 @@
 
 .button-shape{
     -fx-background-radius: 50;
+}
+
+.button:hover{
+    -fx-background-color: #116591;
+    -fx-cursor: hand;
 }

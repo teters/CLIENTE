@@ -4,6 +4,7 @@ import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,10 +55,14 @@ public class VentanaActividadController implements Initializable {
 
     private String actividad;
 
+
+
     public void setData(String actividad){
         this.actividad = actividad;
         this.nombreAct=new Label();
         nombreAct.setText(actividad);
+       /* ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad));
+        centroDepAct.setItems(centrosDeportivos);*/
     }
     public void reserva(ActionEvent event){
         String centroDep = centroDepAct.getValue();
@@ -82,7 +87,7 @@ public class VentanaActividadController implements Initializable {
     }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //centroDepAct.setItems();
+
     }
 
 

@@ -24,7 +24,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         //FXMLLoader fxmlLoader = new FXMLLoader();
         //fxmlLoader.setControllerFactory(PrimerProyectoTic1Application.getContext()::getBean);
-        Parent root = FXMLLoader.load(Main.class.getResource("Main.fxml"));
+        Parent root = FXMLLoader.load(Main.class.getResource("Login.fxml"));
         stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/logo-fit.png"))));
         Scene scene = new Scene(root);
         stage.setTitle("FITNESS APP");
