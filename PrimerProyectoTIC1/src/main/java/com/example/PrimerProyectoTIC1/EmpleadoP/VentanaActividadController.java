@@ -51,31 +51,37 @@ public class VentanaActividadController {
     private Label ubicacionCentroDep;
 
     @FXML
+    private Label precio;
+
+    @FXML
     private Button reservar;
 
     private String actividad;
 
+    public static final String CURRENCY = "$";
+
     public void setData(String actividad){
         this.actividad = actividad;
-        this.nombreAct=new Label();
+        //this.nombreAct=new Label();
         nombreAct.setText(actividad);
-        System.out.println("hola");
         ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad));
         centroDepAct.setItems(centrosDeportivos);
-        ObservableList<String> horarios = FXCollections.observableArrayList(obtenerHorarioConNombreCentroYNombreActividad(actividad, centroDepAct.getValue()));
+        ObservableList<String> horarios = FXCollections.observableArrayList(horariosDeActividad(actividad));
         horarioAct.setItems(horarios);
-        //this.ubicacionCentroDep = new Label();
+       /* for (int i = 0; i < horarios.size(); i++) {
+
+        }*/
+        this.ubicacionCentroDep = new Label();
+        //ubicacionCentroDep.setText();
+        this.precio = new Label();
+        precio.setText(VentanaActividadController.CURRENCY);
+
 
 
     }
 
     public void reserva(ActionEvent event){
-        String centroDep = centroDepAct.getValue();
-        /*for (int i=0;i<listaCentroDep.size();i++){
-            if (centroDep == listaCentroDep.get(i).getNombre()){
 
-            }
-        }*/
     }
     public List<String> nombreDeCentrosDeportivos(String nombredeactividad){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/"+nombredeactividad+"/centros").
@@ -103,6 +109,7 @@ public class VentanaActividadController {
         }
         return horarios;
     }
+
     public List<String> obtenerHorarioConNombreCentroYNombreActividad(String actividad,String centro){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/"+actividad+"/"+centro+"/horarios").
                 header("Content-Type","application/json").asJson();

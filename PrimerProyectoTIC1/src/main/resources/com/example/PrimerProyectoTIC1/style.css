@@ -37,3 +37,7 @@
 .background{
     -fx-background-color: rgba(132, 236, 134, 0.59);
 }
+
+.filter{
+    -fx-background-color: whitesmoke;
+}
