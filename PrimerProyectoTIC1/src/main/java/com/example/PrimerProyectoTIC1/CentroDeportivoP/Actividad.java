@@ -12,22 +12,22 @@ public class Actividad {
 
     private Float precio;
 
-    private String img;
+    //private String img;
 
-    private String centroDeportivoID;
+    private CentroDeportivo centroDeportivo;
 
     private Boolean reserva;
 
     private String tipoActividad;
 
-    public Actividad(Integer cupos, String nombre, Float precio, String img, String centroDeportivoID, Boolean reserva, String tipoActividad) {
+    public Actividad(Integer cupos, String nombre, Float precio,  CentroDeportivo centroDeportivo, Boolean reserva, String tipoActividad) {
         this.cupos = cupos;
         this.nombre = nombre;
         this.precio = precio;
-        this.img = img;
-        this.centroDeportivoID = centroDeportivoID;
+        //this.img = img;
+        this.centroDeportivo = centroDeportivo;
         this.reserva = reserva;
-        this.
+        this.tipoActividad=tipoActividad;
     }
 
     public Integer getCupos() {
@@ -54,20 +54,20 @@ public class Actividad {
         this.precio = precio;
     }
 
-    public String getImg() {
+    /*public String getImg() {
         return img;
-    }
+    }*/
 
-    public void setImg(String img) {
+    /*public void setImg(String img) {
         this.img = img;
+    }*/
+
+    public CentroDeportivo getCentroDeportivo() {
+        return centroDeportivo;
     }
 
-    public String getCentroDeportivoID() {
-        return centroDeportivoID;
-    }
-
-    public void setCentroDeportivoID(String centroDeportivoID) {
-        this.centroDeportivoID = centroDeportivoID;
+    public void setCentroDeportivo(CentroDeportivo centroDeportivo) {
+        this.centroDeportivo = centroDeportivo;
     }
 
     public Boolean getReserva() {

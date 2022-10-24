@@ -56,19 +56,19 @@ public class VentanaActividadController {
     @FXML
     private Button reservar;
 
-    private String actividad;
+    private Actividad actividad;
 
 
 
     public static final String CURRENCY = "$";
 
-    public void setData(String actividad){
+    public void setData( Actividad actividad){
         this.actividad = actividad;
-        nombreAct.setText(actividad);
-        ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad));
+        nombreAct.setText(actividad.getNombre());
+        ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad.getCentroDeportivo().getNombre()));
         //centroDepAct.setItems(centrosDeportivos);
-        ObservableList<String> horarios = FXCollections.observableArrayList(horariosDeActividad(actividad));
-        horarioAct.setItems(horarios);
+        //ObservableList<String> horarios = FXCollections.observableArrayList(horariosDeActividad(actividad.g));
+        //horarioAct.setItems(horarios);
 
 
         this.precio = new Label();

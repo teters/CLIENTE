@@ -29,18 +29,18 @@ public class VistaEmpleadoController implements Initializable {
     @FXML
     private GridPane grid;
 
-    private List<String> actividades = new ArrayList<>();
+    private List<Actividad> actividades = new ArrayList<>();
 
     private Stage stage;
 
-    private List<String> getData(){
+    public List<Actividad> getData(){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/todas").
                 header("Content-Type","application/json").asJson();
         ObjectMapper mapper=new ObjectMapper();
-        List<String> actividades1=null;
+        List<Actividad> actividades1=null;
         try {
-            String[] nombres=mapper.readValue(response.getBody().toString(),String[].class);
-            actividades1= Arrays.asList(nombres);
+            Actividad[] actividadsArray=mapper.readValue(response.getBody().toString(),Actividad[].class);
+            actividades1= Arrays.asList(actividadsArray);
         } catch (IOException e) {
             e.printStackTrace();
         }

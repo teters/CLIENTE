@@ -1,6 +1,8 @@
 package com.example.PrimerProyectoTIC1;
 
+import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
 import com.example.PrimerProyectoTIC1.EmpleadoP.VentanaActividadController;
+import com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -39,6 +41,12 @@ class PrimerProyectoTic1ApplicationTests {
 		List<String> centro=vent.obtenerCentrosAPartirDeUnHorariodeActividad("hockey","8 horas");
 		assertEquals(2,centro.size());
 		assertEquals("Nautico",centro.get(1));
+	}
+	@Test
+	void getData(){
+		VistaEmpleadoController vista=new VistaEmpleadoController();
+		List<Actividad> actividades=vista.getData();
+		assertEquals(actividades.get(0).getCentroDeportivo().getNombre(),"casa teter");
 	}
 
 }
