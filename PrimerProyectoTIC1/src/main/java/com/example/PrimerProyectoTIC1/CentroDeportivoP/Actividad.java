@@ -16,12 +16,18 @@ public class Actividad {
 
     private String centroDeportivoID;
 
-    public Actividad(Integer cupos, String nombre, Float precio, String img, String centroDeportivoID) {
+    private Boolean reserva;
+
+    private String tipoActividad;
+
+    public Actividad(Integer cupos, String nombre, Float precio, String img, String centroDeportivoID, Boolean reserva, String tipoActividad) {
         this.cupos = cupos;
         this.nombre = nombre;
         this.precio = precio;
         this.img = img;
         this.centroDeportivoID = centroDeportivoID;
+        this.reserva = reserva;
+        this.
     }
 
     public Integer getCupos() {
@@ -62,5 +68,13 @@ public class Actividad {
 
     public void setCentroDeportivoID(String centroDeportivoID) {
         this.centroDeportivoID = centroDeportivoID;
+    }
+
+    public Boolean getReserva() {
+        return reserva;
+    }
+
+    public void setReserva(Boolean reserva) {
+        this.reserva = reserva;
     }
 }

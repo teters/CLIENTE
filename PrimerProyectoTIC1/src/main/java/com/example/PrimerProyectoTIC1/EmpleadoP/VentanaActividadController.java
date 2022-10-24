@@ -44,11 +44,11 @@ public class VentanaActividadController {
     @FXML
     private ChoiceBox<String> horarioAct;
 
-    @FXML
+    /*@FXML
     private ChoiceBox<String> centroDepAct;
-
+*/
     @FXML
-    private Label ubicacionCentroDep;
+    private Label tipoAct;
 
     @FXML
     private Label precio;
@@ -58,24 +58,34 @@ public class VentanaActividadController {
 
     private String actividad;
 
+
+
     public static final String CURRENCY = "$";
 
     public void setData(String actividad){
         this.actividad = actividad;
-        //this.nombreAct=new Label();
         nombreAct.setText(actividad);
         ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad));
-        centroDepAct.setItems(centrosDeportivos);
+        //centroDepAct.setItems(centrosDeportivos);
         ObservableList<String> horarios = FXCollections.observableArrayList(horariosDeActividad(actividad));
         horarioAct.setItems(horarios);
-       /* for (int i = 0; i < horarios.size(); i++) {
 
-        }*/
-        this.ubicacionCentroDep = new Label();
-        //ubicacionCentroDep.setText();
+
         this.precio = new Label();
-        precio.setText(VentanaActividadController.CURRENCY);
-
+        precio.setText(VentanaActividadController.CURRENCY + "actividad.getPrecio()");
+        /*if (actividad.getReserva()==true){
+            Button reservar = new Button();
+            reservar.setText("Reservar");
+            reservar.setLayoutX(94);
+            reservar.setLayoutY(232);
+            reservar.setPrefWidth(76);
+            reservar.setPrefHeight(32);
+            reservar.setOnAction(this::reserva);
+            horarioAct.setItems(horariosDeActividad(actividad));
+        } else {
+            horarioAct.setValue("Libre horario");
+        }
+        */
 
 
     }
@@ -83,6 +93,7 @@ public class VentanaActividadController {
     public void reserva(ActionEvent event){
 
     }
+
     public List<String> nombreDeCentrosDeportivos(String nombredeactividad){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/"+nombredeactividad+"/centros").
                 header("Content-Type","application/json").asJson();
