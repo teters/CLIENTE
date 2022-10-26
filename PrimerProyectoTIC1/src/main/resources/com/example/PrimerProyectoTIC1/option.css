@@ -9,7 +9,6 @@
 
 .top{
     -fx-background-color: #054c75;
-    -fx-border-color: #111111;
 }
 
 .rest{
@@ -17,12 +16,11 @@
 }
 
 .boxShape{
-    -fx-background-radius: 0 0 0 0;
+    -fx-background-radius: 5;
 }
 
 .btnColor{
     -fx-background-color: #1479b0;
-    -fx-border-color: #111111;
 }
 
 .actividad-fondo{
