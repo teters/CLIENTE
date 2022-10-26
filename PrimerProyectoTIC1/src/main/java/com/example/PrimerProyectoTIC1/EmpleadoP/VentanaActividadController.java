@@ -62,7 +62,7 @@ public class VentanaActividadController {
 
     public static final String CURRENCY = "$";
 
-    public void setData( Actividad actividad){
+    public void setData(Actividad actividad){
         this.actividad = actividad;
         nombreAct.setText(actividad.getNombre());
         ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad.getCentroDeportivo().getNombre()));
