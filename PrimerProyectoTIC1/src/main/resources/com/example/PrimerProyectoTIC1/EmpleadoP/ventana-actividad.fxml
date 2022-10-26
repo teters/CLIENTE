@@ -23,7 +23,7 @@
                         <Image url="@../../../../imagenes/futbol.jpg" />
                      </image>
                   </ImageView>
-                  <Label fx:id="nombreAct" alignment="CENTER" layoutX="94.0" layoutY="134.0" prefHeight="34.0" prefWidth="129.0" styleClass="title" stylesheets="@../style.css" text="Label">
+                  <Label fx:id="nombreAct" alignment="CENTER" layoutX="11.0" layoutY="134.0" prefHeight="34.0" prefWidth="295.0" styleClass="title" stylesheets="@../style.css" text="Label">
                      <font>
                         <Font name="Corbel Bold" size="25.0" />
                      </font>
@@ -47,7 +47,7 @@
             </HBox>
             <HBox prefHeight="40.0" prefWidth="116.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="116.0" text="Tipo actividad:">
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="139.0" text="Tipo actividad:">
                      <font>
                         <Font name="Corbel Bold" size="16.0" />
                      </font>
@@ -56,23 +56,23 @@
             </HBox>
             <HBox prefHeight="40.0" prefWidth="116.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="116.0" text="Horario:">
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="137.0" text="Horario:">
                      <font>
                         <Font name="Corbel Bold" size="16.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox prefHeight="56.0" prefWidth="116.0">
+            <HBox prefHeight="60.0" prefWidth="130.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="116.0" text="Descripción:">
+                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="130.0" text="Descripción:">
                      <font>
                         <Font name="Corbel Bold" size="16.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox prefHeight="52.0" prefWidth="116.0">
+            <HBox prefHeight="38.0" prefWidth="130.0">
                <children>
                   <Label alignment="CENTER" prefHeight="47.0" prefWidth="116.0" text="Precio:">
                      <font>
@@ -108,7 +108,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="8.0" layoutY="11.0" prefHeight="20.0" prefWidth="159.0" text="Centro dep + ',' + ubicacion" />
+            <Label fx:id="centroDepYAct" layoutX="8.0" layoutY="11.0" prefHeight="20.0" prefWidth="159.0" text="Centro dep + ',' + ubicacion" />
          </children>
       </AnchorPane>
    </center>

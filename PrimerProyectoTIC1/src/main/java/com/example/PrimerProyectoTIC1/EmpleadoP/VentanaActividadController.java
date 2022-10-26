@@ -39,6 +39,9 @@ public class VentanaActividadController {
     private Label nombreAct;
 
     @FXML
+    private Label centroDepYAct;
+
+    @FXML
     private BorderPane borderPane;
 
     @FXML
@@ -65,8 +68,8 @@ public class VentanaActividadController {
     public void setData(Actividad actividad){
         this.actividad = actividad;
         nombreAct.setText(actividad.getNombre());
-        ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad.getCentroDeportivo().getNombre()));
-        //centroDepAct.setItems(centrosDeportivos);
+        //ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad.getCentroDeportivo().getNombre()));
+        centroDepYAct.setText(actividad.getCentroDeportivo() + "," + "" + actividad.getCentroDeportivo().getDireccion());
         //ObservableList<String> horarios = FXCollections.observableArrayList(horariosDeActividad(actividad.getHorario()));
         //horarioAct.setItems(horarios);
 
