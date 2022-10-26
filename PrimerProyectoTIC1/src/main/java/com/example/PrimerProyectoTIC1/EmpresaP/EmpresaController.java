@@ -1,6 +1,6 @@
 package com.example.PrimerProyectoTIC1.EmpresaP;
 
-import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo;
+import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
 import com.example.PrimerProyectoTIC1.OptionPaneController;
 import com.google.gson.Gson;
 import javafx.collections.FXCollections;

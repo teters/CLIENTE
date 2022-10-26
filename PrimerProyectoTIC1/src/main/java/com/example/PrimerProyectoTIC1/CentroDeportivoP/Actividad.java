@@ -4,7 +4,11 @@ import java.util.List;
 
 public class Actividad {
 
+    //private DateTime horario;
+    private Long id;
+
     private String horario;
+
 
     private Integer cupos;
 
@@ -12,26 +16,30 @@ public class Actividad {
 
     private Float precio;
 
-    private String img;
 
-    private String centroDeportivoID;
 
-    private CentroDeportivo centroDeportivo;
+    //private String img;
+
+
+
+
+
+    private CentroDeportivo1 centroDeportivo1;
 
     private Boolean reserva;
 
     private String tipoActividad;
 
-    public Actividad(String horario, Integer cupos, String nombre, Float precio, String img, String centroDeportivoID, CentroDeportivo centroDeportivo, Boolean reserva, String tipoActividad) {
-        this.horario = horario;
-        this.cupos = cupos;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.img = img;
-        this.centroDeportivoID = centroDeportivoID;
-        this.centroDeportivo = centroDeportivo;
-        this.reserva = reserva;
-        this.tipoActividad = tipoActividad;
+
+    public Actividad() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getHorario() {
@@ -41,6 +49,36 @@ public class Actividad {
     public void setHorario(String horario) {
         this.horario = horario;
     }
+
+    public CentroDeportivo1 getCentroDeportivo1() {
+        return centroDeportivo1;
+    }
+
+    public void setCentroDeportivo1(CentroDeportivo1 centroDeportivo1) {
+        this.centroDeportivo1 = centroDeportivo1;
+    }
+
+    public String getTipoActividad() {
+        return tipoActividad;
+    }
+
+    public void setTipoActividad(String tipoActividad) {
+        this.tipoActividad = tipoActividad;
+    }
+
+    public Actividad(Long actividadID, Integer cupos, String nombre, Float precio, String horario, CentroDeportivo1 centroDeportivo1, Boolean reserva, String tipoActividad) {
+        this.id = actividadID;
+        this.cupos = cupos;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.horario = horario;
+        this.centroDeportivo1 = centroDeportivo1;
+        this.reserva = reserva;
+        this.tipoActividad = tipoActividad;
+    }
+
+
+
 
     public Integer getCupos() {
         return cupos;
@@ -66,28 +104,14 @@ public class Actividad {
         this.precio = precio;
     }
 
-    public String getImg() {
-        return img;
+
+
+    public CentroDeportivo1 getCentroDeportivo() {
+        return centroDeportivo1;
     }
 
-    public void setImg(String img) {
-        this.img = img;
-    }
-
-    public String getCentroDeportivoID() {
-        return centroDeportivoID;
-    }
-
-    public void setCentroDeportivoID(String centroDeportivoID) {
-        this.centroDeportivoID = centroDeportivoID;
-    }
-
-    public CentroDeportivo getCentroDeportivo() {
-        return centroDeportivo;
-    }
-
-    public void setCentroDeportivo(CentroDeportivo centroDeportivo) {
-        this.centroDeportivo = centroDeportivo;
+    public void setCentroDeportivo(CentroDeportivo1 centroDeportivo) {
+        this.centroDeportivo1 = centroDeportivo;
     }
 
     public Boolean getReserva() {
@@ -98,12 +122,6 @@ public class Actividad {
         this.reserva = reserva;
     }
 
-    public String getTipoActividad() {
-        return tipoActividad;
-    }
 
-    public void setTipoActividad(String tipoActividad) {
-        this.tipoActividad = tipoActividad;
-    }
 }
 

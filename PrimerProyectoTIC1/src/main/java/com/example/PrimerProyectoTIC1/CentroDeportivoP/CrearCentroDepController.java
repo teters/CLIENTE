@@ -27,7 +27,7 @@ public class CrearCentroDepController {
 
 
     public void agregarCentroDeportivo(ActionEvent actionEvent) throws Exception{
-        CentroDeportivo centroDeportivo = new CentroDeportivo(nombreCentroDep.getText(),direccionCentroDep.getText());
+        CentroDeportivo1 centroDeportivo = new CentroDeportivo1(nombreCentroDep.getText(),direccionCentroDep.getText());
         Gson gson=new Gson();
         String body= gson.toJson(centroDeportivo);
         HttpResponse<kong.unirest.JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/centrodeportivo/agregarcentrodeportivo").header("Content-Type","application/json").body(new JsonNode(body)).asJson();
