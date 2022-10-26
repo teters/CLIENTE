@@ -7,21 +7,29 @@ public class Actividad {
     //private DateTime horario;
     private Long id;
 
+    private String horario;
+
+
     private Integer cupos;
 
     private String nombre;
 
     private Float precio;
 
-    private String horario;
+
 
     //private String img;
+
+
+
+
 
     private CentroDeportivo1 centroDeportivo1;
 
     private Boolean reserva;
 
     private String tipoActividad;
+
 
     public Actividad() {
     }
@@ -69,6 +77,9 @@ public class Actividad {
         this.tipoActividad = tipoActividad;
     }
 
+
+
+
     public Integer getCupos() {
         return cupos;
     }
@@ -93,13 +104,7 @@ public class Actividad {
         this.precio = precio;
     }
 
-    /*public String getImg() {
-        return img;
-    }*/
 
-    /*public void setImg(String img) {
-        this.img = img;
-    }*/
 
     public CentroDeportivo1 getCentroDeportivo() {
         return centroDeportivo1;
@@ -116,4 +121,7 @@ public class Actividad {
     public void setReserva(Boolean reserva) {
         this.reserva = reserva;
     }
+
+
 }
+

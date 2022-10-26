@@ -67,7 +67,7 @@ public class VentanaActividadController {
         nombreAct.setText(actividad.getNombre());
         ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad.getCentroDeportivo().getNombre()));
         //centroDepAct.setItems(centrosDeportivos);
-        //ObservableList<String> horarios = FXCollections.observableArrayList(horariosDeActividad(actividad.g));
+        //ObservableList<String> horarios = FXCollections.observableArrayList(horariosDeActividad(actividad.getHorario()));
         //horarioAct.setItems(horarios);
 
 
@@ -86,7 +86,6 @@ public class VentanaActividadController {
             horarioAct.setValue("Libre horario");
         }
         */
-
 
     }
 
