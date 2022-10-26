@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Actividad {
 
-    //private DateTime horario;
+    private String horario;
 
     private Integer cupos;
 
@@ -12,7 +12,9 @@ public class Actividad {
 
     private Float precio;
 
-    //private String img;
+    private String img;
+
+    private String centroDeportivoID;
 
     private CentroDeportivo centroDeportivo;
 
@@ -20,14 +22,24 @@ public class Actividad {
 
     private String tipoActividad;
 
-    public Actividad(Integer cupos, String nombre, Float precio,  CentroDeportivo centroDeportivo, Boolean reserva, String tipoActividad) {
+    public Actividad(String horario, Integer cupos, String nombre, Float precio, String img, String centroDeportivoID, CentroDeportivo centroDeportivo, Boolean reserva, String tipoActividad) {
+        this.horario = horario;
         this.cupos = cupos;
         this.nombre = nombre;
         this.precio = precio;
-        //this.img = img;
+        this.img = img;
+        this.centroDeportivoID = centroDeportivoID;
         this.centroDeportivo = centroDeportivo;
         this.reserva = reserva;
-        this.tipoActividad=tipoActividad;
+        this.tipoActividad = tipoActividad;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
     }
 
     public Integer getCupos() {
@@ -54,13 +66,21 @@ public class Actividad {
         this.precio = precio;
     }
 
-    /*public String getImg() {
+    public String getImg() {
         return img;
-    }*/
+    }
 
-    /*public void setImg(String img) {
+    public void setImg(String img) {
         this.img = img;
-    }*/
+    }
+
+    public String getCentroDeportivoID() {
+        return centroDeportivoID;
+    }
+
+    public void setCentroDeportivoID(String centroDeportivoID) {
+        this.centroDeportivoID = centroDeportivoID;
+    }
 
     public CentroDeportivo getCentroDeportivo() {
         return centroDeportivo;
@@ -77,4 +97,13 @@ public class Actividad {
     public void setReserva(Boolean reserva) {
         this.reserva = reserva;
     }
+
+    public String getTipoActividad() {
+        return tipoActividad;
+    }
+
+    public void setTipoActividad(String tipoActividad) {
+        this.tipoActividad = tipoActividad;
+    }
 }
+
