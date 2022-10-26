@@ -1,5 +1,7 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
 public class Actividad {
@@ -15,14 +17,19 @@ public class Actividad {
     private String nombre;
 
     private Float precio;
-
-
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    private List<String> horarios;
 
     //private String img;
 
 
+    public List<String> getHorarios() {
+        return horarios;
+    }
 
-
+    public void setHorarios(List<String> horarios) {
+        this.horarios = horarios;
+    }
 
     private CentroDeportivo1 centroDeportivo1;
 

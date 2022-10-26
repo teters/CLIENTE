@@ -69,7 +69,7 @@ public class VentanaActividadController {
 
 
         this.precio = new Label();
-        precio.setText(VentanaActividadController.CURRENCY + "actividad.getPrecio()");
+        precio.setText(VentanaActividadController.CURRENCY + actividad.getPrecio());
         /*if (actividad.getReserva()==true){
             Button reservar = new Button();
             reservar.setText("Reservar");
