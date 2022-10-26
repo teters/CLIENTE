@@ -41,7 +41,7 @@ public class VistaEmpleadoController implements Initializable {
         List<Actividad> actividades1=null;
         try {
             Actividad[] actividadsArray=mapper.readValue(response.getBody().toString(),Actividad[].class);
-            actividades1= Arrays.asList(actividadsArray);
+            actividades1=new ArrayList<>(Arrays.asList(actividadsArray)) ;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -50,11 +50,11 @@ public class VistaEmpleadoController implements Initializable {
             String nombre = actividades1.get(i).getNombre();
             CentroDeportivo1 centroDep = actividades1.get(i).getCentroDeportivo();
             horarios.add(actividades1.get(i).getHorario());
-            for (int j = i; j < actividades1.size(); j++) {
+            for (int j = i+1; j < actividades1.size(); j++) {
                 if (nombre.equals(actividades1.get(j).getNombre())){
                     if (centroDep.getDireccion().equals(actividades1.get(j).getCentroDeportivo().getDireccion())){
                         horarios.add(actividades1.get(j).getHorario());
-                        actividades1.remove(actividades1.get(j));
+                        actividades1.remove(j);
                     }
                 }
             }
