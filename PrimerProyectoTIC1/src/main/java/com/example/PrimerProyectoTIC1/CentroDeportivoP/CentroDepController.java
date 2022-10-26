@@ -22,27 +22,26 @@ import java.util.ResourceBundle;
 
 public class CentroDepController implements Initializable{
 
-    @Autowired
 
 
     @FXML
-    private TableView<CentroDeportivo> centroDepTabla;
+    private TableView<CentroDeportivo1> centroDepTabla;
 
     @FXML
-    private TableColumn<CentroDeportivo, String> colNombre;
+    private TableColumn<CentroDeportivo1, String> colNombre;
 
     @FXML
-    private TableColumn<CentroDeportivo,String> colDireccion;
+    private TableColumn<CentroDeportivo1,String> colDireccion;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        List<CentroDeportivo> items = Unirest.get("http://localhost:8080/empresa/listaDeCentrosDeportivos").
+        List<CentroDeportivo1> items = Unirest.get("http://localhost:8080/empresa/listaDeCentrosDeportivos").
                 header("Content-Type","application/json")
-                .asObject(new GenericType<List<CentroDeportivo>>(){})
+                .asObject(new GenericType<List<CentroDeportivo1>>(){})
                 .getBody();
 
-        ObservableList<CentroDeportivo> listaCentroDep = FXCollections.observableArrayList(items);
+        ObservableList<CentroDeportivo1> listaCentroDep = FXCollections.observableArrayList(items);
 
         colNombre.setCellValueFactory(new PropertyValueFactory<>("Nombre"));
         colDireccion.setCellValueFactory(new PropertyValueFactory<>("Direccion"));

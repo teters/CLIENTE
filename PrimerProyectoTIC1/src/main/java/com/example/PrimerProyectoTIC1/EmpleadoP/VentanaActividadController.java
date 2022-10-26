@@ -1,7 +1,7 @@
 package com.example.PrimerProyectoTIC1.EmpleadoP;
 
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
-import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo;
+import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
