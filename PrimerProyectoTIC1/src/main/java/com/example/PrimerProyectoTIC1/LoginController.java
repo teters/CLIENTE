@@ -44,21 +44,15 @@ public class LoginController {
     private Parent root;
 
     public void adminAceptado(ActionEvent e) throws IOException {
+        Empleado empleado=null;
+
         boolean login = false;
         Admin admin=new Admin("eduardo@correo.com","Eduardo");
         String mail = username.getText();
         String passwordLogin = password.getText();
-        Empleado empleado1=new Empleado(mail,passwordLogin);
+        User user=new User(mail,passwordLogin);
         Gson gson=new Gson();
-        String body= gson.toJson(empleado1);
-        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/empleado/iniciosesion").
-                header("Content-Type","application/json").
-                body(new JsonNode(body)).asJson();
-
-        com.fasterxml.jackson.databind.ObjectMapper mapper= new com.fasterxml.jackson.databind.ObjectMapper();
-        Empleado empleado=mapper.readValue(response.getBody().toString(),new TypeReference<Empleado>(){});
-        System.out.println(response.getBody().toString());
-
+        String body= gson.toJson(user);
         if (mail.equals(admin.getMail())  && passwordLogin.equals(admin.getContrasena()) ) {
             login = true;
             FXMLLoader loader = new FXMLLoader();
@@ -69,8 +63,23 @@ public class LoginController {
             stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
+            return;
         }
-        if (empleado.getMail().equals(mail) && empleado.getPassword().equals(passwordLogin)){
+        //VER SI ES UN BOSSCD
+
+
+        try{
+            HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/empleado/iniciosesion").
+                    header("Content-Type","application/json").
+                    body(new JsonNode(body)).asJson();
+            com.fasterxml.jackson.databind.ObjectMapper mapper= new com.fasterxml.jackson.databind.ObjectMapper();
+            empleado=mapper.readValue(response.getBody().toString(),new TypeReference<Empleado>(){});
+        }catch (NullPointerException n){
+
+        }
+
+
+        if (empleado!=null){
             login=true;
             FXMLLoader loader = new FXMLLoader();
             Parent root = loader.load(VistaEmpleadoController.class.getResource("vista-empleado.fxml"));
