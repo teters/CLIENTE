@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 public class CentroDepPaneController {
 
 
-    public void verTablasCentroDep(ActionEvent event) throws Exception {
+    public void eliminarActividad(ActionEvent event) throws Exception {
         FXMLLoader loader = new FXMLLoader();
         Parent root = loader.load(CentroDepController.class.getResource("centro-dep.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -19,9 +19,9 @@ public class CentroDepPaneController {
         stage.show();
     }
 
-    public void crearCentroDep(ActionEvent event) throws Exception {
+    public void crearActividades(ActionEvent event) throws Exception {
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(CrearCentroDepController.class.getResource("crear-centro-dep.fxml"));
+        Parent root = loader.load(CrearActividadController.class.getResource("crear-actividad.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

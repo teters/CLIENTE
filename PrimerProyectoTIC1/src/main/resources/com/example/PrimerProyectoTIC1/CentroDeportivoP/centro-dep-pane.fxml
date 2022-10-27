@@ -15,7 +15,7 @@
     <left>
         <VBox prefHeight="330.0" prefWidth="600.0" styleClass="rest" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
-                <Button mnemonicParsing="false" onAction="#crearCentroDep" prefHeight="80.0" prefWidth="600.0" stylesheets="@../option.css" text="Crear centro deportivo" textFill="WHITE">
+                <Button mnemonicParsing="false" onAction="#crearActividades" prefHeight="80.0" prefWidth="600.0" stylesheets="@../option.css" text="Crear actividad" textFill="WHITE">
                     <font>
                         <Font name="Corbel" size="14.0" />
                     </font>
@@ -23,7 +23,7 @@
                         <String fx:value="azul" />
                         <String fx:value="button" />
                     </styleClass></Button>
-                <Button mnemonicParsing="false" onAction="#verTablasCentroDep" prefHeight="80.0" prefWidth="600.0" stylesheets="@../option.css" text="Ver centro deportivo" textFill="WHITE">
+                <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="600.0" stylesheets="@../option.css" text="Eliminar actividad" textFill="WHITE">
                     <font>
                         <Font size="14.0" />
                     </font>
