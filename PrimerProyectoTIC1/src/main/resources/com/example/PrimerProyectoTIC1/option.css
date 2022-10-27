@@ -1,8 +1,3 @@
-.boton{
-    -fx-background-color: #1479b0;
-    -fx-border-color: #111111;
-}
-
 .azul{
     -fx-background-color: #1479b0;
 }
@@ -23,20 +18,6 @@
     -fx-background-color: #1479b0;
 }
 
-.actividad-fondo{
-    -fx-background-color: #FFFFFF;
-    -fx-background-radius: 30;
-}
-
-.title{
-    -fx-background-color: rgba(132, 236, 134, 0.59);
-    -fx-background-radius: 30;
-}
-
-.image{
-    -fx-border-radius: 30 30 0 0;
-}
-
 .shadow{
     -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0);
 }
@@ -45,11 +26,8 @@
     -fx-background-color: whitesmoke;
 }
 
-.left-bar{
-    -fx-background-color: #d3d3d3;
-}
 
-.button-shape{
+.round-shape{
     -fx-background-radius: 50;
 }
 
@@ -58,3 +36,7 @@
     -fx-cursor: hand;
 }
 
+.botones-centro-dep{
+    -fx-background-color: #66a5de;
+    -fx-background-radius: 30;
+}
