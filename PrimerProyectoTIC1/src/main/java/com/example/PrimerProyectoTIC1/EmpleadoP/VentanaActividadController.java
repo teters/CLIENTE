@@ -36,7 +36,7 @@ public class VentanaActividadController {
     private Label nombreAct;
 
     @FXML
-    private Label centroDepYAct;
+    private Label centroDepYLugar;
 
     @FXML
     private BorderPane borderPane;
@@ -47,6 +47,10 @@ public class VentanaActividadController {
     /*@FXML
     private ChoiceBox<String> centroDepAct;
 */
+
+    @FXML
+    private Label descripcion;
+
     @FXML
     private Label tipoAct;
 
@@ -66,14 +70,9 @@ public class VentanaActividadController {
         this.actividad = actividad;
         nombreAct.setText(actividad.getNombre());
         //ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad.getCentroDeportivo().getNombre()));
-        centroDepYAct.setText(actividad.getCentroDeportivo() + "," + "" + actividad.getCentroDeportivo().getDireccion());
-        //ObservableList<String> horarios = FXCollections.observableArrayList(horariosDeActividad(actividad.getHorario()));
-        //horarioAct.setItems(horarios);
-
-
-        this.precio = new Label();
+        centroDepYLugar.setText(actividad.getCentroDeportivo().getNombre() + "," + "" + actividad.getCentroDeportivo().getDireccion());
         precio.setText(VentanaActividadController.CURRENCY + actividad.getPrecio());
-        /*if (actividad.getReserva()==true){
+        if (actividad.getReserva()==true){
             Button reservar = new Button();
             reservar.setText("Reservar");
             reservar.setLayoutX(94);
@@ -81,16 +80,16 @@ public class VentanaActividadController {
             reservar.setPrefWidth(76);
             reservar.setPrefHeight(32);
             reservar.setOnAction(this::reserva);
-            horarioAct.setItems(horariosDeActividad(actividad));
+            ObservableList<String> horarios = FXCollections.observableArrayList(actividad.getHorarios());
+            horarioAct.setItems(horarios);
         } else {
             horarioAct.setValue("Libre horario");
         }
-        */
 
     }
 
     public void reserva(ActionEvent event){
-
+        //if (){}
     }
 
     public List<String> nombreDeCentrosDeportivos(String nombredeactividad){

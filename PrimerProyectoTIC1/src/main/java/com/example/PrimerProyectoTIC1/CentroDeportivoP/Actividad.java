@@ -17,6 +17,9 @@ public class Actividad {
     private String nombre;
 
     private Float precio;
+
+    //private String descripcion;
+
     @JsonIgnoreProperties(ignoreUnknown = true)
     private List<String> horarios;
 
