@@ -39,6 +39,7 @@ public class VistaEmpleadoController implements Initializable {
                 header("Content-Type","application/json").asJson();
         ObjectMapper mapper=new ObjectMapper();
         List<Actividad> actividades1=null;
+
         try {
             Actividad[] actividadsArray=mapper.readValue(response.getBody().toString(),Actividad[].class);
             actividades1=new ArrayList<>(Arrays.asList(actividadsArray)) ;

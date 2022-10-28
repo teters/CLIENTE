@@ -71,7 +71,7 @@
                      <children>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <DatePicker layoutY="30.0" prefHeight="25.0" prefWidth="202.0" />
+                              <DatePicker fx:id="fecha" layoutX="2.0" layoutY="30.0" prefHeight="25.0" prefWidth="200.0" promptText="AAAA-MM-DD" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -80,7 +80,7 @@
                      <children>
                         <AnchorPane prefHeight="85.0" prefWidth="136.0">
                            <children>
-                              <ChoiceBox layoutX="16.0" layoutY="30.0" prefHeight="25.0" prefWidth="127.0" stylesheets="@../option.css">
+                              <ChoiceBox fx:id="horarios" layoutX="16.0" layoutY="30.0" prefHeight="25.0" prefWidth="127.0" stylesheets="@../option.css">
                                  <styleClass>
                                     <String fx:value="rest" />
                                     <String fx:value="button" />
@@ -107,16 +107,16 @@
                      <children>
                         <AnchorPane prefHeight="83.0" prefWidth="226.0">
                            <children>
-                              <TextField layoutX="11.0" layoutY="29.0" prefHeight="25.0" prefWidth="224.0" promptText="Mail de empleado" />
+                              <TextField fx:id="mailDeEmp" layoutX="11.0" layoutY="29.0" prefHeight="25.0" prefWidth="224.0" promptText="Mail de empleado" />
                            </children>
                         </AnchorPane>
                      </children>
                   </VBox>
                </children>
             </HBox>
-            <Button layoutX="92.0" layoutY="286.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" />
-            <Button layoutX="339.0" layoutY="289.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" />
-            <Button layoutX="478.0" layoutY="289.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" />
+            <Button layoutX="106.0" layoutY="286.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" />
+            <Button layoutX="303.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" />
+            <Button layoutX="466.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" />
          </children>
       </AnchorPane>
    </right>

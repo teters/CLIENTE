@@ -31,7 +31,9 @@ public class EmpleadosEnCentrosController implements Initializable {
 
 
     public void setData(Actividad actividad){
-
+        for (int i = 0; i < listaActividades.size(); i++) {
+            if (actividad.equals(listaActividades.get(i))){}
+        }
 
 
     }
