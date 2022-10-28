@@ -37,7 +37,7 @@
                         <Font name="Corbel Bold Italic" size="18.0" />
                     </font>
                 </Label>
-                <Button layoutX="195.0" layoutY="229.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="60.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar">
+                <Button fx:id="altaActividad" layoutX="195.0" layoutY="229.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="60.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar">
                     <font>
                         <Font name="Corbel Bold" size="12.0" />
                     </font>

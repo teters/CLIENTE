@@ -23,14 +23,6 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class CrearActividadController {
-    public void altaActividad(Actividad actividad){
-        Gson gson=new Gson();
-        String body= gson.toJson(actividad);
-        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/empleado/iniciosesion").
-                header("Content-Type","application/json").
-                body(new JsonNode(body)).asJson();
-    }
-
     @FXML
     private TextField cuposActividad;
 
@@ -54,6 +46,14 @@ public class CrearActividadController {
 
     @FXML
     private Button salirBEmp;
+
+    public void altaActividad(Actividad actividad){
+        Gson gson=new Gson();
+        String body= gson.toJson(actividad);
+        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/empleado/iniciosesion").
+                header("Content-Type","application/json").
+                body(new JsonNode(body)).asJson();
+    }
 
     public void volverEmp(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader();
