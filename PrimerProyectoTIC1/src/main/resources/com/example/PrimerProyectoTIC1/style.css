@@ -34,6 +34,10 @@
     -fx-background-color: #d3d3d3;
 }
 
+.color{
+    -fx-background-color: #ad9742;
+}
+
 .background{
     -fx-background-color: rgba(132, 236, 134, 0.59);
 }

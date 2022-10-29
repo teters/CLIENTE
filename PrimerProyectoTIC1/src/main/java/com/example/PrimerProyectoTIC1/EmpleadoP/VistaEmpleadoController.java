@@ -49,11 +49,11 @@ public class VistaEmpleadoController implements Initializable {
         List<String> horarios = new ArrayList<>();
         for (int i = 0; i < actividades1.size(); i++) {
             String nombre = actividades1.get(i).getNombre();
-            CentroDeportivo1 centroDep = actividades1.get(i).getCentroDeportivo();
+            CentroDeportivo1 centroDep = actividades1.get(i).getCentroDeportivo1();
             horarios.add(actividades1.get(i).getHorario());
             for (int j = i+1; j < actividades1.size(); j++) {
                 if (nombre.equals(actividades1.get(j).getNombre())){
-                    if (centroDep.getDireccion().equals(actividades1.get(j).getCentroDeportivo().getDireccion())){
+                    if (centroDep.getDireccion().equals(actividades1.get(j).getCentroDeportivo1().getDireccion())){
                         horarios.add(actividades1.get(j).getHorario());
                         actividades1.remove(j);
                     }

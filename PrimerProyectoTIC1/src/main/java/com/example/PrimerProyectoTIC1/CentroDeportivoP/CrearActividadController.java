@@ -1,12 +1,78 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
+<<<<<<< HEAD
 import com.example.PrimerProyectoTIC1.Imagen;
 import com.fasterxml.jackson.databind.ObjectMapper;
+=======
+import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
+import com.example.PrimerProyectoTIC1.OptionPaneController;
+>>>>>>> 3d0911b72cb71b1b0d62ed53bc7a72c1dee185bf
 import com.google.gson.Gson;
-import kong.unirest.HttpResponse;
-import kong.unirest.JsonNode;
-import kong.unirest.Unirest;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import kong.unirest.*;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
+
+public class CrearActividadController implements Initializable{
+    @FXML
+    private TextField cuposActividad;
+
+    @FXML
+    private TextArea descripcionActividad;
+
+    @FXML
+    private ChoiceBox<String> fechaActividad;
+
+    @FXML
+    private TextField horariosActividad;
+
+    @FXML
+    private TextField nombreActividad;
+
+    @FXML
+    private TextField precioActividad;
+
+    @FXML
+    private TextField tipoActividad;
+
+    @FXML
+    private Button salirBEmp;
+
+    public void altaActividad(Actividad actividad) {
+
+
+        String cupos = cuposActividad.getText();
+        String descripcion = descripcionActividad.getText();
+        String fechaAct = fechaActividad.getValue();
+        String horarios = horariosActividad.getText();
+        String nombre = nombreActividad.getText();
+        String precio = precioActividad.getText();
+        String tipo = tipoActividad.getText();
+        Actividad actividad1 = new Actividad();
+        actividad1.setCupos(Integer.valueOf(cupos));
+        actividad1.setDescripcion(descripcion);
+        actividad1.setHorario(horarios);
+        //como hacemos con la fecha?
+        actividad1.setNombre(nombre);
+        actividad1.setPrecio(Float.valueOf(precio));
+        actividad1.setTipoActividad(tipo);
+        //Actividad actividad1 = new Actividad(cupos, descripcion, fechaAct, horarios, nombre, precio, tipo);
+
+<<<<<<< HEAD
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,6 +82,8 @@ import java.util.List;
 
 public class CrearActividadController {
     public void altaActividad(Actividad actividad){
+=======
+>>>>>>> 3d0911b72cb71b1b0d62ed53bc7a72c1dee185bf
         Gson gson=new Gson();
         String body= gson.toJson(actividad);
         HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/empleado/iniciosesion").
@@ -25,6 +93,34 @@ public class CrearActividadController {
     public void subirFotos(Actividad actividad){
 
 
+    }
+
+    public void volverEmp(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(CrearActividadController.class.getResource("crear-actividad.fxml"));
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void salirEmp(ActionEvent e){
+        Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+        alerta.setTitle("Salir");
+        alerta.setHeaderText("¿Estás seguro que quieres salir?");
+        if (alerta.showAndWait().get() == ButtonType.OK){
+            Stage stage = (Stage) salirBEmp.getScene().getWindow();
+            System.out.println("Has salido exitosamente.");
+            stage.close();
+        }
+
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ObservableList<String> fecha = FXCollections.observableArrayList("Lunes","Martes","Miercoles",
+                "Jueves", "Viernes","Sabado");
+        fechaActividad.setItems(fecha);
     }
 
 
