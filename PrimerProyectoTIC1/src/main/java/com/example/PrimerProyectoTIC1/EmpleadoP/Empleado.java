@@ -16,7 +16,7 @@ public class Empleado {
 
     }
 
-    public Empleado(Long id, String nombre, Long telefono, String mail, String password, Long saldo, String fechaVenc, Long empresaID) {
+    public Empleado(String nombre, Long telefono, String mail, String password, Long saldo, String fechaVenc, Long empresaID) {
         this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;
