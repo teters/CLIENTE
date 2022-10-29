@@ -2,6 +2,7 @@ package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import javax.persistence.Lob;
 import java.util.List;
 
 public class Actividad {
@@ -9,8 +10,9 @@ public class Actividad {
     //private DateTime horario;
     private Long id;
 
+    private CentroDeportivo1 centroDeportivo1;
     private String horario;
-
+    private String dia;
 
     private Integer cupos;
 
@@ -18,7 +20,12 @@ public class Actividad {
 
     private Float precio;
 
-    //private String descripcion;
+    @Lob
+    private String descripcion;
+
+    private Boolean reserva;
+
+    private String tipoActividad;
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     private List<String> horarios;
@@ -26,22 +33,30 @@ public class Actividad {
     //private String img;
 
 
+
+
+    public Actividad() {
+    }
+
+    public Actividad(Long actividadID, Integer cupos, String nombre, Float precio, String dia, String horario, CentroDeportivo1 centroDeportivo1, Boolean reserva, String tipoActividad, String descripcion) {
+        this.id = actividadID;
+        this.centroDeportivo1 = centroDeportivo1;
+        this.horario = horario;
+        this.cupos = cupos;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.descripcion=descripcion;
+        this.dia = dia;
+        this.reserva = reserva;
+        this.tipoActividad = tipoActividad;
+    }
+
     public List<String> getHorarios() {
         return horarios;
     }
 
     public void setHorarios(List<String> horarios) {
         this.horarios = horarios;
-    }
-
-    private CentroDeportivo1 centroDeportivo1;
-
-    private Boolean reserva;
-
-    private String tipoActividad;
-
-
-    public Actividad() {
     }
 
     public long getId() {
@@ -52,14 +67,6 @@ public class Actividad {
         this.id = id;
     }
 
-    public String getHorario() {
-        return horario;
-    }
-
-    public void setHorario(String horario) {
-        this.horario = horario;
-    }
-
     public CentroDeportivo1 getCentroDeportivo1() {
         return centroDeportivo1;
     }
@@ -68,27 +75,21 @@ public class Actividad {
         this.centroDeportivo1 = centroDeportivo1;
     }
 
-    public String getTipoActividad() {
-        return tipoActividad;
+    public String getHorario() {
+        return horario;
     }
 
-    public void setTipoActividad(String tipoActividad) {
-        this.tipoActividad = tipoActividad;
-    }
-
-    public Actividad(Long actividadID, Integer cupos, String nombre, Float precio, String horario, CentroDeportivo1 centroDeportivo1, Boolean reserva, String tipoActividad) {
-        this.id = actividadID;
-        this.cupos = cupos;
-        this.nombre = nombre;
-        this.precio = precio;
+    public void setHorario(String horario) {
         this.horario = horario;
-        this.centroDeportivo1 = centroDeportivo1;
-        this.reserva = reserva;
-        this.tipoActividad = tipoActividad;
     }
 
+    public String getDia() {
+        return dia;
+    }
 
-
+    public void setDia(String dia) {
+        this.dia = dia;
+    }
 
     public Integer getCupos() {
         return cupos;
@@ -114,14 +115,12 @@ public class Actividad {
         this.precio = precio;
     }
 
-
-
-    public CentroDeportivo1 getCentroDeportivo() {
-        return centroDeportivo1;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setCentroDeportivo(CentroDeportivo1 centroDeportivo) {
-        this.centroDeportivo1 = centroDeportivo;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public Boolean getReserva() {
@@ -132,6 +131,12 @@ public class Actividad {
         this.reserva = reserva;
     }
 
+    public String getTipoActividad() {
+        return tipoActividad;
+    }
 
+    public void setTipoActividad(String tipoActividad) {
+        this.tipoActividad = tipoActividad;
+    }
 }
 

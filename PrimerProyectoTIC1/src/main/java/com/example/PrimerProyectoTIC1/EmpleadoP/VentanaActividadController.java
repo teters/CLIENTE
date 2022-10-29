@@ -70,7 +70,7 @@ public class VentanaActividadController {
         this.actividad = actividad;
         nombreAct.setText(actividad.getNombre());
         //ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad.getCentroDeportivo().getNombre()));
-        centroDepYLugar.setText(actividad.getCentroDeportivo().getNombre() + "," + "" + actividad.getCentroDeportivo().getDireccion());
+        centroDepYLugar.setText(actividad.getCentroDeportivo1().getNombre() + "," + "" + actividad.getCentroDeportivo1().getDireccion());
         precio.setText(VentanaActividadController.CURRENCY + actividad.getPrecio());
         if (actividad.getReserva()==true){
             Button reservar = new Button();

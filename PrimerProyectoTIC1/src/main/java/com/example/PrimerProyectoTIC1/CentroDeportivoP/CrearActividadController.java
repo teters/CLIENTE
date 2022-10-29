@@ -22,7 +22,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class CrearActividadController {
+public class CrearActividadController implements Initializable{
     @FXML
     private TextField cuposActividad;
 
@@ -30,7 +30,7 @@ public class CrearActividadController {
     private TextArea descripcionActividad;
 
     @FXML
-    private DatePicker fechaActividad;
+    private ChoiceBox<String> fechaActividad;
 
     @FXML
     private TextField horariosActividad;
@@ -47,7 +47,26 @@ public class CrearActividadController {
     @FXML
     private Button salirBEmp;
 
-    public void altaActividad(Actividad actividad){
+    public void altaActividad(Actividad actividad) {
+
+
+        String cupos = cuposActividad.getText();
+        String descripcion = descripcionActividad.getText();
+        String fechaAct = fechaActividad.getValue();
+        String horarios = horariosActividad.getText();
+        String nombre = nombreActividad.getText();
+        String precio = precioActividad.getText();
+        String tipo = tipoActividad.getText();
+        Actividad actividad1 = new Actividad();
+        actividad1.setCupos(Integer.valueOf(cupos));
+        actividad1.setDescripcion(descripcion);
+        actividad1.setHorario(horarios);
+        //como hacemos con la fecha?
+        actividad1.setNombre(nombre);
+        actividad1.setPrecio(Float.valueOf(precio));
+        actividad1.setTipoActividad(tipo);
+        //Actividad actividad1 = new Actividad(cupos, descripcion, fechaAct, horarios, nombre, precio, tipo);
+
         Gson gson=new Gson();
         String body= gson.toJson(actividad);
         HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/empleado/iniciosesion").
@@ -74,6 +93,13 @@ public class CrearActividadController {
             stage.close();
         }
 
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ObservableList<String> fecha = FXCollections.observableArrayList("Lunes","Martes","Miercoles",
+                "Jueves", "Viernes","Sabado");
+        fechaActividad.setItems(fecha);
     }
 
 
