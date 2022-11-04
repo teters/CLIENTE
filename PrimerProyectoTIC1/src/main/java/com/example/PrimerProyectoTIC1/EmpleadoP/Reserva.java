@@ -2,24 +2,28 @@ package com.example.PrimerProyectoTIC1.EmpleadoP;
 
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
 
+import java.time.LocalDate;
+
 public class Reserva {
     private Long id;
     private Actividad actividad;
     private Empleado empleado;
-    private String fechaAct;
+    //private String fechaAct;
     private String horaAct;
     private String dia;
-    private String fechaReserva;
+    private LocalDate fechaReserva;
 
-    public Reserva(Actividad actividad, Empleado empleado, String fechaAct, String horaAct, String dia, String fechaReserva) {
+    public Reserva(Actividad actividad, Empleado empleado, String horaAct, String dia, LocalDate fechaReserva) {
         this.actividad = actividad;
         this.empleado = empleado;
-        this.fechaAct = fechaAct;
+        //this.fechaAct = fechaAct;
         this.horaAct = horaAct;
         this.dia = dia;
         this.fechaReserva = fechaReserva;
     }
 
+    public Reserva() {
+    }
 
     public Long getId() {
         return id;
@@ -33,9 +37,9 @@ public class Reserva {
         return empleado;
     }
 
-    public String getFechaAct() {
+    /*public String getFechaAct() {
         return fechaAct;
-    }
+    }*/
 
     public String getHoraAct() {
         return horaAct;
@@ -45,7 +49,7 @@ public class Reserva {
         return dia;
     }
 
-    public String getFechaReserva() {
+    public LocalDate getFechaReserva() {
         return fechaReserva;
     }
 
@@ -61,9 +65,9 @@ public class Reserva {
         this.empleado = empleado;
     }
 
-    public void setFechaAct(String fechaAct) {
+    /*public void setFechaAct(String fechaAct) {
         this.fechaAct = fechaAct;
-    }
+    }*/
 
     public void setHoraAct(String horaAct) {
         this.horaAct = horaAct;
@@ -73,7 +77,7 @@ public class Reserva {
         this.dia = dia;
     }
 
-    public void setFechaReserva(String fechaReserva) {
+    public void setFechaReserva(LocalDate fechaReserva) {
         this.fechaReserva = fechaReserva;
     }
 }

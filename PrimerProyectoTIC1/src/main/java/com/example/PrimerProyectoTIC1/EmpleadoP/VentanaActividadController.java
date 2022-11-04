@@ -4,7 +4,9 @@ import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.example.PrimerProyectoTIC1.Imagen;
+import com.example.PrimerProyectoTIC1.LoginController;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -25,10 +27,8 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.time.LocalDate;
+import java.util.*;
 
 public class VentanaActividadController {
 
@@ -96,9 +96,30 @@ public class VentanaActividadController {
     }
 
     public void reserva(ActionEvent event){
+        Reserva reserva=new Reserva();
+        reserva.setActividad(actividad);
+        reserva.setFechaReserva(LocalDate.now());
+        reserva.setDia(diaAct.getValue());
+        reserva.setHoraAct(horarioAct.getValue());
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/empleado/getEmpleadoInicio").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        Empleado empleado=null;
 
+        try {
+            empleado=mapper.readValue(response.getBody().toString(),Empleado.class);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        reserva.setEmpleado(empleado);
     }
-    public void altaActividad(Reserva reserva){
+    public void posteoReserva(Reserva reserva){
+        Gson gson=new Gson();
+        String body= gson.toJson(reserva);
+        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/reserva/").
+                header("Content-Type","application/json").
+                body(new JsonNode(body)).asJson();
 
     }
 

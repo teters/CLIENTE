@@ -42,9 +42,9 @@ public class LoginController {
     private Stage stage;
     private Scene scene;
     private Parent root;
-
+    private Empleado empleado;
     public void adminAceptado(ActionEvent e) throws IOException {
-        Empleado empleado=null;
+
 
         boolean login = false;
         Admin admin=new Admin("eduardo@correo.com","Eduardo");
