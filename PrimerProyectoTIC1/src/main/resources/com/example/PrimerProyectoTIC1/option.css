@@ -1,4 +1,9 @@
 .azul{
+  -fx-background-color: #1479b0;
+}
+
+.azul-sin-redondear{
+    -fx-background-radius: 0;
     -fx-background-color: #1479b0;
 }
 

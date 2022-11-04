@@ -36,18 +36,17 @@ public class EmpleadosEnCentrosController implements Initializable {
     }
 
     public void validar(ActionEvent event){
+        for (int i = 0; i < listaActividades.size(); i++) {
 
-
-
+        }
 
 
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-
-
-
+        ObservableList<String> list = null;
+        list.addAll("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo");
+        dias.setItems(list);
     }
 }
