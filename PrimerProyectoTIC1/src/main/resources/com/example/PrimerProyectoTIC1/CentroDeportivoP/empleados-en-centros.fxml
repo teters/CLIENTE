@@ -3,7 +3,6 @@
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -33,7 +32,7 @@
    <right>
       <AnchorPane prefHeight="343.0" prefWidth="660.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="95.0" prefWidth="678.0">
+            <HBox prefHeight="106.0" prefWidth="678.0">
                <children>
                   <VBox prefHeight="65.0" prefWidth="222.0">
                      <children>
@@ -56,43 +55,7 @@
                   </AnchorPane>
                </children>
             </HBox>
-            <HBox layoutY="99.0" prefHeight="85.0" prefWidth="678.0">
-               <children>
-                  <VBox prefHeight="95.0" prefWidth="243.0">
-                     <children>
-                        <Label prefHeight="121.0" prefWidth="290.0" text="Seleccione fecha y hora:" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="85.0" prefWidth="209.0">
-                     <children>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <DatePicker fx:id="fecha" layoutX="2.0" layoutY="30.0" prefHeight="25.0" prefWidth="200.0" promptText="AAAA-MM-DD" />
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </VBox>
-                  <VBox prefHeight="85.0" prefWidth="145.0">
-                     <children>
-                        <AnchorPane prefHeight="85.0" prefWidth="136.0">
-                           <children>
-                              <ChoiceBox fx:id="horarios" layoutX="16.0" layoutY="30.0" prefHeight="25.0" prefWidth="127.0" stylesheets="@../option.css">
-                                 <styleClass>
-                                    <String fx:value="rest" />
-                                    <String fx:value="button" />
-                                 </styleClass>
-                              </ChoiceBox>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </VBox>
-               </children>
-            </HBox>
-            <HBox layoutY="184.0" prefHeight="83.0" prefWidth="678.0">
+            <HBox layoutX="1.0" layoutY="172.0" prefHeight="96.0" prefWidth="678.0">
                <children>
                   <VBox prefHeight="83.0" prefWidth="362.0">
                      <children>
@@ -117,6 +80,29 @@
             <Button layoutX="106.0" layoutY="286.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" />
             <Button layoutX="303.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" />
             <Button layoutX="466.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" />
+            <HBox layoutX="1.0" layoutY="88.0" prefHeight="106.0" prefWidth="678.0">
+               <children>
+                  <VBox prefHeight="65.0" prefWidth="222.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="94.0" prefWidth="222.0" text="Seleccione un día:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <AnchorPane prefHeight="65.0" prefWidth="271.0">
+                     <children>
+                        <ChoiceBox fx:id="dias" layoutX="14.0" layoutY="32.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
+                           <styleClass>
+                              <String fx:value="button" />
+                              <String fx:value="rest" />
+                           </styleClass>
+                        </ChoiceBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
    </right>

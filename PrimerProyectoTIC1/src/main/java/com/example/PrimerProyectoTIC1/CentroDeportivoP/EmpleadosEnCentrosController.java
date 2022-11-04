@@ -19,10 +19,7 @@ public class EmpleadosEnCentrosController implements Initializable {
     private ChoiceBox<String> actividadesList;
 
     @FXML
-    private DatePicker fecha;
-
-    @FXML
-    private ChoiceBox<String> horarios;
+    private ChoiceBox<String> dias;
 
     @FXML
     private TextField mailDeEmp;

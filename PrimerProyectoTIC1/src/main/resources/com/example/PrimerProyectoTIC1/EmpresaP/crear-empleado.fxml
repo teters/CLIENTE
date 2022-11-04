@@ -4,45 +4,52 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpresaP.CrearEmpresaController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpresaP.CrearEmpleadoController">
     <top>
-        <AnchorPane prefHeight="106.0" prefWidth="600.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="97.0" prefWidth="639.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
                 <Label layoutX="213.0" layoutY="38.0" text="Fitness App" textFill="WHITE">
                     <font>
                         <Font name="Corbel Bold Italic" size="36.0" />
                     </font>
                 </Label>
+            <ImageView fitHeight="93.0" fitWidth="110.0" layoutX="452.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../imagenes/logo-fit.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
     </top>
    <left>
         <AnchorPane prefHeight="330.0" prefWidth="639.0" styleClass="azul" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
-                <Button layoutX="159.0" layoutY="261.0" mnemonicParsing="false" onAction="#agregarEmpresa" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
+                <Button layoutX="173.0" layoutY="261.0" mnemonicParsing="false" onAction="#agregarEmpleado" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
                     <font>
                         <Font name="Corbel Bold" size="14.0" />
                     </font>
                 </Button>
-                <Button layoutX="282.0" layoutY="261.0" mnemonicParsing="false" onAction="#volver" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Volver" textFill="WHITE">
+                <Button layoutX="291.0" layoutY="261.0" mnemonicParsing="false" onAction="#volver" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                     <font>
                         <Font name="Corbel Bold" size="14.0" />
                     </font>
                 </Button>
-                <Button fx:id="salirBCEmp" layoutX="394.0" layoutY="260.0" mnemonicParsing="false" onAction="#salir" prefHeight="29.0" prefWidth="55.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+                <Button fx:id="salirBCEmp" layoutX="407.0" layoutY="260.0" mnemonicParsing="false" onAction="#salir" prefHeight="29.0" prefWidth="55.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                     <font>
                         <Font name="Corbel Bold" size="14.0" />
                     </font>
                 </Button>
             <VBox layoutX="-1.0" prefHeight="221.0" prefWidth="639.0">
                <children>
-                  <HBox prefHeight="39.0" prefWidth="639.0">
+                  <HBox prefHeight="72.0" prefWidth="639.0">
                      <children>
                         <VBox prefHeight="60.0" prefWidth="106.0">
                            <children>
@@ -57,7 +64,7 @@
                            <children>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <TextField layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="145.0" promptText="Nombre" />
+                                    <TextField fx:id="nombre" layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="145.0" promptText="Nombre" />
                                  </children>
                               </AnchorPane>
                            </children>
@@ -76,18 +83,18 @@
                            <children>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <PasswordField layoutX="4.0" layoutY="2.0" />
+                                    <PasswordField fx:id="password" layoutX="4.0" layoutY="2.0" promptText="Contraseña" />
                                  </children>
                               </AnchorPane>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="39.0" prefWidth="639.0">
+                  <HBox prefHeight="68.0" prefWidth="639.0">
                      <children>
                         <VBox prefHeight="60.0" prefWidth="106.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="106.0" text="Telefono:" textFill="WHITE">
+                              <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="106.0" text="Telefono:" textFill="WHITE">
                                  <font>
                                     <Font name="Corbel Italic" size="19.0" />
                                  </font>
@@ -98,18 +105,37 @@
                            <children>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <TextField layoutX="1.0" layoutY="7.0" prefHeight="25.0" prefWidth="145.0" promptText="Telefono" />
+                                    <TextField fx:id="telefono" layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="145.0" promptText="Telefono" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="53.0" prefWidth="115.0" />
+                        <VBox prefHeight="53.0" prefWidth="64.0">
+                           <children>
+                              <Label prefHeight="29.0" prefWidth="100.0" text="Saldo:" textAlignment="RIGHT" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel Italic" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="39.0" prefWidth="156.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <PasswordField fx:id="saldo" layoutX="4.0" layoutY="2.0" promptText="Saldo" />
                                  </children>
                               </AnchorPane>
                            </children>
                         </VBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="39.0" prefWidth="639.0">
+                  <HBox prefHeight="66.0" prefWidth="639.0">
                      <children>
                         <VBox prefHeight="60.0" prefWidth="106.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="106.0" text="Mail:" textFill="WHITE">
+                              <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="106.0" text="Mail:" textFill="WHITE">
                                  <font>
                                     <Font name="Corbel Italic" size="19.0" />
                                  </font>
@@ -120,11 +146,45 @@
                            <children>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <TextField layoutX="1.0" layoutY="7.0" prefHeight="25.0" prefWidth="145.0" promptText="Mail" />
+                                    <TextField fx:id="mail" layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="145.0" promptText="Mail" />
                                  </children>
                               </AnchorPane>
                            </children>
                         </VBox>
+                        <VBox prefHeight="39.0" prefWidth="78.0" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="29.0" prefWidth="100.0" text="Vencimiento:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel Italic" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="39.0" prefWidth="156.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <PasswordField fx:id="fechaVenc" layoutX="4.0" layoutY="2.0" promptText="Vencimiento carnet salud" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="64.0" prefWidth="639.0">
+                     <children>
+                        <AnchorPane prefHeight="38.0" prefWidth="639.0">
+                           <children>
+                              <TextField fx:id="empresaID" layoutX="285.0" layoutY="14.0" promptText="ID de la empresa" />
+                              <Label layoutX="221.0" layoutY="18.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="134.0" layoutY="11.0" prefHeight="31.0" prefWidth="140.0" text="ID de la empresa:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel Italic" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
                      </children>
                   </HBox>
                </children>
