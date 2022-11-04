@@ -75,7 +75,6 @@ public class EmpleadosEnCentrosController implements Initializable {
         return reservas;
 
     }
-
     public void validar(ActionEvent event){
         for (int i = 0; i < listaActividades.size(); i++) {
 
