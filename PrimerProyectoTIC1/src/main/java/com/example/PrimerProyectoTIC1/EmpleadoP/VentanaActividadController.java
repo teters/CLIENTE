@@ -3,6 +3,7 @@ package com.example.PrimerProyectoTIC1.EmpleadoP;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
+import com.example.PrimerProyectoTIC1.Imagen;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -144,6 +145,21 @@ public class VentanaActividadController {
             e.printStackTrace();
         }
         return centro;
+    }
+    public void getFotos(String nombreAct){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/imagen/"+nombreAct).
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        List<Imagen> imagens=null;
+        try {
+            Imagen[] horariosArray=mapper.readValue(response.getBody().toString(),Imagen[].class);
+            imagens= Arrays.asList(horariosArray);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for (int i = 0; i < imagens.size(); i++) {
+            ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(imagens.get(i).getContent());
+        }
     }
 
 
