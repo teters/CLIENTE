@@ -113,6 +113,7 @@ public class VentanaActividadController {
             e.printStackTrace();
         }
         reserva.setEmpleado(empleado);
+        posteoReserva(reserva);
     }
     public void posteoReserva(Reserva reserva){
         Gson gson=new Gson();
