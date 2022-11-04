@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="695.0" styleClass="azul" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.ReservasEnCentrosController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="695.0" styleClass="azul" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.ReservasEnCentrosController">
     <top>
         <AnchorPane prefHeight="100.0" prefWidth="695.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
@@ -37,7 +37,7 @@
                             <children>
                                 <Label alignment="CENTER" prefHeight="94.0" prefWidth="222.0" text="Mostrar reservas:" textFill="WHITE">
                                     <font>
-                                        <Font name="System Bold" size="18.0" />
+                                        <Font name="Corbel Bold Italic" size="24.0" />
                                     </font>
                                 </Label>
                             </children>
@@ -60,16 +60,25 @@
                         <VBox prefHeight="83.0" prefWidth="236.0" />
                     </children>
                 </HBox>
-                <Button layoutX="106.0" layoutY="286.0" mnemonicParsing="false" onAction="#validar" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" />
-                <Button layoutX="303.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" />
-                <Button layoutX="466.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" />
+                <Button layoutX="106.0" layoutY="286.0" mnemonicParsing="false" onAction="#validar" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font></Button>
+                <Button layoutX="303.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font></Button>
+                <Button layoutX="466.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="14.0" />
+               </font></Button>
                 <HBox layoutX="1.0" layoutY="68.0" prefHeight="75.0" prefWidth="678.0">
                     <children>
                         <VBox prefHeight="65.0" prefWidth="222.0">
                             <children>
                                 <Label alignment="CENTER" prefHeight="94.0" prefWidth="222.0" text="Seleccione un día:" textFill="WHITE">
                                     <font>
-                                        <Font name="System Bold" size="18.0" />
+                                        <Font name="Corbel Bold Italic" size="24.0" />
                                     </font>
                                 </Label>
                             </children>
