@@ -6,78 +6,87 @@ import java.time.LocalDate;
 
 public class Reserva {
     private Long id;
-    private Actividad actividad;
-    private Empleado empleado;
-    //private String fechaAct;
-    private String horaAct;
-    private String dia;
-    private LocalDate fechaReserva;
 
-    public Reserva(Actividad actividad, Empleado empleado, String horaAct, String dia, LocalDate fechaReserva) {
-        this.actividad = actividad;
-        this.empleado = empleado;
-        //this.fechaAct = fechaAct;
-        this.horaAct = horaAct;
+    private Long empleadoId;
+
+    private Long actividadId;
+
+    private Long centroId;
+
+    private String dia;
+
+    private LocalDate fecha;
+
+    private String hora;
+
+
+    public Reserva(Long id, Long empleadoId, Long actividadId, Long centroId, String dia, LocalDate fecha, String hora) {
+        this.id = id;
+        this.empleadoId = empleadoId;
+        this.actividadId = actividadId;
+        this.centroId = centroId;
         this.dia = dia;
-        this.fechaReserva = fechaReserva;
+        this.fecha = fecha;
+        this.hora = hora;
     }
 
     public Reserva() {
     }
 
+
     public Long getId() {
         return id;
-    }
-
-    public Actividad getActividad() {
-        return actividad;
-    }
-
-    public Empleado getEmpleado() {
-        return empleado;
-    }
-
-    /*public String getFechaAct() {
-        return fechaAct;
-    }*/
-
-    public String getHoraAct() {
-        return horaAct;
-    }
-
-    public String getDia() {
-        return dia;
-    }
-
-    public LocalDate getFechaReserva() {
-        return fechaReserva;
     }
 
     public void setId(Long id) {
         this.id = id;
     }
 
-    public void setActividad(Actividad actividad) {
-        this.actividad = actividad;
+    public Long getEmpleadoId() {
+        return empleadoId;
     }
 
-    public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
+    public void setEmpleadoId(Long empleadoId) {
+        this.empleadoId = empleadoId;
     }
 
-    /*public void setFechaAct(String fechaAct) {
-        this.fechaAct = fechaAct;
-    }*/
+    public Long getActividadId() {
+        return actividadId;
+    }
 
-    public void setHoraAct(String horaAct) {
-        this.horaAct = horaAct;
+    public void setActividadId(Long actividadId) {
+        this.actividadId = actividadId;
+    }
+
+    public Long getCentroId() {
+        return centroId;
+    }
+
+    public void setCentroId(Long centroId) {
+        this.centroId = centroId;
+    }
+
+    public String getDia() {
+        return dia;
     }
 
     public void setDia(String dia) {
         this.dia = dia;
     }
 
-    public void setFechaReserva(LocalDate fechaReserva) {
-        this.fechaReserva = fechaReserva;
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public void setHora(String hora) {
+        this.hora = hora;
     }
 }

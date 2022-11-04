@@ -80,12 +80,7 @@ public class VentanaActividadController {
         centroDepYLugar.setText(actividad.getCentroDeportivo1().getNombre() + "," + "" + actividad.getCentroDeportivo1().getDireccion());
         precio.setText(VentanaActividadController.CURRENCY + actividad.getPrecio());
         if (actividad.getReserva()==true){
-            Button reservar = new Button();
-            reservar.setText("Reservar");
-            reservar.setLayoutX(94);
-            reservar.setLayoutY(232);
-            reservar.setPrefWidth(76);
-            reservar.setPrefHeight(32);
+            reservar.setVisible(true);
             reservar.setOnAction(this::reserva);
             ObservableList<String> horarios = FXCollections.observableArrayList(actividad.getHorarios());
             horarioAct.setItems(horarios);
@@ -97,10 +92,10 @@ public class VentanaActividadController {
 
     public void reserva(ActionEvent event){
         Reserva reserva=new Reserva();
-        reserva.setActividad(actividad);
-        reserva.setFechaReserva(LocalDate.now());
+        reserva.setActividadId(actividad.getId());
+        reserva.setFecha(LocalDate.now());
         reserva.setDia(diaAct.getValue());
-        reserva.setHoraAct(horarioAct.getValue());
+        reserva.setHora(horarioAct.getValue());
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/empleado/getEmpleadoInicio").
                 header("Content-Type","application/json").asJson();
         ObjectMapper mapper=new ObjectMapper();
@@ -112,7 +107,7 @@ public class VentanaActividadController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        reserva.setEmpleado(empleado);
+        reserva.setEmpleadoId(empleado.getId());
         posteoReserva(reserva);
 
     }
