@@ -95,6 +95,9 @@ public class VentanaActividadController {
     public void reserva(ActionEvent event){
         //if (){}
     }
+    public void altaActividad(Reserva reserva){
+
+    }
 
     public List<String> nombreDeCentrosDeportivos(String nombredeactividad){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/"+nombredeactividad+"/centros").

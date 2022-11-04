@@ -1,12 +1,12 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
-<<<<<<< HEAD
+
 import com.example.PrimerProyectoTIC1.Imagen;
 import com.fasterxml.jackson.databind.ObjectMapper;
-=======
+
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
 import com.example.PrimerProyectoTIC1.OptionPaneController;
->>>>>>> 3d0911b72cb71b1b0d62ed53bc7a72c1dee185bf
+
 import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
