@@ -19,7 +19,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import kong.unirest.*;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
@@ -159,6 +162,18 @@ public class VentanaActividadController {
         }
         for (int i = 0; i < imagens.size(); i++) {
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(imagens.get(i).getContent());
+            BufferedImage bImage2 = null;
+            try {
+                bImage2 = ImageIO.read(byteArrayInputStream);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                String string=String.valueOf(i);
+                ImageIO.write(bImage2, "jpg", new File(nombreAct+string+".jpg") );
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
