@@ -61,6 +61,10 @@ public class Actividad {
         this.tipoActividad = tipoActividad;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public List<String> getHorarios() {
         return horarios;
     }

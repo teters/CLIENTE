@@ -74,7 +74,7 @@ public class LoginController {
                     body(new JsonNode(body)).asJson();
             com.fasterxml.jackson.databind.ObjectMapper mapper= new com.fasterxml.jackson.databind.ObjectMapper();
             String bod=response.getBody().toString();
-            managerCD=mapper.readValue(response.getBody().toString(),new TypeReference<Empleado>(){});
+            managerCD=mapper.readValue(response.getBody().toString(),new TypeReference<BossCD1>(){});
         }catch (NotActiveException n){
 
         }

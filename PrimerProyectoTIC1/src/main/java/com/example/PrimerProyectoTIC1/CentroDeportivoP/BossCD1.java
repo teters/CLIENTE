@@ -6,7 +6,7 @@ public class BossCD1 {
     private String password;
     private Long telefono;
     private String nombre;
-
+    private Long id;
     public BossCD1(CentroDeportivo1 centroDepor, String mail, String password, Long telefono, String nombre) {
         this.centroDepor = centroDepor;
         this.mail = mail;
@@ -15,6 +15,13 @@ public class BossCD1 {
         this.nombre = nombre;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getNombre() {
         return nombre;
