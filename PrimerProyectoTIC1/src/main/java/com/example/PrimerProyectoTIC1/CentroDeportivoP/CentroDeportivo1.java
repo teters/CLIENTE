@@ -1,5 +1,7 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
+import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,11 +12,20 @@ public class CentroDeportivo1 {
 
     private String direccion;
 
-    //private List<Actividad> actividads;
+    private List<Actividad> actividads;
+
+    private List<Reserva> Reservas;
 
     public CentroDeportivo1() {
     }
 
+    public CentroDeportivo1(Long id, String nombre, String direccion, List<Actividad> actividads, List<Reserva> reservas) {
+        this.id = id;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.actividads = actividads;
+        Reservas = reservas;
+    }
 
     public CentroDeportivo1(String nombre, String direccion) {
         this.nombre = nombre;
@@ -52,11 +63,19 @@ public class CentroDeportivo1 {
         this.direccion = direccion;
     }
 
-    /*public List<Actividad> getActividads() {
+    public List<Actividad> getActividads() {
         return actividads;
     }
 
     public void setActividads(List<Actividad> actividads) {
         this.actividads = actividads;
-    }*/
+    }
+
+    public List<Reserva> getReservas() {
+        return Reservas;
+    }
+
+    public void setReservas(List<Reserva> reservas) {
+        Reservas = reservas;
+    }
 }

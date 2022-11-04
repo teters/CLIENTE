@@ -5,12 +5,23 @@ public class BossCD1 {
     private String mail;
     private String password;
     private Long telefono;
+    private String nombre;
 
-    public BossCD1(CentroDeportivo1 centroDepor, String mail, String password, Long telefono) {
+    public BossCD1(CentroDeportivo1 centroDepor, String mail, String password, Long telefono, String nombre) {
         this.centroDepor = centroDepor;
         this.mail = mail;
         this.password = password;
         this.telefono = telefono;
+        this.nombre = nombre;
+    }
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public BossCD1() {

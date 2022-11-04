@@ -46,7 +46,7 @@ class PrimerProyectoTic1ApplicationTests {
 	void getData(){
 		VistaEmpleadoController vista=new VistaEmpleadoController();
 		List<Actividad> actividades=vista.getData();
-		assertEquals(actividades.get(0).getCentroDeportivo().getNombre(),"casa teter");
+		assertEquals(actividades.get(0).getCentroDeportivo1().getNombre(),"casa teter");
 	}
 
 }

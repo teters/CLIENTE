@@ -1,5 +1,6 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
+import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.Lob;
@@ -8,6 +9,7 @@ import java.util.List;
 public class Actividad {
 
     //private DateTime horario;
+    private List<Reserva> Reservas;
     private Long id;
 
     private CentroDeportivo1 centroDeportivo1;
@@ -20,7 +22,7 @@ public class Actividad {
 
     private Float precio;
 
-    @Lob
+
     private String descripcion;
 
     private Boolean reserva;
@@ -36,6 +38,14 @@ public class Actividad {
 
 
     public Actividad() {
+    }
+
+    public List<Reserva> getReservas() {
+        return Reservas;
+    }
+
+    public void setReservas(List<Reserva> reservas) {
+        Reservas = reservas;
     }
 
     public Actividad(Long actividadID, Integer cupos, String nombre, Float precio, String dia, String horario, CentroDeportivo1 centroDeportivo1, Boolean reserva, String tipoActividad, String descripcion) {

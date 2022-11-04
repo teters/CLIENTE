@@ -19,6 +19,7 @@ import kong.unirest.*;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.io.NotActiveException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -72,8 +73,9 @@ public class LoginController {
                     header("Content-Type","application/json").
                     body(new JsonNode(body)).asJson();
             com.fasterxml.jackson.databind.ObjectMapper mapper= new com.fasterxml.jackson.databind.ObjectMapper();
-            managerCD=mapper.readValue(response.getBody().toString(),new TypeReference<BossCD1>(){});
-        }catch (Exception n){
+            String bod=response.getBody().toString();
+            managerCD=mapper.readValue(response.getBody().toString(),new TypeReference<Empleado>(){});
+        }catch (NotActiveException n){
 
         }
         if(managerCD!=null){
@@ -94,8 +96,9 @@ public class LoginController {
                     header("Content-Type","application/json").
                     body(new JsonNode(body)).asJson();
             com.fasterxml.jackson.databind.ObjectMapper mapper= new com.fasterxml.jackson.databind.ObjectMapper();
+            String bod=response.getBody().toString();
             empleado=mapper.readValue(response.getBody().toString(),new TypeReference<Empleado>(){});
-        }catch (NullPointerException n){
+        }catch (Exception n){
 
         }
 

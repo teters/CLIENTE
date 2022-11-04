@@ -67,9 +67,35 @@ public class EmpleadosEnCentrosController implements Initializable {
         return reservas;
 
     }
+    public CentroDeportivo1 obtenerCentroDelManager(){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/reserva/managercentrodep/centroDelManagerLoggeado").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        CentroDeportivo1 centro=null;
+        try {
+            centro=mapper.readValue(response.getBody().toString(),CentroDeportivo1.class);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return centro;
+
+    }
+
     public void validar(ActionEvent event){
-        for (int i = 0; i < obtenerActividadesConCentro(algo).size(); i++) {
+        /*for (int i = 0; i < obtenerActividadesConCentro(obtenerCentroDelManager()).size(); i++) {
             if (){}
+        }*/
+        boolean seHizo=false;
+        List<Reserva> reservas=obtenerReservasConMail(mailDeEmp.getText());
+        for (int i = 0; i < reservas.size(); i++) {
+            if(dias.getValue().equals(reservas.get(i).getDia())){
+                validarReserva.setVisible(false);
+                seHizo=true;
+            }
+        }
+        if(!seHizo){
+            esValida.setText("No hay ninguna reserva del usuario ingresado para ese dia");
         }
 
         esValida.setText("Reserva valida");
@@ -85,11 +111,11 @@ public class EmpleadosEnCentrosController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList<String> list = null;
-        list.addAll("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo");
+        list.addAll("lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo");
         dias.setItems(list);
         ObservableList<String> actividadesCD = null;
-        for (int i = 0; i < obtenerActividadesConCentro().size(); i++) {
-            actividadesCD.add(obtenerActividadesConCentro().get(i).getNombre());
+        for (int i = 0; i < obtenerActividadesConCentro(obtenerCentroDelManager()).size(); i++) {
+            actividadesCD.add(obtenerActividadesConCentro(obtenerCentroDelManager()).get(i).getNombre());
         }
         actividadesList.setItems(actividadesCD);
     }
