@@ -7,6 +7,13 @@
     -fx-background-color: #1479b0;
 }
 
+.azul-sin-redondear-borde{
+    -fx-background-radius: 0;
+    -fx-border-color: #111111;
+    -fx-background-color: #66a5de;
+}
+
+
 .top{
     -fx-background-color: #054c75;
 }

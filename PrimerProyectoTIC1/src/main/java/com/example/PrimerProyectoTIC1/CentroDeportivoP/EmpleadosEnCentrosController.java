@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
@@ -30,6 +31,11 @@ public class EmpleadosEnCentrosController implements Initializable {
 
     @FXML
     private TextField mailDeEmp;
+
+
+    @FXML
+    private Label esValida;
+
 
     List<String> listaActividades = new ArrayList<>();
 
@@ -75,7 +81,7 @@ public class EmpleadosEnCentrosController implements Initializable {
 
         }
 
-
+        esValida.setText("Reserva valida");
     }
 
     @Override

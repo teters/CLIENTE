@@ -114,6 +114,7 @@ public class VentanaActividadController {
         }
         reserva.setEmpleado(empleado);
         posteoReserva(reserva);
+
     }
     public void posteoReserva(Reserva reserva){
         Gson gson=new Gson();

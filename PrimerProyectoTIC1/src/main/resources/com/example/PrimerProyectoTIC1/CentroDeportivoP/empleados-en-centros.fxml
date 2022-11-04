@@ -30,9 +30,9 @@
          </children></AnchorPane>
    </top>
    <right>
-      <AnchorPane prefHeight="343.0" prefWidth="660.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="343.0" prefWidth="652.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="106.0" prefWidth="678.0">
+            <HBox layoutX="1.0" layoutY="-7.0" prefHeight="75.0" prefWidth="678.0">
                <children>
                   <VBox prefHeight="65.0" prefWidth="222.0">
                      <children>
@@ -45,7 +45,7 @@
                   </VBox>
                   <AnchorPane prefHeight="65.0" prefWidth="271.0">
                      <children>
-                        <ChoiceBox fx:id="actividadesList" layoutX="14.0" layoutY="32.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
+                        <ChoiceBox fx:id="actividadesList" layoutX="14.0" layoutY="25.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
                            <styleClass>
                               <String fx:value="button" />
                               <String fx:value="rest" />
@@ -55,7 +55,7 @@
                   </AnchorPane>
                </children>
             </HBox>
-            <HBox layoutX="1.0" layoutY="172.0" prefHeight="96.0" prefWidth="678.0">
+            <HBox layoutX="1.0" layoutY="143.0" prefHeight="74.0" prefWidth="678.0">
                <children>
                   <VBox prefHeight="83.0" prefWidth="362.0">
                      <children>
@@ -70,7 +70,7 @@
                      <children>
                         <AnchorPane prefHeight="83.0" prefWidth="226.0">
                            <children>
-                              <TextField fx:id="mailDeEmp" layoutX="11.0" layoutY="29.0" prefHeight="25.0" prefWidth="224.0" promptText="Mail de empleado" />
+                              <TextField fx:id="mailDeEmp" layoutX="6.0" layoutY="23.0" prefHeight="25.0" prefWidth="224.0" promptText="Mail de empleado" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -80,7 +80,7 @@
             <Button layoutX="106.0" layoutY="286.0" mnemonicParsing="false" onAction="#validar" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" />
             <Button layoutX="303.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" />
             <Button layoutX="466.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" />
-            <HBox layoutX="1.0" layoutY="88.0" prefHeight="106.0" prefWidth="678.0">
+            <HBox layoutX="1.0" layoutY="68.0" prefHeight="75.0" prefWidth="678.0">
                <children>
                   <VBox prefHeight="65.0" prefWidth="222.0">
                      <children>
@@ -93,7 +93,7 @@
                   </VBox>
                   <AnchorPane prefHeight="65.0" prefWidth="271.0">
                      <children>
-                        <ChoiceBox fx:id="dias" layoutX="14.0" layoutY="32.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
+                        <ChoiceBox fx:id="dias" layoutX="14.0" layoutY="25.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
                            <styleClass>
                               <String fx:value="button" />
                               <String fx:value="rest" />
@@ -103,6 +103,11 @@
                   </AnchorPane>
                </children>
             </HBox>
+            <Label fx:id="esValida" alignment="CENTER" layoutX="40.0" layoutY="224.0" prefHeight="27.0" prefWidth="553.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="23.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </right>
