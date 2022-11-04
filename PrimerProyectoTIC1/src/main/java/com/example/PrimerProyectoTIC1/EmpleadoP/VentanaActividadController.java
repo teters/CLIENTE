@@ -46,6 +46,9 @@ public class VentanaActividadController {
     private BorderPane borderPane;
 
     @FXML
+    private ChoiceBox<String> diaAct;
+
+    @FXML
     private ChoiceBox<String> horarioAct;
 
     /*@FXML
@@ -93,7 +96,7 @@ public class VentanaActividadController {
     }
 
     public void reserva(ActionEvent event){
-        //if (){}
+
     }
     public void altaActividad(Reserva reserva){
 
