@@ -1,6 +1,7 @@
 package com.example.PrimerProyectoTIC1;
 
 import com.example.PrimerProyectoTIC1.AdminP.Admin;
+import com.example.PrimerProyectoTIC1.CentroDeportivoP.BossCD1;
 import com.example.PrimerProyectoTIC1.EmpleadoP.Empleado;
 import com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
@@ -44,7 +45,7 @@ public class LoginController {
     private Parent root;
     private Empleado empleado;
     public void adminAceptado(ActionEvent e) throws IOException {
-
+        BossCD1 managerCD=null;
 
         boolean login = false;
         Admin admin=new Admin("eduardo@correo.com","Eduardo");
@@ -66,6 +67,26 @@ public class LoginController {
             return;
         }
         //VER SI ES UN BOSSCD
+        try{
+            HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/managercentrodep/iniciosesion").
+                    header("Content-Type","application/json").
+                    body(new JsonNode(body)).asJson();
+            com.fasterxml.jackson.databind.ObjectMapper mapper= new com.fasterxml.jackson.databind.ObjectMapper();
+            managerCD=mapper.readValue(response.getBody().toString(),new TypeReference<BossCD1>(){});
+        }catch (Exception n){
+
+        }
+        if(managerCD!=null){
+            login=true;
+            FXMLLoader loader = new FXMLLoader();
+            Parent root = loader.load(VistaEmpleadoController.class.getResource("centro-dep-pane.fxml"));
+            Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+
+        }
 
 
         try{

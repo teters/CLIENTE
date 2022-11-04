@@ -1,5 +1,6 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
+import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -51,6 +52,20 @@ public class EmpleadosEnCentrosController implements Initializable {
             e.printStackTrace();
         }
         return actividades;
+    }
+    public List<Reserva> obtenerReservasConMail(String mail){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/reservas/"+mail+"/").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        List<Reserva> reservas=null;
+        try {
+            Reserva[] reservasarray=mapper.readValue(response.getBody().toString(),Reserva[].class);
+            reservas= Arrays.asList(reservasarray);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return reservas;
+
     }
 
     public void validar(ActionEvent event){
