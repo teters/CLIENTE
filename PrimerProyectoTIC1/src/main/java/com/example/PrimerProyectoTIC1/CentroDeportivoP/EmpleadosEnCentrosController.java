@@ -1,17 +1,14 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
-
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
@@ -31,6 +28,8 @@ public class EmpleadosEnCentrosController implements Initializable {
     @FXML
     private TextField mailDeEmp;
 
+    @FXML
+    private Button validarReserva;
 
     @FXML
     private Label esValida;
@@ -39,13 +38,7 @@ public class EmpleadosEnCentrosController implements Initializable {
     List<String> listaActividades = new ArrayList<>();
 
 
-    public void setData(Actividad actividad){
-        for (int i = 0; i < listaActividades.size(); i++) {
-            if (actividad.equals(listaActividades.get(i))){}
-        }
 
-
-    }
     public List<Actividad> obtenerActividadesConCentro(CentroDeportivo1 centro){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/centrodeportivo/"+centro+"/actividades").
                 header("Content-Type","application/json").asJson();
@@ -57,22 +50,33 @@ public class EmpleadosEnCentrosController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return actividades
-        ;
+        return actividades;
     }
 
     public void validar(ActionEvent event){
-        for (int i = 0; i < listaActividades.size(); i++) {
-
+        for (int i = 0; i < obtenerActividadesConCentro(algo).size(); i++) {
+            if (){}
         }
 
         esValida.setText("Reserva valida");
+        validarReserva.setVisible(false);
     }
+
+    public void checkIn(){
+
+    }
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList<String> list = null;
         list.addAll("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo");
         dias.setItems(list);
+        ObservableList<String> actividadesCD = null;
+        for (int i = 0; i < obtenerActividadesConCentro().size(); i++) {
+            actividadesCD.add(obtenerActividadesConCentro().get(i).getNombre());
+        }
+        actividadesList.setItems(actividadesCD);
     }
 }

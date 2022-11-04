@@ -15,11 +15,11 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="695.0" styleClass="azul" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.EmpleadosEnCentrosController">
    <top>
-      <AnchorPane prefHeight="97.0" prefWidth="600.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="100.0" prefWidth="695.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="257.0" layoutY="27.0" prefHeight="44.0" prefWidth="181.0" text="Fitness App" textFill="WHITE">
+            <Label layoutX="240.0" layoutY="22.0" prefHeight="53.0" prefWidth="215.0" text="Fitness App" textFill="WHITE">
                <font>
-                  <Font name="Corbel Bold Italic" size="36.0" />
+                  <Font name="Corbel Bold Italic" size="44.0" />
                </font>
             </Label>
             <ImageView fitHeight="88.0" fitWidth="93.0" layoutX="480.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
@@ -30,9 +30,9 @@
          </children></AnchorPane>
    </top>
    <right>
-      <AnchorPane prefHeight="343.0" prefWidth="652.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="343.0" prefWidth="660.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="1.0" layoutY="-7.0" prefHeight="75.0" prefWidth="678.0">
+            <HBox prefHeight="83.0" prefWidth="678.0">
                <children>
                   <VBox prefHeight="65.0" prefWidth="222.0">
                      <children>
@@ -45,7 +45,7 @@
                   </VBox>
                   <AnchorPane prefHeight="65.0" prefWidth="271.0">
                      <children>
-                        <ChoiceBox fx:id="actividadesList" layoutX="14.0" layoutY="25.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
+                        <ChoiceBox fx:id="actividadesList" layoutX="14.0" layoutY="29.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
                            <styleClass>
                               <String fx:value="button" />
                               <String fx:value="rest" />
@@ -55,7 +55,7 @@
                   </AnchorPane>
                </children>
             </HBox>
-            <HBox layoutX="1.0" layoutY="143.0" prefHeight="74.0" prefWidth="678.0">
+            <HBox layoutX="1.0" layoutY="155.0" prefHeight="71.0" prefWidth="678.0">
                <children>
                   <VBox prefHeight="83.0" prefWidth="362.0">
                      <children>
@@ -77,10 +77,10 @@
                   </VBox>
                </children>
             </HBox>
-            <Button layoutX="106.0" layoutY="286.0" mnemonicParsing="false" onAction="#validar" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" />
-            <Button layoutX="303.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" />
-            <Button layoutX="466.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" />
-            <HBox layoutX="1.0" layoutY="68.0" prefHeight="75.0" prefWidth="678.0">
+            <Button layoutX="52.0" layoutY="286.0" mnemonicParsing="false" onAction="#validar" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" />
+            <Button layoutX="422.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" />
+            <Button layoutX="533.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" />
+            <HBox layoutY="73.0" prefHeight="82.0" prefWidth="678.0">
                <children>
                   <VBox prefHeight="65.0" prefWidth="222.0">
                      <children>
@@ -93,7 +93,7 @@
                   </VBox>
                   <AnchorPane prefHeight="65.0" prefWidth="271.0">
                      <children>
-                        <ChoiceBox fx:id="dias" layoutX="14.0" layoutY="25.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
+                        <ChoiceBox fx:id="dias" layoutX="14.0" layoutY="29.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
                            <styleClass>
                               <String fx:value="button" />
                               <String fx:value="rest" />
@@ -103,9 +103,10 @@
                   </AnchorPane>
                </children>
             </HBox>
-            <Label fx:id="esValida" alignment="CENTER" layoutX="40.0" layoutY="224.0" prefHeight="27.0" prefWidth="553.0" text="Label" textFill="WHITE">
+            <Button layoutX="198.0" layoutY="286.0" mnemonicParsing="false" onAction="#validar" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Hacer check-in" />
+            <Label fx:id="esValida" alignment="CENTER" layoutX="52.0" layoutY="226.0" prefHeight="44.0" prefWidth="540.0" text="Label" textFill="WHITE">
                <font>
-                  <Font name="Corbel Bold" size="23.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
          </children>
