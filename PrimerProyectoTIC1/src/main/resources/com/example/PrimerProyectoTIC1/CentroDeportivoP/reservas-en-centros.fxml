@@ -14,14 +14,14 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="695.0" styleClass="azul" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.ReservasEnCentrosController">
     <top>
-        <AnchorPane prefHeight="97.0" prefWidth="600.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="100.0" prefWidth="695.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
-                <Label layoutX="257.0" layoutY="27.0" prefHeight="44.0" prefWidth="181.0" text="Fitness App" textFill="WHITE">
+                <Label layoutX="237.0" layoutY="23.0" prefHeight="53.0" prefWidth="222.0" text="Fitness App" textFill="WHITE">
                     <font>
-                        <Font name="Corbel Bold Italic" size="36.0" />
+                        <Font name="Corbel Bold Italic" size="44.0" />
                     </font>
                 </Label>
-                <ImageView fitHeight="88.0" fitWidth="93.0" layoutX="480.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="88.0" fitWidth="93.0" layoutX="515.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../../imagenes/logo-fit.png" />
                     </image>
