@@ -8,6 +8,23 @@
     -fx-background-radius: 30;
 }
 
+.green{
+    -fx-background-color: rgb(33, 77, 34);
+}
+
+.green-oscuro{
+    -fx-background-color: #153115;
+}
+
+.app-buttons{
+    -fx-background-radius: 0 30 30 0;
+}
+
+.bottom-button{
+    -fx-background-color: rgba(132, 236, 134, 0.59);
+    -fx-background-radius: 50;
+}
+
 .image{
     -fx-border-radius: 30 30 0 0;
 }
