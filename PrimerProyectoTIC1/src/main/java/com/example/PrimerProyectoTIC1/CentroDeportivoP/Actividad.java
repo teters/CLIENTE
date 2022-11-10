@@ -2,6 +2,7 @@ package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.Lob;
 import java.util.List;
@@ -11,7 +12,6 @@ public class Actividad {
     //private DateTime horario;
     private List<Reserva> Reservas;
     private Long id;
-
     private CentroDeportivo1 centroDeportivo1;
     private String horario;
     private String dia;
@@ -40,29 +40,23 @@ public class Actividad {
     public Actividad() {
     }
 
-    public List<Reserva> getReservas() {
-        return Reservas;
-    }
-
-    public void setReservas(List<Reserva> reservas) {
+    public Actividad(List<Reserva> reservas, Long id, CentroDeportivo1 centroDeportivo1, String horario, String dia, Integer cupos, String nombre, Float precio, String descripcion, Boolean reserva, String tipoActividad, List<String> horarios) {
         Reservas = reservas;
-    }
-
-    public Actividad(Long actividadID, Integer cupos, String nombre, Float precio, String dia, String horario, CentroDeportivo1 centroDeportivo1, Boolean reserva, String tipoActividad, String descripcion) {
-        this.id = actividadID;
+        this.id = id;
         this.centroDeportivo1 = centroDeportivo1;
         this.horario = horario;
+        this.dia = dia;
         this.cupos = cupos;
         this.nombre = nombre;
         this.precio = precio;
-        this.descripcion=descripcion;
-        this.dia = dia;
+        this.descripcion = descripcion;
         this.reserva = reserva;
         this.tipoActividad = tipoActividad;
+        this.horarios = horarios;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public List<Reserva> getReservas() {
+        return Reservas;
     }
 
     public List<String> getHorarios() {
@@ -73,11 +67,15 @@ public class Actividad {
         this.horarios = horarios;
     }
 
-    public long getId() {
+    public void setReservas(List<Reserva> reservas) {
+        Reservas = reservas;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
