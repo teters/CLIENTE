@@ -38,7 +38,16 @@
          <children>
             <HBox prefHeight="40.0" prefWidth="116.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="147.0" text="Lugar y ubicación:" textAlignment="JUSTIFY">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="130.0" text="Lugar y ubicación:" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Corbel Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="43.0" prefWidth="130.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="116.0" text="Tipo actividad:">
                      <font>
                         <Font name="Corbel Bold" size="16.0" />
                      </font>
@@ -47,16 +56,7 @@
             </HBox>
             <HBox prefHeight="40.0" prefWidth="116.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="42.0" prefWidth="116.0" text="Tipo actividad:">
-                     <font>
-                        <Font name="Corbel Bold" size="16.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox prefHeight="40.0" prefWidth="116.0">
-               <children>
-                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="116.0" text="Horario:">
+                  <Label alignment="CENTER" prefHeight="52.0" prefWidth="116.0" text="Día:">
                      <font>
                         <Font name="Corbel Bold" size="16.0" />
                      </font>
@@ -65,16 +65,25 @@
             </HBox>
             <HBox prefHeight="56.0" prefWidth="116.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="116.0" text="Descripción:">
+                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="116.0" text="Horario:">
                      <font>
                         <Font name="Corbel Bold" size="16.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <HBox prefHeight="52.0" prefWidth="116.0">
+            <HBox prefHeight="41.0" prefWidth="130.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="47.0" prefWidth="116.0" text="Precio:">
+                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="116.0" text="Descripcion:">
+                     <font>
+                        <Font name="Corbel Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="107.0" prefWidth="130.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="41.0" prefWidth="118.0" text="Precio:">
                      <font>
                         <Font name="Corbel Bold" size="16.0" />
                      </font>
@@ -87,8 +96,11 @@
    <center>
       <AnchorPane prefHeight="278.0" prefWidth="184.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="tipoAct" layoutX="2.0" layoutY="52.0" prefHeight="17.0" prefWidth="76.0" text="tipo actividad" />
-            <Label fx:id="descripcion" alignment="TOP_LEFT" layoutX="2.0" layoutY="132.0" lineSpacing="1.5" prefHeight="56.0" prefWidth="197.0" text="Label" textAlignment="JUSTIFY" wrapText="true" />
+            <Label fx:id="tipoAct" layoutX="5.0" layoutY="36.0" prefHeight="24.0" prefWidth="158.0" text="tipo actividad">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label fx:id="descripcion" alignment="TOP_LEFT" layoutX="2.0" layoutY="149.0" lineSpacing="1.5" prefHeight="39.0" prefWidth="197.0" text="Label" textAlignment="JUSTIFY" wrapText="true" />
             <Button fx:id="reservar" layoutX="94.0" layoutY="232.0" mnemonicParsing="false" onAction="#reserva" prefHeight="32.0" prefWidth="76.0" stylesheets="@../style.css" text="Reservar">
                <font>
                   <Font name="Corbel" size="15.0" />
@@ -98,7 +110,7 @@
                   <String fx:value="button-shape" />
                </styleClass>
             </Button>
-            <ChoiceBox fx:id="horarioAct" layoutX="1.0" layoutY="90.0" prefHeight="24.0" prefWidth="150.0" stylesheets="@../style.css">
+            <ChoiceBox fx:id="horarioAct" layoutX="5.0" layoutY="107.0" prefHeight="25.0" prefWidth="150.0" stylesheets="@../style.css">
                <styleClass>
                   <String fx:value="title" />
                   <String fx:value="button" />
@@ -108,7 +120,16 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="centroDepYLugar" alignment="TOP_LEFT" layoutX="15.0" layoutY="7.0" prefHeight="37.0" prefWidth="159.0" text="Centro dep + ',' + ubicacion" textAlignment="JUSTIFY" wrapText="true" />
+            <Label fx:id="centroDepYLugar" alignment="TOP_LEFT" layoutX="15.0" layoutY="7.0" prefHeight="18.0" prefWidth="159.0" text="Centro dep + ',' + ubicacion" textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <ChoiceBox fx:id="diaAct" layoutX="5.0" layoutY="69.0" prefWidth="150.0" stylesheets="@../style.css">
+               <styleClass>
+                  <String fx:value="title" />
+                  <String fx:value="button" />
+               </styleClass>
+            </ChoiceBox>
          </children>
       </AnchorPane>
    </center>

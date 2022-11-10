@@ -63,7 +63,7 @@ public class VentanaActividadController {
 
     @FXML
     private Label precio;
-
+    
     @FXML
     private Button reservar;
 
@@ -79,6 +79,9 @@ public class VentanaActividadController {
         //ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad.getCentroDeportivo().getNombre()));
         centroDepYLugar.setText(actividad.getCentroDeportivo1().getNombre() + "," + "" + actividad.getCentroDeportivo1().getDireccion());
         precio.setText(VentanaActividadController.CURRENCY + actividad.getPrecio());
+        ObservableList<String> list = null;
+        list.addAll("lunes", "martes", "miercoles","jueves", "viernes","sabado","domingo");
+        diaAct.setItems(list);
         if (actividad.getReserva()==true){
             reservar.setVisible(true);
             reservar.setOnAction(this::reserva);

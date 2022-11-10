@@ -11,16 +11,16 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="boxShape" stylesheets="@option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.LoginController">
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="738.0" styleClass="boxShape" stylesheets="@option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.LoginController">
    <top>
-      <AnchorPane prefHeight="106.0" prefWidth="600.0" styleClass="top" stylesheets="@option.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="128.0" prefWidth="738.0" styleClass="top" stylesheets="@option.css" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="207.0" layoutY="38.0" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@option.css" text="Fitness App" textFill="WHITE">
+            <Label layoutX="256.0" layoutY="40.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="227.0" stylesheets="@option.css" text="Fitness App" textFill="WHITE">
                <font>
-                  <Font name="Corbel Bold Italic" size="36.0" />
+                  <Font name="Corbel Bold Italic" size="44.0" />
                </font>
             </Label>
-            <ImageView fitHeight="93.0" fitWidth="104.0" layoutX="424.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="93.0" fitWidth="104.0" layoutX="581.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../imagenes/logo-fit.png" />
                </image>
@@ -28,38 +28,61 @@
          </children>
       </AnchorPane>
    </top>
-   <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="actividad-fondo" stylesheets="@option.css" BorderPane.alignment="CENTER">
+   <bottom>
+      <AnchorPane prefHeight="110.0" prefWidth="738.0" styleClass="top" stylesheets="@option.css" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="username" layoutX="226.0" layoutY="38.0" promptText="Correo electrónico" styleClass="boxShape" stylesheets="@option.css" />
-            <PasswordField fx:id="password" layoutX="226.0" layoutY="107.0" promptText="Contraseña" styleClass="boxShape" stylesheets="@option.css" />
-            <Button fx:id="loginBtn" layoutX="188.0" layoutY="186.0" mnemonicParsing="false" onAction="#adminAceptado" prefHeight="27.0" prefWidth="76.0" stylesheets="@option.css" text="Log in" textFill="WHITE">
+            <Button layoutX="292.0" layoutY="37.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" styleClass="botones-centro-dep" stylesheets="@option.css" text="Sobre Nosotros" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="loginBtn" layoutX="51.0" layoutY="35.0" mnemonicParsing="false" onAction="#adminAceptado" prefHeight="38.0" prefWidth="106.0" stylesheets="@option.css" text="Log in" textFill="WHITE">
                <styleClass>
-                  <String fx:value="boxShape" />
+                  <String fx:value="botones-centro-dep" />
                   <String fx:value="btnColor" />
                </styleClass>
                <font>
                   <Font name="System Bold" size="14.0" />
-               </font></Button>
-            <Label layoutX="43.0" layoutY="36.0" prefHeight="29.0" prefWidth="152.0" text="Correo electrónico:">
-               <font>
-                  <Font name="System Italic" size="18.0" />
                </font>
-            </Label>
-            <Label layoutX="98.0" layoutY="105.0" prefHeight="29.0" prefWidth="97.0" text="Contraseña:">
-               <font>
-                  <Font name="System Italic" size="18.0" />
-               </font>
-            </Label>
-            <Button fx:id="salirBtn" layoutX="339.0" layoutY="186.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="27.0" prefWidth="73.0" stylesheets="@option.css" text="Salir" textFill="WHITE">
+            </Button>
+            <Button fx:id="salirBtn" layoutX="589.0" layoutY="36.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="34.0" prefWidth="102.0" stylesheets="@option.css" text="Salir" textFill="WHITE">
                <styleClass>
-                  <String fx:value="boxShape" />
+                  <String fx:value="botones-centro-dep" />
                   <String fx:value="btnColor" />
                </styleClass>
                <font>
                   <Font name="System Bold" size="14.0" />
-               </font></Button>
-            <Label fx:id="textoError" layoutX="286.0" layoutY="6.0" prefHeight="17.0" prefWidth="0.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="301.0" prefWidth="738.0" styleClass="azul" stylesheets="@option.css" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="username" layoutX="271.0" layoutY="64.0" prefHeight="30.0" prefWidth="211.0" promptText="Correo electrónico" styleClass="boxShape" stylesheets="@option.css" />
+            <PasswordField fx:id="password" layoutX="271.0" layoutY="173.0" prefHeight="30.0" prefWidth="211.0" promptText="Contraseña" styleClass="boxShape" stylesheets="@option.css" />
+            <Label fx:id="textoError" layoutX="360.0" layoutY="15.0" prefHeight="17.0" prefWidth="33.0" />
+            <ImageView fitHeight="305.0" fitWidth="190.0" layoutX="548.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagenes/fitness1.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="312.0" layoutY="32.0" prefHeight="21.0" prefWidth="130.0" text="Ingrese el correo:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="300.0" layoutY="134.0" text="Ingrese la contraseña:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="292.0" fitWidth="195.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagenes/gym-mirror.jpg" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </center>

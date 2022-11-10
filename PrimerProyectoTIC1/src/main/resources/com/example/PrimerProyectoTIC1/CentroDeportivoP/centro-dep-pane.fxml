@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDepPaneController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDepPaneController">
     <left>
         <VBox prefHeight="349.0" prefWidth="747.0" styleClass="rest" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
@@ -36,7 +36,7 @@
                <children>
                   <VBox prefHeight="53.0" prefWidth="463.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="369.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Volver">
+                        <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="369.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -45,7 +45,7 @@
                   </VBox>
                   <VBox prefHeight="48.0" prefWidth="465.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="358.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Salir">
+                        <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="358.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                            <font>
                               <Font name="Corbel" size="15.0" />
                            </font>

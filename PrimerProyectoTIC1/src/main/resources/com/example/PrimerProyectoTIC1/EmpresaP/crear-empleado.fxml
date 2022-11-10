@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpresaP.CrearEmpleadoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpresaP.CrearEmpleadoController">
     <top>
         <AnchorPane prefHeight="97.0" prefWidth="639.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
@@ -29,7 +29,7 @@
             </children>
         </AnchorPane>
     </top>
-   <left>
+   <bottom>
         <AnchorPane prefHeight="340.0" prefWidth="668.0" styleClass="azul" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
                 <Button layoutX="173.0" layoutY="261.0" mnemonicParsing="false" onAction="#agregarEmpleado" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
@@ -53,9 +53,9 @@
                      <children>
                         <VBox prefHeight="60.0" prefWidth="106.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="106.0" text="Nombre:" textFill="WHITE">
+                              <Label alignment="CENTER_RIGHT" prefHeight="59.0" prefWidth="104.0" text="Nombre:" textFill="WHITE">
                                  <font>
-                                    <Font name="Corbel Italic" size="19.0" />
+                                    <Font name="Corbel Bold Italic" size="18.0" />
                                  </font>
                               </Label>
                            </children>
@@ -64,7 +64,7 @@
                            <children>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <TextField fx:id="nombre" layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="145.0" promptText="Nombre" />
+                                    <TextField fx:id="nombre" layoutY="17.0" prefHeight="26.0" prefWidth="147.0" promptText="Nombre" />
                                  </children>
                               </AnchorPane>
                            </children>
@@ -72,9 +72,9 @@
                         <VBox prefHeight="39.0" prefWidth="78.0" />
                         <VBox prefHeight="200.0" prefWidth="100.0">
                            <children>
-                              <Label prefHeight="29.0" prefWidth="100.0" text="Contraseña:" textFill="WHITE">
+                              <Label alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" prefHeight="38.0" prefWidth="196.0" text="Contraseña:" textFill="WHITE">
                                  <font>
-                                    <Font name="Corbel Italic" size="19.0" />
+                                    <Font name="Corbel Bold Italic" size="18.0" />
                                  </font>
                               </Label>
                            </children>
@@ -83,7 +83,7 @@
                            <children>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <PasswordField fx:id="password" layoutX="15.0" layoutY="2.0" promptText="Contraseña" />
+                                    <PasswordField fx:id="password" layoutX="15.0" layoutY="14.0" promptText="Contraseña" />
                                  </children>
                               </AnchorPane>
                            </children>
@@ -96,7 +96,7 @@
                            <children>
                               <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="106.0" text="Telefono:" textFill="WHITE">
                                  <font>
-                                    <Font name="Corbel Italic" size="19.0" />
+                                    <Font name="Corbel Bold Italic" size="18.0" />
                                  </font>
                               </Label>
                            </children>
@@ -115,7 +115,7 @@
                            <children>
                               <Label prefHeight="29.0" prefWidth="100.0" text="Saldo:" textAlignment="RIGHT" textFill="WHITE">
                                  <font>
-                                    <Font name="Corbel Italic" size="19.0" />
+                                    <Font name="Corbel Bold Italic" size="18.0" />
                                  </font>
                               </Label>
                            </children>
@@ -137,7 +137,7 @@
                            <children>
                               <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="106.0" text="Mail:" textFill="WHITE">
                                  <font>
-                                    <Font name="Corbel Italic" size="19.0" />
+                                    <Font name="Corbel Bold Italic" size="18.0" />
                                  </font>
                               </Label>
                            </children>
@@ -152,11 +152,11 @@
                            </children>
                         </VBox>
                         <VBox prefHeight="39.0" prefWidth="78.0" />
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+                        <VBox prefHeight="54.0" prefWidth="173.0">
                            <children>
-                              <Label prefHeight="29.0" prefWidth="100.0" text="Vencimiento:" textFill="WHITE">
+                              <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="34.0" prefWidth="127.0" text="Vencimiento:" textFill="WHITE">
                                  <font>
-                                    <Font name="Corbel Italic" size="19.0" />
+                                    <Font name="Corbel Bold Italic" size="18.0" />
                                  </font>
                               </Label>
                            </children>
@@ -165,7 +165,7 @@
                            <children>
                               <AnchorPane prefHeight="54.0" prefWidth="154.0">
                                  <children>
-                                    <PasswordField fx:id="fechaVenc" layoutX="14.0" layoutY="2.0" prefHeight="25.0" prefWidth="148.0" promptText="Vencimiento carnet salud" />
+                                    <PasswordField fx:id="fechaVenc" layoutX="-28.0" layoutY="2.0" prefHeight="26.0" prefWidth="147.0" promptText="Vencimiento carnet salud" />
                                  </children>
                               </AnchorPane>
                            </children>
@@ -191,5 +191,5 @@
             </VBox>
             </children>
         </AnchorPane>
-   </left>
+   </bottom>
 </BorderPane>
