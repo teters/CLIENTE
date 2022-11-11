@@ -1,12 +1,13 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CentroDeportivo1 {
-    private Long id;
+    private Long centro_id;
 
     private String nombre;
 
@@ -22,7 +23,7 @@ public class CentroDeportivo1 {
     }
 
     public CentroDeportivo1(Long id, String nombre, String direccion, List<Actividad> actividads) {
-        this.id = id;
+        this.centro_id = id;
         this.nombre = nombre;
         this.direccion = direccion;
         this.actividads = actividads;
@@ -35,7 +36,7 @@ public class CentroDeportivo1 {
     }
 
     public CentroDeportivo1(Long id, String nombre, String direccion) {
-        this.id = id;
+        this.centro_id = id;
         this.nombre = nombre;
         this.direccion = direccion;
         //this.actividads = actividads;
@@ -58,11 +59,11 @@ public class CentroDeportivo1 {
     }
 
     public Long getId() {
-        return id;
+        return centro_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.centro_id = id;
     }
 
     public void setNombre(String nombre) {
