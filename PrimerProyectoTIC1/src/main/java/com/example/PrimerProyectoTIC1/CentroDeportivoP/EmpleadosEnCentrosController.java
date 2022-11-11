@@ -1,5 +1,6 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
+import com.example.PrimerProyectoTIC1.CheckIn;
 import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
