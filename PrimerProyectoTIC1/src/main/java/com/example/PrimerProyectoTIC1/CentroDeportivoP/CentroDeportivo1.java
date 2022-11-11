@@ -14,17 +14,19 @@ public class CentroDeportivo1 {
 
     private List<Actividad> actividads;
 
-    private List<Reserva> Reservas;
+    private List<Reserva> reservas;
+
+
 
     public CentroDeportivo1() {
     }
 
-    public CentroDeportivo1(Long id, String nombre, String direccion, List<Actividad> actividads, List<Reserva> reservas) {
+    public CentroDeportivo1(Long id, String nombre, String direccion, List<Actividad> actividads) {
         this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;
         this.actividads = actividads;
-        Reservas = reservas;
+
     }
 
     public CentroDeportivo1(String nombre, String direccion) {
@@ -37,6 +39,14 @@ public class CentroDeportivo1 {
         this.nombre = nombre;
         this.direccion = direccion;
         //this.actividads = actividads;
+    }
+
+    public List<Reserva> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(List<Reserva> reservas) {
+        this.reservas = reservas;
     }
 
     public String getNombre() {
@@ -71,11 +81,5 @@ public class CentroDeportivo1 {
         this.actividads = actividads;
     }
 
-    public List<Reserva> getReservas() {
-        return Reservas;
-    }
 
-    public void setReservas(List<Reserva> reservas) {
-        Reservas = reservas;
-    }
 }

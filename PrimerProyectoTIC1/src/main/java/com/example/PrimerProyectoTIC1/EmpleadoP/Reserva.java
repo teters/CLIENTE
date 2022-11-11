@@ -15,12 +15,12 @@ public class Reserva {
 
     private String dia;
 
-    private LocalDate fecha;
+    private String fecha;
 
     private String hora;
 
 
-    public Reserva(Long id, Long empleadoId, Long actividadId, Long centroId, String dia, LocalDate fecha, String hora) {
+    public Reserva(Long id, Long empleadoId, Long actividadId, Long centroId, String dia, String fecha, String hora) {
         this.id = id;
         this.empleadoId = empleadoId;
         this.actividadId = actividadId;
@@ -74,11 +74,11 @@ public class Reserva {
         this.dia = dia;
     }
 
-    public LocalDate getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

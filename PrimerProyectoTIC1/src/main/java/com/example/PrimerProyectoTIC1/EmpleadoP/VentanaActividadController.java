@@ -28,6 +28,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class VentanaActividadController {
@@ -96,7 +97,10 @@ public class VentanaActividadController {
     public void reserva(ActionEvent event){
         Reserva reserva=new Reserva();
         reserva.setActividadId(actividad.getId());
-        reserva.setFecha(LocalDate.now());
+        LocalDate localDate = LocalDate.now();//For reference
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LLLL/yyyy");
+        String formattedString = localDate.format(formatter);
+        reserva.setFecha(formattedString);
         reserva.setDia(diaAct.getValue());
         reserva.setHora(horarioAct.getValue());
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/empleado/getEmpleadoInicio").

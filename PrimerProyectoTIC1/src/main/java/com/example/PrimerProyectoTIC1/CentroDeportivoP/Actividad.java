@@ -29,13 +29,17 @@ public class Actividad {
 
     private String tipoActividad;
 
+    private Long centro_deportivo_1_id;
+
     @JsonIgnoreProperties(ignoreUnknown = true)
     private List<String> horarios;
 
     //private String img;
 
 
-
+    public void setCentro_deportivo_1_id(Long centro_deportivo_1_id) {
+        this.centro_deportivo_1_id = centro_deportivo_1_id;
+    }
 
     public Actividad() {
     }
@@ -61,6 +65,10 @@ public class Actividad {
 
     public List<String> getHorarios() {
         return horarios;
+    }
+
+    public Long getCentro_deportivo_1_id(){
+        return centro_deportivo_1_id;
     }
 
     public void setHorarios(List<String> horarios) {
