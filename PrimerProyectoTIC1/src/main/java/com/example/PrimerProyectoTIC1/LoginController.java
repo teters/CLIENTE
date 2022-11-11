@@ -2,6 +2,7 @@ package com.example.PrimerProyectoTIC1;
 
 import com.example.PrimerProyectoTIC1.AdminP.Admin;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.BossCD1;
+import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
 import com.example.PrimerProyectoTIC1.EmpleadoP.Empleado;
 import com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
@@ -75,10 +76,12 @@ public class LoginController {
             com.fasterxml.jackson.databind.ObjectMapper mapper= new com.fasterxml.jackson.databind.ObjectMapper();
             String bod=response.getBody().toString();
             managerCD=mapper.readValue(response.getBody().toString(),new TypeReference<BossCD1>(){});
-        }catch (NotActiveException n){
+        }catch (Exception n){
+            managerCD=new BossCD1(new CentroDeportivo1(),"co","dk",2L,"");
 
         }
-        if(managerCD!=null){
+        BossCD1 bossPredeterminado=new BossCD1(new CentroDeportivo1(),"co","dk",2L,"");
+        if(!managerCD.getMail().equals(bossPredeterminado.getMail())&& !managerCD.getPassword().equals(bossPredeterminado.getPassword())){
             login=true;
             FXMLLoader loader = new FXMLLoader();
             Parent root = loader.load(VistaEmpleadoController.class.getResource("centro-dep-pane.fxml"));
