@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="695.0" styleClass="azul" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.EmpleadosEnCentrosController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="695.0" styleClass="azul" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.EmpleadosEnCentrosController">
    <top>
       <AnchorPane prefHeight="97.0" prefWidth="600.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
          <children>
@@ -29,23 +29,23 @@
             </ImageView>
          </children></AnchorPane>
    </top>
-   <right>
-      <AnchorPane prefHeight="343.0" prefWidth="652.0" BorderPane.alignment="CENTER">
+   <bottom>
+      <AnchorPane prefHeight="343.0" prefWidth="665.0" BorderPane.alignment="CENTER">
          <children>
             <HBox layoutX="1.0" layoutY="-7.0" prefHeight="75.0" prefWidth="678.0">
                <children>
-                  <VBox prefHeight="65.0" prefWidth="222.0">
+                  <VBox prefHeight="75.0" prefWidth="222.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="94.0" prefWidth="222.0" text="Seleccione una actividad:" textFill="WHITE">
+                        <Label alignment="CENTER" prefHeight="75.0" prefWidth="263.0" text="Seleccione una actividad:" textFill="WHITE">
                            <font>
                               <Font name="Corbel Bold Italic" size="18.0" />
                            </font>
                         </Label>
                      </children>
                   </VBox>
-                  <AnchorPane prefHeight="65.0" prefWidth="271.0">
+                  <AnchorPane prefHeight="75.0" prefWidth="403.0">
                      <children>
-                        <ChoiceBox fx:id="actividadesList" layoutX="14.0" layoutY="25.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
+                        <ChoiceBox fx:id="actividadesList" layoutX="47.0" layoutY="25.0" prefHeight="25.0" prefWidth="362.0" stylesheets="@../option.css">
                            <styleClass>
                               <String fx:value="button" />
                               <String fx:value="rest" />
@@ -59,27 +59,27 @@
                <children>
                   <VBox prefHeight="83.0" prefWidth="362.0">
                      <children>
-                        <Label prefHeight="83.0" prefWidth="341.0" text="Ingrese correo electrónico de empleado:" textFill="WHITE" wrapText="true">
+                        <Label alignment="CENTER" prefHeight="74.0" prefWidth="357.0" text="Ingrese correo electrónico de empleado:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
                               <Font name="Corbel Bold Italic" size="18.0" />
                            </font>
                         </Label>
                      </children>
                   </VBox>
-                  <VBox prefHeight="83.0" prefWidth="236.0">
+                  <VBox prefHeight="74.0" prefWidth="273.0">
                      <children>
                         <AnchorPane prefHeight="83.0" prefWidth="226.0">
                            <children>
-                              <TextField fx:id="mailDeEmp" layoutX="-47.0" layoutY="23.0" prefHeight="26.0" prefWidth="277.0" promptText="Mail de empleado" />
+                              <TextField fx:id="mailDeEmp" layoutX="-1.0" layoutY="24.0" prefHeight="26.0" prefWidth="265.0" promptText="Mail de empleado" />
                            </children>
                         </AnchorPane>
                      </children>
                   </VBox>
                </children>
             </HBox>
-            <Button layoutX="106.0" layoutY="286.0" mnemonicParsing="false" onAction="#validar" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" textFill="WHITE" />
-            <Button layoutX="303.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" textFill="WHITE" />
-            <Button layoutX="466.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE" />
+            <Button layoutX="68.0" layoutY="286.0" mnemonicParsing="false" onAction="#validar" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" textFill="WHITE" />
+            <Button layoutX="378.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" textFill="WHITE" />
+            <Button layoutX="517.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE" />
             <HBox layoutX="1.0" layoutY="68.0" prefHeight="75.0" prefWidth="678.0">
                <children>
                   <VBox prefHeight="65.0" prefWidth="222.0">
@@ -91,9 +91,9 @@
                         </Label>
                      </children>
                   </VBox>
-                  <AnchorPane prefHeight="65.0" prefWidth="271.0">
+                  <AnchorPane prefHeight="68.0" prefWidth="381.0">
                      <children>
-                        <ChoiceBox fx:id="dias" layoutX="14.0" layoutY="25.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
+                        <ChoiceBox fx:id="dias" layoutX="47.0" layoutY="25.0" prefHeight="21.0" prefWidth="360.0" stylesheets="@../option.css">
                            <styleClass>
                               <String fx:value="button" />
                               <String fx:value="rest" />
@@ -103,12 +103,13 @@
                   </AnchorPane>
                </children>
             </HBox>
-            <Label fx:id="esValida" alignment="CENTER" layoutX="40.0" layoutY="224.0" prefHeight="27.0" prefWidth="553.0" text="Label" textFill="WHITE">
+            <Label fx:id="esValida" alignment="CENTER" layoutX="40.0" layoutY="224.0" prefHeight="38.0" prefWidth="606.0" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="23.0" />
                </font>
             </Label>
+            <Button layoutX="229.0" layoutY="285.0" mnemonicParsing="false" onAction="#checkIn" prefHeight="34.0" prefWidth="95.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Hacer check-in" textFill="WHITE" />
          </children>
       </AnchorPane>
-   </right>
+   </bottom>
 </BorderPane>

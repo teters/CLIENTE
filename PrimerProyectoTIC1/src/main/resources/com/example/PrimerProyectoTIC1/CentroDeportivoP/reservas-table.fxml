@@ -13,7 +13,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.ReservasTableController">
     <top>
-        <AnchorPane prefHeight="113.0" prefWidth="600.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="104.0" prefWidth="690.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
                 <Label layoutX="238.0" layoutY="31.0" prefHeight="53.0" prefWidth="215.0" text="Fitness App" textFill="WHITE">
                     <font>
