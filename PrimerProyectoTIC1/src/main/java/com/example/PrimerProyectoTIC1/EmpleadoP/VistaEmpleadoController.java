@@ -4,6 +4,7 @@ import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.example.PrimerProyectoTIC1.LoginController;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -49,9 +50,28 @@ public class VistaEmpleadoController implements Initializable {
         List<String> horarios = new ArrayList<>();
         for (int i = 0; i < actividades1.size(); i++) {
             String nombre = actividades1.get(i).getNombre();
-            CentroDeportivo1 centroDep = actividades1.get(i).getCentroDeportivo1();
+            HttpResponse<JsonNode> response1 = Unirest.get("http://localhost:8080/centrodeportivo/"+actividades1.get(i).getCentro_deportivo_1_id()+"/").
+                    header("Content-Type","application/json").asJson();
+            ObjectMapper mapper1=new ObjectMapper();
+            CentroDeportivo1[] centroAct=null;
+            CentroDeportivo1 centroAct2=null;
+            List<CentroDeportivo1>centroscoso=null;
+
+
+            try {
+                centroAct=mapper1.readValue(response.getBody().toString(),CentroDeportivo1[].class);
+                centroscoso=new ArrayList<>(Arrays.asList(centroAct));
+                centroAct2=centroscoso.get(0);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+            actividades1.get(i).setCentroDeportivo1(centroAct2);
+            CentroDeportivo1 centroDep=actividades1.get(i).getCentroDeportivo1();
             horarios.add(actividades1.get(i).getHorario());
             for (int j = i+1; j < actividades1.size(); j++) {
+
                 if (nombre.equals(actividades1.get(j).getNombre())){
                     if (centroDep.getDireccion().equals(actividades1.get(j).getCentroDeportivo1().getDireccion())){
                         horarios.add(actividades1.get(j).getHorario());
@@ -74,6 +94,7 @@ public class VistaEmpleadoController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         actividades.addAll(getData());
+
         int column = 0;
         int row = 1;
         try{

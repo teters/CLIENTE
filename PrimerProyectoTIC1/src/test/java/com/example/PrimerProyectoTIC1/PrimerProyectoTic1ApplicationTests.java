@@ -6,6 +6,7 @@ import com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.io.IOException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -43,7 +44,7 @@ class PrimerProyectoTic1ApplicationTests {
 		assertEquals("Nautico",centro.get(1));
 	}
 	@Test
-	void getData(){
+	void getData() throws IOException {
 		VistaEmpleadoController vista=new VistaEmpleadoController();
 		List<Actividad> actividades=vista.getData();
 		assertEquals(actividades.get(0).getCentroDeportivo1().getNombre(),"casa teter");
