@@ -2,6 +2,7 @@ package com.example.PrimerProyectoTIC1;
 
 import com.example.PrimerProyectoTIC1.AdminP.Admin;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.BossCD1;
+import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDepPaneController;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
 import com.example.PrimerProyectoTIC1.EmpleadoP.Empleado;
 import com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController;
@@ -84,7 +85,7 @@ public class LoginController {
         if(!managerCD.getMail().equals(bossPredeterminado.getMail())&& !managerCD.getPassword().equals(bossPredeterminado.getPassword())){
             login=true;
             FXMLLoader loader = new FXMLLoader();
-            Parent root = loader.load(VistaEmpleadoController.class.getResource("centro-dep-pane.fxml"));
+            Parent root = loader.load(CentroDepPaneController.class.getResource("centro-dep-pane.fxml"));
             Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setResizable(false);

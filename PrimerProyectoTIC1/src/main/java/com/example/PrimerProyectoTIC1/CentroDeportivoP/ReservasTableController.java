@@ -1,15 +1,26 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
+import com.example.PrimerProyectoTIC1.OptionPaneController;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import kong.unirest.GenericType;
+import kong.unirest.Unirest;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ReservasTableController implements Initializable {
@@ -35,30 +46,40 @@ public class ReservasTableController implements Initializable {
     @FXML
     private Button salirBEmp;
 
-    @FXML
-    void salirEmp(ActionEvent event) {
-
-    }
-
-    @FXML
-    void volverEmp(ActionEvent event) {
-
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        /*
-         List<Empresa> items= Unirest.get("http://localhost:8080/empresas/ListaDeEmpresas").
+         List<Reserva> items= Unirest.get("http://localhost:8080/empresas/ListaDeEmpresas").
                 header("Content-Type","application/json").
-                asObject(new GenericType<List<Empresa>>(){}).getBody();
+                asObject(new GenericType<List<Reserva>>(){}).getBody();
 
-        ObservableList<Empresa> listaEmpresas = FXCollections.observableArrayList(items);
-        colTelefono.setCellValueFactory(new PropertyValueFactory<>("telefono"));
-        colNombreE.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        colDireccionE.setCellValueFactory(new PropertyValueFactory<>("direccion"));
+        ObservableList<Reserva> listaReservas = FXCollections.observableArrayList(items);
+        colActividadID.setCellValueFactory(new PropertyValueFactory<>("actividadId"));
+        colEmpID.setCellValueFactory(new PropertyValueFactory<>("empleadoId"));
+        colDia.setCellValueFactory(new PropertyValueFactory<>("dia"));
+        colFecha.setCellValueFactory(new PropertyValueFactory<>("fecha"));
+        colHora.setCellValueFactory(new PropertyValueFactory<>("hora"));
+        empresaTabla.setItems(listaReservas);
+    }
 
-        empresaTabla.setItems(listaEmpresas);
+    @FXML
+    void salir(ActionEvent event) {
+        Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+        alerta.setTitle("Salir");
+        alerta.setHeaderText("¿Estás seguro que quieres salir?");
+        if (alerta.showAndWait().get() == ButtonType.OK){
+            Stage stage = (Stage) salirBEmp.getScene().getWindow();
+            System.out.println("Has salido exitosamente.");
+            stage.close();
+        }
+    }
 
-        */
+    @FXML
+    void volver(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(OptionPaneController.class.getResource("option-pane.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

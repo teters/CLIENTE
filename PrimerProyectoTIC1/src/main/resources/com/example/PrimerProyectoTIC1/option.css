@@ -52,3 +52,7 @@
     -fx-background-color: #66a5de;
     -fx-background-radius: 30;
 }
+
+.black{
+    -fx-background-color: #000000;
+}
