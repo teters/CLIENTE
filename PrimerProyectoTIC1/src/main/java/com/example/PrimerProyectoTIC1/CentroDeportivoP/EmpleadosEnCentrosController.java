@@ -103,7 +103,7 @@ public class EmpleadosEnCentrosController implements Initializable {
         validarReserva.setVisible(false);
     }
 
-    public void checkIn(){
+    public void checkIn(ActionEvent event){
 
     }
 

@@ -77,9 +77,9 @@
                   </VBox>
                </children>
             </HBox>
-            <Button layoutX="106.0" layoutY="286.0" mnemonicParsing="false" onAction="#validar" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" textFill="WHITE" />
-            <Button layoutX="303.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" textFill="WHITE" />
-            <Button layoutX="466.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE" />
+            <Button layoutX="68.0" layoutY="286.0" mnemonicParsing="false" onAction="#validar" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" textFill="WHITE" />
+            <Button layoutX="378.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" textFill="WHITE" />
+            <Button layoutX="517.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE" />
             <HBox layoutX="1.0" layoutY="68.0" prefHeight="75.0" prefWidth="678.0">
                <children>
                   <VBox prefHeight="65.0" prefWidth="222.0">
@@ -108,6 +108,7 @@
                   <Font name="Corbel Bold" size="23.0" />
                </font>
             </Label>
+            <Button layoutX="229.0" layoutY="285.0" mnemonicParsing="false" onAction="#checkIn" prefHeight="34.0" prefWidth="95.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Hacer check-in" textFill="WHITE" />
          </children>
       </AnchorPane>
    </bottom>
