@@ -79,19 +79,20 @@ public class VentanaActividadController {
         nombreAct.setText(actividad.getNombre());
         //ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad.getCentroDeportivo().getNombre()));
         Long centro_id=actividad.getCentro_deportivo_1_id();
-        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/centrodeportivo/"+centro_id+"/").
-                header("Content-Type","application/json").asJson();
+        HttpResponse<String> response = Unirest.get("http://localhost:8080/centrodeportivo/"+centro_id+"/").
+                header("Content-Type","application/json").asString();
         ObjectMapper mapper=new ObjectMapper();
         String nombre_centro=null;
-        try {
-            nombre_centro=mapper.readValue(response.getBody().toString(),String.class);
+       //     nombre_centro=mapper.readValue(response.getBody().toString(),String.class);
+        nombre_centro=response.getBody();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        //} catch (IOException e) {
+        //    e.printStackTrace();
+        //}
         centroDepYLugar.setText(nombre_centro + ",");
         precio.setText(VentanaActividadController.CURRENCY + actividad.getPrecio());
-        ObservableList<String> list = null;
+        ObservableList<String> list =  FXCollections.observableArrayList();
+
         list.addAll("lunes", "martes", "miercoles","jueves", "viernes","sabado","domingo");
         diaAct.setItems(list);
         if (actividad.getReserva()==true){

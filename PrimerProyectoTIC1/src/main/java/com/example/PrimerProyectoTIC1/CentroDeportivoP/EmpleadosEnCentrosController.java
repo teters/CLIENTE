@@ -118,5 +118,6 @@ public class EmpleadosEnCentrosController implements Initializable {
             actividadesCD.add(obtenerActividadesConCentro(obtenerCentroDelManager()).get(i).getNombre());
         }
         actividadesList.setItems(actividadesCD);
+
     }
 }
