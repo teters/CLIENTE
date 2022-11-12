@@ -1,7 +1,11 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
+import com.example.PrimerProyectoTIC1.CheckIn;
+import com.example.PrimerProyectoTIC1.CheckinDTO;
+import com.example.PrimerProyectoTIC1.EmpleadoP.Empleado;
 import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,9 +15,12 @@ import javafx.scene.control.*;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
+import org.hibernate.annotations.Check;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -42,7 +49,7 @@ public class EmpleadosEnCentrosController implements Initializable {
 
 
     public List<Actividad> obtenerActividadesConCentro(CentroDeportivo1 centro){
-        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/centrodeportivo/"+centro+"/actividades").
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/centrodeportivo/"+centro.getId()+"/actividades").
                 header("Content-Type","application/json").asJson();
         ObjectMapper mapper=new ObjectMapper();
         List<Actividad> actividades=null;
@@ -68,8 +75,24 @@ public class EmpleadosEnCentrosController implements Initializable {
         return reservas;
 
     }
+    public Empleado obtenerEmpleadoConMail(String mail){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/empleado/"+mail+"/").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        Empleado empleado=null;
+        try {
+            empleado=mapper.readValue(response.getBody().toString(),Empleado.class);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return empleado;
+
+
+
+    }
     public CentroDeportivo1 obtenerCentroDelManager(){
-        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/reserva/managercentrodep/centroDelManagerLoggeado").
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/managercentrodep/centroDelManagerLoggeado").
                 header("Content-Type","application/json").asJson();
         ObjectMapper mapper=new ObjectMapper();
         CentroDeportivo1 centro=null;
@@ -102,8 +125,39 @@ public class EmpleadosEnCentrosController implements Initializable {
         esValida.setText("Reserva valida");
         validarReserva.setVisible(false);
     }
+    public Actividad obtenerActividadConNombre(String nombre){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/"+nombre+"/").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        Actividad actividad=null;
+        try {
+            actividad=mapper.readValue(response.getBody().toString(),Actividad.class);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return actividad;
+
+
+    }
 
     public void checkIn(ActionEvent event){
+        CheckIn checkIn=new CheckIn();
+        Empleado empleado=obtenerEmpleadoConMail(mailDeEmp.getText());
+        CheckinDTO checkindto=new CheckinDTO();
+        checkIn.setEmpleado(empleado);
+        checkIn.setHora(LocalDateTime.now());
+        checkIn.setActividad(obtenerActividadConNombre(actividadesList.getValue()));
+        Actividad actividad=obtenerActividadConNombre(actividadesList.getValue());
+        checkindto.setId_empleado(empleado.getId());
+        checkindto.setHora(LocalDateTime.now());
+        checkindto.setId_actividad(actividad.getId());
+        Gson gson=new Gson();
+        String body= gson.toJson(checkindto);
+        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/checkIn/").
+                header("Content-Type","application/json").header("Accept","application/json").
+                body(new JsonNode(body)).asJson();
+        System.out.println(response);
 
     }
 
@@ -111,14 +165,17 @@ public class EmpleadosEnCentrosController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ObservableList<String> list = null;
+        ObservableList<String> list = FXCollections.observableArrayList();
         list.addAll("lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo");
         dias.setItems(list);
-        ObservableList<String> actividadesCD = null;
-        for (int i = 0; i < obtenerActividadesConCentro(obtenerCentroDelManager()).size(); i++) {
-            actividadesCD.add(obtenerActividadesConCentro(obtenerCentroDelManager()).get(i).getNombre());
+        ObservableList<String> actividadesCD = FXCollections.observableArrayList();
+        CentroDeportivo1 centroManager=obtenerCentroDelManager();
+        List<Actividad> actividades=obtenerActividadesConCentro(centroManager);
+        for (int i = 0; i < actividades.size(); i++) {
+            actividadesCD.add(actividades.get(i).getNombre());
         }
         actividadesList.setItems(actividadesCD);
+
 
     }
 }
