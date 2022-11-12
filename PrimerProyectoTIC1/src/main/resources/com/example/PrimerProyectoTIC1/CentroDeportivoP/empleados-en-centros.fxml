@@ -38,7 +38,7 @@
                      <children>
                         <Label alignment="CENTER" prefHeight="75.0" prefWidth="263.0" text="Seleccione una actividad:" textFill="WHITE">
                            <font>
-                              <Font name="Corbel Bold Italic" size="18.0" />
+                              <Font name="Corbel Bold" size="18.0" />
                            </font>
                         </Label>
                      </children>
@@ -61,7 +61,7 @@
                      <children>
                         <Label alignment="CENTER" prefHeight="74.0" prefWidth="357.0" text="Ingrese correo electrónico de empleado:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                            <font>
-                              <Font name="Corbel Bold Italic" size="18.0" />
+                              <Font name="Corbel Bold" size="18.0" />
                            </font>
                         </Label>
                      </children>
@@ -86,7 +86,7 @@
                      <children>
                         <Label alignment="CENTER" prefHeight="94.0" prefWidth="222.0" text="Seleccione un día:" textFill="WHITE">
                            <font>
-                              <Font name="Corbel Bold Italic" size="18.0" />
+                              <Font name="Corbel Bold" size="18.0" />
                            </font>
                         </Label>
                      </children>

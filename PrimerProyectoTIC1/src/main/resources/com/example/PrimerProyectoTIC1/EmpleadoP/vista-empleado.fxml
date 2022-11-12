@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -14,46 +13,59 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController">
    <left>
-      <VBox prefHeight="575.0" prefWidth="147.0" styleClass="left-bar" stylesheets="@../style.css" BorderPane.alignment="CENTER">
+      <VBox prefHeight="459.0" prefWidth="179.0" styleClass="green" stylesheets="@../style.css" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="31.0" prefWidth="147.0" text="Filtrar por:">
-               <font>
-                  <Font name="Corbel Bold" size="18.0" />
-               </font>
-            </Label>
-            <ChoiceBox prefWidth="150.0" stylesheets="@../style.css">
-               <styleClass>
-                  <String fx:value="button" />
-                  <String fx:value="button-shape" />
-                  <String fx:value="filter" />
-               </styleClass>
-            </ChoiceBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <AnchorPane prefHeight="385.0" prefWidth="179.0" styleClass="green" stylesheets="@../style.css">
                <children>
-                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="112.0" prefWidth="179.0" stylesheets="@../style.css" text="Reservar actividad" textAlignment="CENTER" wrapText="true">
+                     <styleClass>
+                        <String fx:value="background" />
+                        <String fx:value="app-buttons" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutY="131.0" mnemonicParsing="false" prefHeight="112.0" prefWidth="179.0" stylesheets="@../style.css" text="Eliminar actividad">
+                     <styleClass>
+                        <String fx:value="background" />
+                        <String fx:value="app-buttons" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button layoutY="273.0" mnemonicParsing="false" prefHeight="112.0" prefWidth="179.0" stylesheets="@../style.css" text="Ver mis datos">
+                     <styleClass>
+                        <String fx:value="background" />
+                        <String fx:value="app-buttons" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </Button>
                </children>
-            </HBox>
+            </AnchorPane>
          </children></VBox>
    </left>
    <center>
-      <ScrollPane fx:id="scroll" prefHeight="575.0" prefWidth="1100.0" stylesheets="@../style.css" BorderPane.alignment="CENTER">
+      <ScrollPane fx:id="scroll" prefHeight="459.0" prefWidth="729.0" styleClass="green-oscuro" stylesheets="@../style.css" BorderPane.alignment="CENTER">
          <content>
-            <GridPane fx:id="grid" prefHeight="11.0" prefWidth="0.0">
+            <GridPane fx:id="grid" prefHeight="11.0" prefWidth="0.0" styleClass="green" stylesheets="@../style.css">
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
             </GridPane>
          </content>
-         <styleClass>
-            <String fx:value="shadow" />
-            <String fx:value="color-fondo" />
-         </styleClass>
       </ScrollPane>
    </center>
    <top>
       <HBox prefHeight="116.0" prefWidth="900.0" stylesheets="@../option.css" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="119.0" prefWidth="148.0" styleClass="left-bar" stylesheets="@../style.css" />
+            <VBox prefHeight="116.0" prefWidth="904.0" styleClass="verde-titulo" stylesheets="@../style.css" />
          </children>
       </HBox>
    </top>
