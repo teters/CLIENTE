@@ -8,6 +8,10 @@
     -fx-background-radius: 30;
 }
 
+.verde-titulo{
+    -fx-background-color: rgba(132, 236, 132, 0.59);
+}
+
 .green{
     -fx-background-color: rgb(33, 77, 34);
 }
@@ -47,10 +51,6 @@
 }
 
 
-.left-bar{
-    -fx-background-color: #d3d3d3;
-}
-
 .color{
     -fx-background-color: #ad9742;
 }
@@ -58,6 +58,8 @@
 .background{
     -fx-background-color: rgba(132, 236, 134, 0.59);
 }
+
+
 
 .filter{
     -fx-background-color: whitesmoke;

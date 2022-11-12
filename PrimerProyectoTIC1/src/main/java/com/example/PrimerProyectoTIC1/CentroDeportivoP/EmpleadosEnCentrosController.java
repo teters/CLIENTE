@@ -1,8 +1,11 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 import com.example.PrimerProyectoTIC1.CheckIn;
+<<<<<<< HEAD
 import com.example.PrimerProyectoTIC1.CheckinDTO;
 import com.example.PrimerProyectoTIC1.EmpleadoP.Empleado;
+=======
+>>>>>>> 77857394395996b6b2bcc15c7a24bd7ee421b198
 import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
