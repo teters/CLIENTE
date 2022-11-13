@@ -1,11 +1,10 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 import com.example.PrimerProyectoTIC1.CheckIn;
-<<<<<<< HEAD
+
 import com.example.PrimerProyectoTIC1.CheckinDTO;
 import com.example.PrimerProyectoTIC1.EmpleadoP.Empleado;
-=======
->>>>>>> 77857394395996b6b2bcc15c7a24bd7ee421b198
+
 import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
@@ -18,12 +17,10 @@ import javafx.scene.control.*;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
-import org.hibernate.annotations.Check;
 
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -152,12 +149,12 @@ public class EmpleadosEnCentrosController implements Initializable {
         checkIn.setHora(LocalDateTime.now());
         checkIn.setActividad(obtenerActividadConNombre(actividadesList.getValue()));
         Actividad actividad=obtenerActividadConNombre(actividadesList.getValue());
-        checkindto.setId_empleado(empleado.getId());
-        checkindto.setHora(LocalDateTime.now());
+        checkindto.setMail_empleado(empleado.getMail());
+        checkindto.setHora("2:00");
         checkindto.setId_actividad(actividad.getId());
         Gson gson=new Gson();
         String body= gson.toJson(checkindto);
-        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/checkIn/").
+        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/checkin/").
                 header("Content-Type","application/json").header("Accept","application/json").
                 body(new JsonNode(body)).asJson();
         System.out.println(response);

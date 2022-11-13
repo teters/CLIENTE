@@ -1,20 +1,18 @@
 package com.example.PrimerProyectoTIC1;
 
 
-import java.time.LocalDateTime;
-
-    public class CheckinDTO {
-        private Long id_empleado;
+public class CheckinDTO {
+        private String mail_empleado;
         private Long id_actividad;
-        private LocalDateTime hora;
+        private String hora;
 
 
-        public Long getId_empleado() {
-            return id_empleado;
+        public String getMail_empleado() {
+            return mail_empleado;
         }
 
-        public void setId_empleado(Long id_empleado) {
-            this.id_empleado = id_empleado;
+        public void setMail_empleado(String id_empleado) {
+            this.mail_empleado = id_empleado;
         }
 
         public Long getId_actividad() {
@@ -25,11 +23,11 @@ import java.time.LocalDateTime;
             this.id_actividad = id_actividad;
         }
 
-        public LocalDateTime getHora() {
+        public String getHora() {
             return hora;
         }
 
-        public void setHora(LocalDateTime hora) {
+        public void setHora(String hora) {
             this.hora = hora;
         }
     }
