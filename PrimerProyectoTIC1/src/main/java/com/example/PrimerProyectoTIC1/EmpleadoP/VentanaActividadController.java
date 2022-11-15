@@ -5,6 +5,7 @@ import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
 import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.example.PrimerProyectoTIC1.Imagen;
 import com.example.PrimerProyectoTIC1.LoginController;
+import com.example.PrimerProyectoTIC1.ReservaDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import javafx.collections.FXCollections;
@@ -77,6 +78,8 @@ public class VentanaActividadController {
     public void setData(Actividad actividad){
         this.actividad = actividad;
         nombreAct.setText(actividad.getNombre());
+        tipoAct.setText(actividad.getTipoActividad());
+        descripcion.setText(actividad.getDescripcion());
         //ObservableList<String> centrosDeportivos = FXCollections.observableArrayList(nombreDeCentrosDeportivos(actividad.getCentroDeportivo().getNombre()));
         Long centro_id=actividad.getCentro_deportivo_1_id();
         HttpResponse<String> response = Unirest.get("http://localhost:8080/centrodeportivo/"+centro_id+"/").
@@ -91,30 +94,32 @@ public class VentanaActividadController {
         //}
         centroDepYLugar.setText(nombre_centro + ",");
         precio.setText(VentanaActividadController.CURRENCY + actividad.getPrecio());
-        ObservableList<String> list =  FXCollections.observableArrayList();
+        ObservableList<String> list =  FXCollections.observableArrayList(obtenerDiaAct(actividad.getNombre()));
 
-        list.addAll("lunes", "martes", "miercoles","jueves", "viernes","sabado","domingo");
+
         diaAct.setItems(list);
         if (actividad.getReserva()==true){
             reservar.setVisible(true);
             reservar.setOnAction(this::reserva);
-            ObservableList<String> horarios = FXCollections.observableArrayList(actividad.getHorarios());
+            ObservableList<String> horarios = FXCollections.observableArrayList(obtenerHorarioConNombreCentroYNombreActividad(actividad.getNombre(),nombre_centro));
             horarioAct.setItems(horarios);
         } else {
             horarioAct.setValue("Libre horario");
+            reservar.setVisible(false);
         }
 
     }
 
     public void reserva(ActionEvent event){
-        Reserva reserva=new Reserva();
-        reserva.setActividadId(actividad.getId());
+
+        ReservaDTO reservaDTO=new ReservaDTO();
+        reservaDTO.setActividadId(actividad.getId());
+        reservaDTO.setCentroId(actividad.getCentro_deportivo_1_id());
+
         LocalDate localDate = LocalDate.now();//For reference
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LLLL/yyyy");
         String formattedString = localDate.format(formatter);
-        reserva.setFecha(formattedString);
-        reserva.setDia(diaAct.getValue());
-        reserva.setHora(horarioAct.getValue());
+        reservaDTO.setFecha(formattedString);
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/empleado/getEmpleadoInicio").
                 header("Content-Type","application/json").asJson();
         ObjectMapper mapper=new ObjectMapper();
@@ -126,16 +131,17 @@ public class VentanaActividadController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        reserva.setEmpleadoId(empleado.getId());
-        posteoReserva(reserva);
+        reservaDTO.setMail_empleado(empleado.getMail());
+        posteoReserva(reservaDTO);
 
     }
-    public void posteoReserva(Reserva reserva){
+    public void posteoReserva(ReservaDTO reservaDTO){
         Gson gson=new Gson();
-        String body= gson.toJson(reserva);
+        String body= gson.toJson(reservaDTO);
         HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/reserva/").
                 header("Content-Type","application/json").
                 body(new JsonNode(body)).asJson();
+        System.out.println(response.getBody().toString());
 
     }
 
@@ -178,6 +184,20 @@ public class VentanaActividadController {
             e.printStackTrace();
         }
         return horarios;
+    }
+    public List<String> obtenerDiaAct(String nombreAct){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/"+nombreAct+"/dias/").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        List<String> dias=null;
+        try {
+            String[] horariosArray=mapper.readValue(response.getBody().toString(),String[].class);
+            dias= Arrays.asList(horariosArray);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return dias;
+
     }
     public List<String> obtenerCentrosAPartirDeUnHorariodeActividad(String actividad, String horario){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/"+actividad+"/"+horario+"/centro").

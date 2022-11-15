@@ -31,7 +31,7 @@ public class VistaEmpleadoController implements Initializable {
     @FXML
     private GridPane grid;
 
-    private List<Actividad> actividades = new ArrayList<>();
+    private List<Actividad> actividades = new LinkedList<>();
 
     private Stage stage;
 
@@ -49,10 +49,14 @@ public class VistaEmpleadoController implements Initializable {
         }
         List<String> horarios = new ArrayList<>();
         for (int i = 0; i < actividades1.size(); i++) {
-
             horarios.add(actividades1.get(i).getHorario());
-
             actividades1.get(i).setHorarios(horarios);
+            for (int j = i+1; j < actividades1.size(); j++) {
+                if(actividades1.get(i).getNombre().equals(actividades1.get(j).getNombre())){
+                    actividades1.remove(j);
+                }
+
+            }
         }
 
         /*for (int i = 0; i < Objects.requireNonNull(actividades1).size(); i++) {
@@ -67,14 +71,17 @@ public class VistaEmpleadoController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         actividades.addAll(getData());
+        List<String> nombresact=new ArrayList<>();
 
         int column = 0;
         int row = 1;
         try{
+
             for (int i=0;i< actividades.size();i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(VentanaActividadController.class.getResource("ventana-actividad.fxml"));
                 BorderPane borderPane = fxmlLoader.load();
+
 
                 VentanaActividadController ventana = fxmlLoader.getController();
                 ventana.setData(actividades.get(i));

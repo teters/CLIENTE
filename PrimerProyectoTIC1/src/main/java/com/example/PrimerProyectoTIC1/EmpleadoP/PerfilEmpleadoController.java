@@ -10,6 +10,7 @@ import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 import org.apache.http.HttpRequest;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -46,7 +47,17 @@ public class PerfilEmpleadoController implements Initializable {
 
 
     public Empleado obtenerEmpleadoDelLogin(){
-        //Teo, aca haceme esta response si podes :D
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/empleado/getEmpleadoInicio").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        Empleado empleado=null;
+
+        try {
+            empleado=mapper.readValue(response.getBody().toString(),Empleado.class);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return null;
     }
