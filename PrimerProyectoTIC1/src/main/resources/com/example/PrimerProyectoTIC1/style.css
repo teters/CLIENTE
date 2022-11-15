@@ -60,7 +60,21 @@
 }
 
 
-
-.filter{
-    -fx-background-color: whitesmoke;
+.left-buttons{
+    -fx-background-color: #828282;
+    -fx-background-radius: 30;
 }
+
+.gris{
+    -fx-background-color: #D3D3D3;
+}
+
+.busqueda{
+     -fx-background-color: #D3d3d3;
+    -fx-background-radius: 30;
+}
+
+.filter-bar{
+    -fx-background-radius: 30;
+}
+

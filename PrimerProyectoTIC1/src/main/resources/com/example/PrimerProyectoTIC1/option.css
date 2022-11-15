@@ -56,3 +56,15 @@
 .black{
     -fx-background-color: #000000;
 }
+
+.transparent{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+}
+
+.transparent:pressed{
+    -fx-text-fill: #0c92dc;
+    -fx-underline: #0c92dc;
+}

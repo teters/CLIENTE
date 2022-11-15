@@ -6,10 +6,14 @@ import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.example.PrimerProyectoTIC1.LoginController;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -31,9 +35,24 @@ public class VistaEmpleadoController implements Initializable {
     @FXML
     private GridPane grid;
 
+    @FXML
+    private Button saldoButton;
+
     private List<Actividad> actividades = new LinkedList<>();
 
     private Stage stage;
+
+    private static final String CURRENCY = "$";
+
+    public void saldo(ActionEvent event){
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+        alerta.setTitle("Saldo");
+        alerta.setHeaderText("Saldo disponible:" + "" + CURRENCY + "");
+        if (alerta.showAndWait().get() == ButtonType.OK){
+            stage = (Stage) saldoButton.getScene().getWindow();
+            stage.close();
+        }
+    }
 
     public List<Actividad> getData(){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/todas").
@@ -49,14 +68,10 @@ public class VistaEmpleadoController implements Initializable {
         }
         List<String> horarios = new ArrayList<>();
         for (int i = 0; i < actividades1.size(); i++) {
-            horarios.add(actividades1.get(i).getHorario());
-            actividades1.get(i).setHorarios(horarios);
-            for (int j = i+1; j < actividades1.size(); j++) {
-                if(actividades1.get(i).getNombre().equals(actividades1.get(j).getNombre())){
-                    actividades1.remove(j);
-                }
 
-            }
+            horarios.add(actividades1.get(i).getHorario());
+
+            actividades1.get(i).setHorarios(horarios);
         }
 
         /*for (int i = 0; i < Objects.requireNonNull(actividades1).size(); i++) {
@@ -71,17 +86,14 @@ public class VistaEmpleadoController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         actividades.addAll(getData());
-        List<String> nombresact=new ArrayList<>();
 
         int column = 0;
         int row = 1;
         try{
-
             for (int i=0;i< actividades.size();i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(VentanaActividadController.class.getResource("ventana-actividad.fxml"));
                 BorderPane borderPane = fxmlLoader.load();
-
 
                 VentanaActividadController ventana = fxmlLoader.getController();
                 ventana.setData(actividades.get(i));

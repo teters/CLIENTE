@@ -59,11 +59,14 @@ public class PerfilEmpleadoController implements Initializable {
             e.printStackTrace();
         }
 
-        return null;
+        return empleado;
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        nombreEmpleado.setText(obtenerEmpleadoDelLogin().getNombre());
+        mail.setText(obtenerEmpleadoDelLogin().getMail());
+        saldo.setText(Long.toString(obtenerEmpleadoDelLogin().getSaldo()));
+        telefono.setText(Long.toString(obtenerEmpleadoDelLogin().getTelefono()));
     }
 }
