@@ -7,6 +7,7 @@ public class CheckinDTO {
         private String hora;
 
 
+
         public String getMail_empleado() {
             return mail_empleado;
         }
