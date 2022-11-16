@@ -10,38 +10,29 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDepPaneController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDepPaneController">
     <left>
         <VBox prefHeight="349.0" prefWidth="747.0" styleClass="rest" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
-                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#crearActividades" prefHeight="67.0" prefWidth="713.0" styleClass="azul-sin-redondear" stylesheets="@../option.css" text="Crear actividad" textAlignment="CENTER" textFill="WHITE">
+                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#crearActividades" prefHeight="107.0" prefWidth="713.0" styleClass="azul-sin-redondear" stylesheets="@../option.css" text="Crear actividad" textAlignment="CENTER" textFill="WHITE">
                     <font>
                         <Font name="Corbel Bold" size="21.0" />
                     </font></Button>
-                <Button alignment="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="713.0" styleClass="azul-sin-redondear" stylesheets="@../option.css" text="Eliminar actividad" textAlignment="CENTER" textFill="WHITE">
-                    <font>
-                        <Font name="Corbel Bold" size="21.0" />
-                    </font></Button>
-            <Button alignment="CENTER" layoutX="10.0" layoutY="66.0" mnemonicParsing="false" onAction="#empleadosEnCentros" prefHeight="78.0" prefWidth="713.0" styleClass="azul-sin-redondear" stylesheets="@../option.css" text="Verificar reservas de empleados" textAlignment="CENTER" textFill="WHITE">
+            <Button alignment="CENTER" layoutX="10.0" layoutY="66.0" mnemonicParsing="false" onAction="#empleadosEnCentros" prefHeight="107.0" prefWidth="713.0" styleClass="azul-sin-redondear" stylesheets="@../option.css" text="Check-in de empleados" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="21.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="713.0" styleClass="azul-sin-redondear" stylesheets="@../option.css" text="Hacer check-in de empleado no registrado" textFill="WHITE">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#verTablaReserva" prefHeight="107.0" prefWidth="713.0" styleClass="azul-sin-redondear" stylesheets="@../option.css" text="Ver reservas registradas en el centro" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="21.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#verTablaReserva" prefHeight="77.0" prefWidth="713.0" styleClass="azul-sin-redondear" stylesheets="@../option.css" text="Ver reservas registradas en el centro" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Corbel Bold" size="21.0" />
-               </font>
-            </Button>
-            <HBox prefHeight="56.0" prefWidth="673.0">
+            <HBox prefHeight="55.0" prefWidth="713.0">
                <children>
                   <VBox prefHeight="53.0" prefWidth="463.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="356.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Volver" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#volver" prefHeight="54.0" prefWidth="357.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
@@ -50,7 +41,7 @@
                   </VBox>
                   <VBox prefHeight="48.0" prefWidth="465.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="358.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+                        <Button fx:id="salirCD" mnemonicParsing="false" onAction="#salir" prefHeight="54.0" prefWidth="357.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>

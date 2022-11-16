@@ -100,11 +100,11 @@ public class CrearActividadController implements Initializable{
                 header("Content-Type","application/json").
                 body(new JsonNode(body)).asJson();
         }
-    public void subirFotos(Actividad actividad){//aca necesito un boton de subir fotos
 
-
-
-
+    public void subirFotos(ActionEvent event){
+        FileChooser fileChooser=new FileChooser();
+        fileChooser.setTitle("Open Resource File");
+        File file =fileChooser.showOpenDialog(stage)
 
     }
 

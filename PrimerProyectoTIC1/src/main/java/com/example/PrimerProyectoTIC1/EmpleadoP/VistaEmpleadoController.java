@@ -11,10 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.ScrollPane;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -44,15 +41,32 @@ public class VistaEmpleadoController implements Initializable {
 
     private static final String CURRENCY = "$";
 
+    public Empleado obtenerEmpleadoDelLogin(){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/empleado/getEmpleadoInicio").
+                header("Content-Type","application/json").asJson();
+        ObjectMapper mapper=new ObjectMapper();
+        Empleado empleado=null;
+
+        try {
+            empleado=mapper.readValue(response.getBody().toString(),Empleado.class);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return empleado;
+    }
+
     public void saldo(ActionEvent event){
         Alert alerta = new Alert(Alert.AlertType.INFORMATION);
         alerta.setTitle("Saldo");
-        alerta.setHeaderText("Saldo disponible:" + "" + CURRENCY + "");
-        if (alerta.showAndWait().get() == ButtonType.OK){
-            stage = (Stage) saldoButton.getScene().getWindow();
-            stage.close();
-        }
+        alerta.setHeaderText("Saldo disponible:");
+        alerta.setContentText( CURRENCY + obtenerEmpleadoDelLogin().getSaldo());
+        ButtonType buttonType = new ButtonType("Salir", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alerta.getButtonTypes().setAll(buttonType);
+        Optional<ButtonType> result = alerta.showAndWait();
     }
+
 
     public List<Actividad> getData(){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/todas").
