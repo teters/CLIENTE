@@ -7,17 +7,13 @@ import javax.persistence.Lob;
 
 public class Imagen {
     Long id;
-    byte[] content;
+    String content;
     String nombreActividad;
 
     public Imagen() {
     }
 
-    public Imagen(Long id, byte[] content, String nombreActividad) {
-        this.id = id;
-        this.content = content;
-        this.nombreActividad = nombreActividad;
-    }
+
 
     public Long getId() {
         return id;
@@ -27,11 +23,11 @@ public class Imagen {
         this.id = id;
     }
 
-    public byte[] getContent() {
+    public String getContent() {
         return content;
     }
 
-    public void setContent(byte[] content) {
+    public void setContent(String content) {
         this.content = content;
     }
 

@@ -12,9 +12,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import kong.unirest.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -98,7 +100,10 @@ public class CrearActividadController implements Initializable{
                 header("Content-Type","application/json").
                 body(new JsonNode(body)).asJson();
         }
-    public void subirFotos(Actividad actividad){
+    public void subirFotos(Actividad actividad){//aca necesito un boton de subir fotos
+
+
+
 
 
     }
