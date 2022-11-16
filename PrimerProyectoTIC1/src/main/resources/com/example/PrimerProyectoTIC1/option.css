@@ -64,7 +64,3 @@
     -fx-background-color: transparent;
 }
 
-.transparent:pressed{
-    -fx-text-fill: #0c92dc;
-    -fx-underline: #0c92dc;
-}

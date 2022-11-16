@@ -42,9 +42,13 @@ public class CrearActividadController implements Initializable{
     private TextField tipoActividad;
 
     @FXML
+    private CheckBox reserva;
+
+
+    @FXML
     private Button salirBEmp;
 
-    public void altaActividad(Actividad actividad) {
+    public void altaActividad(ActionEvent event) {
         String cupos = cuposActividad.getText();
         String descripcion = descripcionActividad.getText();
         String fechaAct = fechaActividad.getValue();
@@ -56,11 +60,11 @@ public class CrearActividadController implements Initializable{
         actividad1.setCupos(Integer.valueOf(cupos));
         actividad1.setDescripcion(descripcion);
         actividad1.setHorario(horarios);
-        //como hacemos con la fecha?
+        actividad1.setDia(fechaAct);
         actividad1.setNombre(nombre);
         actividad1.setPrecio(Float.valueOf(precio));
         actividad1.setTipoActividad(tipo);
-        //Actividad actividad1 = new Actividad(cupos, descripcion, fechaAct, horarios, nombre, precio, tipo);}
+
         Gson gson=new Gson();
         String body= gson.toJson(actividad1);
         HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/empleado/iniciosesion").
@@ -100,8 +104,6 @@ public class CrearActividadController implements Initializable{
         fechaActividad.setItems(fecha);
     }
 
-
-    //Rellenar, eventualmente.
 
 
 }
