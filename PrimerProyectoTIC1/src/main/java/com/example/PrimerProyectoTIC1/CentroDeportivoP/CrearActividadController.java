@@ -51,6 +51,21 @@ public class CrearActividadController implements Initializable{
     @FXML
     private Button salirBEmp;
 
+    public CentroDeportivo1 obtenerCentroDelManager(){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/managercentrodep/centroDelManagerLoggeado").
+                header("Content-Type","application/json").asJson();
+        com.fasterxml.jackson.databind.ObjectMapper mapper=new com.fasterxml.jackson.databind.ObjectMapper();
+        CentroDeportivo1 centro=null;
+        try {
+            centro=mapper.readValue(response.getBody().toString(),CentroDeportivo1.class);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return centro;
+
+    }
+
     public void altaActividad(ActionEvent event) {
         String cuposString = cuposActividad.getText();
         String descripcion = descripcionActividad.getText();
@@ -60,6 +75,8 @@ public class CrearActividadController implements Initializable{
         String precioString = precioActividad.getText();
         String tipo = tipoActividad.getText();
         Boolean reservaBool=reserva.isSelected();
+        String nombrecentro=obtenerCentroDelManager().getNombre();
+
 
 
         ActividadDTO actividad1 = new ActividadDTO();
@@ -73,7 +90,7 @@ public class CrearActividadController implements Initializable{
         actividad1.setNombre(nombre);
         actividad1.setPrecio(precio);
         actividad1.setTipoActividad(tipo);
-        actividad1.setNombreCentro();
+        actividad1.setNombreCentro(nombrecentro);
 
         actividad1.setReservaBool(reservaBool);
 
