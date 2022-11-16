@@ -90,7 +90,7 @@
                </font>
             </Label>
             <ChoiceBox fx:id="fechaActividad" layoutX="130.0" layoutY="117.0" prefWidth="150.0" />
-            <TextField fx:id="nombreActividad1" layoutX="130.0" layoutY="231.0" promptText="Nombre" styleClass="boxShape" stylesheets="@../option.css" />
+            <TextField fx:id="centroDepActividad" layoutX="130.0" layoutY="231.0" promptText="Nombre" styleClass="boxShape" stylesheets="@../option.css" />
             <CheckBox fx:id="reserva" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="305.0" layoutY="206.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Requiere Reserva?" textFill="WHITE" AnchorPane.leftAnchor="305.0">
                <font>
                   <Font name="Corbel Bold Italic" size="18.0" />
