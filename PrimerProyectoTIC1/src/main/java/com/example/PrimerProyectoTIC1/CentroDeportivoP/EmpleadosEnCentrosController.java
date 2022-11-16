@@ -21,10 +21,7 @@ import kong.unirest.Unirest;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class EmpleadosEnCentrosController implements Initializable {
 
@@ -154,11 +151,27 @@ public class EmpleadosEnCentrosController implements Initializable {
         checkindto.setId_actividad(actividad.getId());
         Gson gson=new Gson();
         String body= gson.toJson(checkindto);
-        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/checkin/").
+        HttpResponse<String> response = Unirest.post("http://localhost:8080/checkin/").
                 header("Content-Type","application/json").header("Accept","application/json").
-                body(new JsonNode(body)).asJson();
-        System.out.println(response);
-
+                body(new JsonNode(body)).asString();
+        System.out.println(response.getBody());
+        if ((response.getBody()).equals("si")){
+            Alert alerta = new Alert(Alert.AlertType.NONE);
+            alerta.setTitle("CHECK-IN");
+            alerta.setHeaderText("Se hizo el checkin");
+            alerta.setContentText("Bien ahi");
+            ButtonType buttonType = new ButtonType("Salir", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alerta.getButtonTypes().setAll(buttonType);
+            Optional<ButtonType> result = alerta.showAndWait();
+        } else if ((response.toString()).equals("no")) {
+            Alert alerta = new Alert(Alert.AlertType.WARNING);
+            alerta.setTitle("CHECK-IN");
+            alerta.setHeaderText("No se hizo");
+            alerta.setContentText("Revisar carnet de salud");
+            ButtonType buttonType = new ButtonType("Salir", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alerta.getButtonTypes().setAll(buttonType);
+            Optional<ButtonType> result = alerta.showAndWait();
+        }
     }
 
 
