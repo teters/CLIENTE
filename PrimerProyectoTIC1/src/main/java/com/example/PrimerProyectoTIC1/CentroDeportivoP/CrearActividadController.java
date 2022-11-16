@@ -60,10 +60,12 @@ public class CrearActividadController implements Initializable{
         actividad1.setNombre(nombre);
         actividad1.setPrecio(Float.valueOf(precio));
         actividad1.setTipoActividad(tipo);
+        //actividad1.setReserva();
+
         //Actividad actividad1 = new Actividad(cupos, descripcion, fechaAct, horarios, nombre, precio, tipo);}
         Gson gson=new Gson();
         String body= gson.toJson(actividad1);
-        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/empleado/iniciosesion").
+        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/actividad/").
                 header("Content-Type","application/json").
                 body(new JsonNode(body)).asJson();
         }
