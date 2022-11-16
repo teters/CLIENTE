@@ -97,14 +97,6 @@
       </HBox>
    </bottom>
    <center>
-      <AnchorPane prefHeight="286.0" prefWidth="418.0" styleClass="gris" stylesheets="@../style.css" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="286.0" fitWidth="429.0" layoutX="22.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../imagenes/gym.jpg" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
+      <AnchorPane prefHeight="286.0" prefWidth="418.0" styleClass="gris" stylesheets="@../style.css" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
