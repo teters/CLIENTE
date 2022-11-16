@@ -8,18 +8,17 @@ import com.example.PrimerProyectoTIC1.LoginController;
 import com.example.PrimerProyectoTIC1.ReservaDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import com.sun.glass.ui.ClipboardAssistance;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 import kong.unirest.*;
 
 import javax.imageio.ImageIO;
@@ -138,11 +137,27 @@ public class VentanaActividadController {
     public void posteoReserva(ReservaDTO reservaDTO){
         Gson gson=new Gson();
         String body= gson.toJson(reservaDTO);
-        HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/reserva/").
+        HttpResponse<String> response = Unirest.post("http://localhost:8080/reserva/").
                 header("Content-Type","application/json").
-                body(new JsonNode(body)).asJson();
-        System.out.println(response.getBody().toString());
-
+                body(new JsonNode(body)).asString();
+        System.out.println(response.getBody());
+        if ((response.getBody()).equals("true")){
+            Alert alerta = new Alert(Alert.AlertType.NONE);
+            alerta.setTitle("Reserva");
+            alerta.setHeaderText("Su reserva ha sido ingresada con exito");
+            alerta.setContentText("Lo esperamos!");
+            ButtonType buttonType = new ButtonType("Salir", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alerta.getButtonTypes().setAll(buttonType);
+            Optional<ButtonType> result = alerta.showAndWait();
+        } else if ((response.getBody()).equals("false")){
+            Alert alerta = new Alert(Alert.AlertType.WARNING);
+            alerta.setTitle("Reserva");
+            alerta.setHeaderText("No se pudo reservar");
+            alerta.setContentText("No quedan cupos :(");
+            ButtonType buttonType = new ButtonType("Salir", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alerta.getButtonTypes().setAll(buttonType);
+            Optional<ButtonType> result = alerta.showAndWait();
+        }
     }
 
     public List<String> nombreDeCentrosDeportivos(String nombredeactividad){
