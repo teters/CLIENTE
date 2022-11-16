@@ -27,7 +27,7 @@ public class OptionPaneController {
 
     public void empresaPane(ActionEvent event) throws Exception {
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(EmpresaPaneController.class.getResource("empresa"));
+        Parent root = loader.load(EmpresaPaneController.class.getResource("empresa.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -36,7 +36,7 @@ public class OptionPaneController {
 
     public void centroDepPane(ActionEvent e) throws Exception{
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(CentroDepController.class.getResource("centro-dep"));
+        Parent root = loader.load(CentroDepController.class.getResource("centro-dep.fxml"));
         Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -45,7 +45,7 @@ public class OptionPaneController {
 
     public void crearEmpresaPane(ActionEvent actionEvent) throws Exception{
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(CrearEmpresaController.class.getResource("crear-empresa"));
+        Parent root = loader.load(CrearEmpresaController.class.getResource("crear-empresa.fxml"));
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -54,7 +54,7 @@ public class OptionPaneController {
 
     public void crearCentroDepPane(ActionEvent a) throws Exception{
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(CrearCentroDepController.class.getResource("crear-centro-dep"));
+        Parent root = loader.load(CrearCentroDepController.class.getResource("crear-centro-dep.fxml"));
         Stage stage = (Stage)((Node)a.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

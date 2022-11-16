@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.CrearActividadController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.CrearActividadController">
     <top>
         <AnchorPane prefHeight="101.0" prefWidth="600.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
@@ -46,17 +46,17 @@
                         <Font name="Corbel Bold Italic" size="18.0" />
                     </font>
                 </Label>
-                <Button fx:id="altaActividad" layoutX="130.0" layoutY="301.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="97.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
+                <Button layoutX="130.0" layoutY="301.0" mnemonicParsing="false" onAction="#altaActividad" prefHeight="27.0" prefWidth="97.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
                     <font>
                         <Font name="Corbel Bold" size="14.0" />
                     </font>
                 </Button>
-                <Button fx:id="volverEmp" layoutX="306.0" layoutY="301.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="66.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Volver" textFill="WHITE">
+                <Button fx:id="volverEmp" layoutX="306.0" layoutY="301.0" mnemonicParsing="false" onAction="#volverEmp" prefHeight="27.0" prefWidth="66.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                     <font>
                         <Font name="Corbel Bold" size="14.0" />
                     </font>
                 </Button>
-                <Button fx:id="salirBEmp" layoutX="445.0" layoutY="301.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="54.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+                <Button fx:id="salirBEmp" layoutX="445.0" layoutY="301.0" mnemonicParsing="false" onAction="#salirEmp" prefHeight="27.0" prefWidth="54.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                     <font>
                         <Font name="Corbel Bold" size="14.0" />
                     </font>
@@ -72,7 +72,7 @@
                   <Font name="Corbel Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="67.0" layoutY="118.0" text="Fecha:" textFill="WHITE">
+            <Label layoutX="67.0" layoutY="118.0" text="Dia:" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold Italic" size="18.0" />
                </font>
@@ -91,7 +91,7 @@
             </Label>
             <ChoiceBox fx:id="fechaActividad" layoutX="130.0" layoutY="117.0" prefWidth="150.0" />
             <TextField fx:id="nombreActividad1" layoutX="130.0" layoutY="231.0" promptText="Nombre" styleClass="boxShape" stylesheets="@../option.css" />
-            <CheckBox alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="305.0" layoutY="206.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Requiere Reserva?" textFill="WHITE" AnchorPane.leftAnchor="305.0">
+            <CheckBox fx:id="reserva" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="305.0" layoutY="206.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Requiere Reserva?" textFill="WHITE" AnchorPane.leftAnchor="305.0">
                <font>
                   <Font name="Corbel Bold Italic" size="18.0" />
                </font></CheckBox>

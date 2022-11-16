@@ -42,27 +42,39 @@ public class CrearActividadController implements Initializable{
     private TextField tipoActividad;
 
     @FXML
+    private CheckBox reserva;
+
+    @FXML
     private Button salirBEmp;
 
-    public void altaActividad(Actividad actividad) {
-        String cupos = cuposActividad.getText();
+    public void altaActividad(ActionEvent event) {
+        String cuposString = cuposActividad.getText();
         String descripcion = descripcionActividad.getText();
         String fechaAct = fechaActividad.getValue();
         String horarios = horariosActividad.getText();
         String nombre = nombreActividad.getText();
-        String precio = precioActividad.getText();
+        String precioString = precioActividad.getText();
         String tipo = tipoActividad.getText();
-        Actividad actividad1 = new Actividad();
-        actividad1.setCupos(Integer.valueOf(cupos));
+        Boolean reservaBool=reserva.isSelected();
+
+
+        ActividadDTO actividad1 = new ActividadDTO();
+        int cupos=Integer.parseInt(cuposString);
+        Float precio=Float.parseFloat(precioString);
+
+        actividad1.setCupos(cupos);
         actividad1.setDescripcion(descripcion);
         actividad1.setHorario(horarios);
-        //como hacemos con la fecha?
+        actividad1.setDia(fechaAct);
         actividad1.setNombre(nombre);
-        actividad1.setPrecio(Float.valueOf(precio));
+        actividad1.setPrecio(precio);
         actividad1.setTipoActividad(tipo);
-        //actividad1.setReserva();
+        actividad1.setNombreCentro();
+
+        actividad1.setReservaBool(reservaBool);
 
         //Actividad actividad1 = new Actividad(cupos, descripcion, fechaAct, horarios, nombre, precio, tipo);}
+
         Gson gson=new Gson();
         String body= gson.toJson(actividad1);
         HttpResponse<JsonNode> response = Unirest.post("http://localhost:8080/actividad/").
@@ -102,8 +114,6 @@ public class CrearActividadController implements Initializable{
         fechaActividad.setItems(fecha);
     }
 
-
-    //Rellenar, eventualmente.
 
 
 }

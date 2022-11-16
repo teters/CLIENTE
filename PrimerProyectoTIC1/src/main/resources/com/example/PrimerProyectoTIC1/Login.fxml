@@ -78,7 +78,7 @@
                   <Image url="@../../../imagenes/gym-mirror.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="270.0" layoutY="249.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="216.0" styleClass="transparent" stylesheets="@option.css" text="Conoce más acerca de nosotros">
+            <Button layoutX="270.0" layoutY="249.0" mnemonicParsing="false" onAction="#sobreNos" prefHeight="28.0" prefWidth="216.0" styleClass="transparent" stylesheets="@option.css" text="Conoce más acerca de nosotros">
                <font>
                   <Font name="Corbel" size="15.0" />
                </font>

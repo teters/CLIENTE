@@ -85,7 +85,6 @@ public class LoginController {
             Parent root = loader.load(CentroDepPaneController.class.getResource("centro-dep-pane.fxml"));
             Stage stage = (Stage)((Node)e.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-            stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
 
@@ -139,7 +138,16 @@ public class LoginController {
     }
 
 
+    public void sobreNos(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(CentroDepPaneController.class.getResource("sobre-nosotros.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.show();
 
+    }
 
 
 }
