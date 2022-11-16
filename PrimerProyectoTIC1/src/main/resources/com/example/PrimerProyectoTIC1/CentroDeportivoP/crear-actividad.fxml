@@ -91,7 +91,7 @@
             </Label>
             <ChoiceBox fx:id="fechaActividad" layoutX="130.0" layoutY="117.0" prefWidth="150.0" />
             <TextField fx:id="centroDepActividad" layoutX="130.0" layoutY="231.0" promptText="Nombre" styleClass="boxShape" stylesheets="@../option.css" />
-            <CheckBox fx:id="reserva" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="305.0" layoutY="206.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" text="Requiere Reserva?" textFill="WHITE" AnchorPane.leftAnchor="305.0">
+            <CheckBox fx:id="reserva" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="326.0" layoutY="190.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="22.0" prefWidth="194.0" text="Requiere Reserva?" textFill="WHITE" AnchorPane.leftAnchor="326.0">
                <font>
                   <Font name="Corbel Bold Italic" size="18.0" />
                </font></CheckBox>
@@ -100,6 +100,11 @@
                   <Font name="Corbel Bold Italic" size="18.0" />
                </font>
             </Label>
+            <Button layoutX="394.0" layoutY="231.0" mnemonicParsing="false" onAction="#subirFotos" prefHeight="25.0" prefWidth="157.0" styleClass="transparent" stylesheets="@../option.css" text="Elegir imagen" textFill="WHITE">
+               <font>
+                  <Font name="Corbel Bold Italic" size="18.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
    </right>

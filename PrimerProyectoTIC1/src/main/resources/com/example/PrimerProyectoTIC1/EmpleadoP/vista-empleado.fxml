@@ -58,7 +58,7 @@
    <center>
       <ScrollPane fx:id="scroll" prefHeight="459.0" prefWidth="705.0" styleClass="shadow" stylesheets="@../style.css" BorderPane.alignment="CENTER">
          <content>
-            <GridPane fx:id="grid" prefHeight="11.0" prefWidth="0.0" styleClass="green" stylesheets="@../style.css">
+            <GridPane fx:id="grid" prefHeight="11.0" prefWidth="0.0" stylesheets="@../style.css">
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>

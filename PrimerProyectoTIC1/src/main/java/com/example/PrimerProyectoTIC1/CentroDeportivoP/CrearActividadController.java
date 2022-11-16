@@ -71,7 +71,7 @@ public class CrearActividadController implements Initializable{
                 header("Content-Type","application/json").
                 body(new JsonNode(body)).asJson();
         }
-    public void subirFotos(Actividad actividad){
+    public void subirFotos(ActionEvent event){
 
 
     }

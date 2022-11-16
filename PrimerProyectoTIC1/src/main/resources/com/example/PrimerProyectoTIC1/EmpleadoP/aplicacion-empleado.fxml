@@ -8,43 +8,56 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.AplicacionEmpleadoController">
     <left>
-        <VBox prefHeight="200.0" prefWidth="279.0" styleClass="green" stylesheets="@../style.css" BorderPane.alignment="CENTER">
+        <VBox prefHeight="200.0" prefWidth="279.0" styleClass="gris" stylesheets="@../style.css" BorderPane.alignment="CENTER">
             <children>
-                <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#reservarActividad" prefHeight="103.0" prefWidth="279.0" stylesheets="@../style.css" text="Reservar actividad" textAlignment="CENTER" textFill="#574a4a">
-                    <font>
-                        <Font name="Corbel Bold" size="21.0" />
-                    </font>
-               <styleClass>
-                  <String fx:value="background" />
-                  <String fx:value="app-buttons" />
-               </styleClass></Button>
-                <Button alignment="CENTER" mnemonicParsing="false" prefHeight="109.0" prefWidth="279.0" stylesheets="@../style.css" text="Eliminar mi reserva" textAlignment="CENTER" textFill="#574a4a">
-                    <font>
-                        <Font name="Corbel Bold" size="21.0" />
-                    </font>
-               <styleClass>
-                  <String fx:value="background" />
-                  <String fx:value="app-buttons" />
-               </styleClass></Button>
-                <Button alignment="CENTER" layoutX="10.0" layoutY="66.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="279.0" stylesheets="@../style.css" text="Ver mis datos" textAlignment="CENTER" textFill="#574a4a">
-                    <font>
-                        <Font name="Corbel Bold" size="21.0" />
-                    </font>
-               <styleClass>
-                  <String fx:value="background" />
-                  <String fx:value="app-buttons" />
-               </styleClass>
-                </Button>
+            <HBox prefHeight="119.0" prefWidth="279.0">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="281.0">
+                     <children>
+                        <Button alignment="CENTER" layoutX="29.0" layoutY="14.0" mnemonicParsing="false" onAction="#reservarActividad" prefHeight="101.0" prefWidth="229.0" stylesheets="@../style.css" text="Reservar actividad" textAlignment="CENTER" textFill="#dddddd">
+                           <font>
+                              <Font name="Cambria Bold" size="21.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="background" />
+                              <String fx:value="left-buttons" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <Pane prefHeight="39.0" prefWidth="279.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="288.0">
+                     <children>
+                        <Button alignment="CENTER" layoutX="25.0" mnemonicParsing="false" onAction="#verDatos" prefHeight="101.0" prefWidth="236.0" stylesheets="@../style.css" text="Ver mis datos" textAlignment="CENTER" textFill="#dddddd">
+                           <font>
+                              <Font name="Cambria Bold" size="21.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="background" />
+                              <String fx:value="left-buttons" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
             </children>
         </VBox>
     </left>
     <top>
-        <AnchorPane prefHeight="121.0" prefWidth="752.0" styleClass="green-oscuro" stylesheets="@../style.css" BorderPane.alignment="CENTER">
+        <AnchorPane prefHeight="121.0" prefWidth="752.0" styleClass="gris" stylesheets="@../style.css" BorderPane.alignment="CENTER">
             <children>
                 <Label layoutX="255.0" layoutY="23.0" prefHeight="79.0" prefWidth="243.0" text="Fitness App" textFill="WHITE">
                     <font>
@@ -84,9 +97,9 @@
       </HBox>
    </bottom>
    <center>
-      <AnchorPane prefHeight="286.0" prefWidth="418.0" styleClass="green" stylesheets="@../style.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="286.0" prefWidth="418.0" styleClass="gris" stylesheets="@../style.css" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="286.0" fitWidth="429.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="286.0" fitWidth="429.0" layoutX="22.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../imagenes/gym.jpg" />
                </image>
