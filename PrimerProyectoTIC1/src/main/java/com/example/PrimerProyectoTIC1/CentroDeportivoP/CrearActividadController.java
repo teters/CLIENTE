@@ -38,6 +38,10 @@ public class CrearActividadController implements Initializable{
     @FXML
     private TextField precioActividad;
 
+
+    @FXML
+    private TextField centroDepActividad;
+
     @FXML
     private TextField tipoActividad;
 
