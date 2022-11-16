@@ -1,7 +1,7 @@
-package com.example.PrimerProyectoTIC1.EmpresaP;
+package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 import com.example.PrimerProyectoTIC1.AdminP.OptionPaneController;
-import com.example.PrimerProyectoTIC1.BossEmpresaDTO;
+import com.example.PrimerProyectoTIC1.CentroDeportivoP.BossCentroDepDTO;
 import com.google.gson.Gson;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,7 +20,7 @@ import kong.unirest.Unirest;
 
 import java.io.IOException;
 
-public class CrearBossEmpresaController {
+public class CrearBossCDController {
 
     @FXML
     private TextField nombreBossID;
@@ -35,23 +35,23 @@ public class CrearBossEmpresaController {
     private TextField ContraseñaBossEmpID;
 
     @FXML
-    private TextField EmpresaBossEmpID;
+    private TextField CentroDeportivoBossEmpID;
 
     @FXML
     private Button salirBCEmp;
 
-    public void agregarBossEmpresa(ActionEvent actionEvent) throws IOException {
+    public void agregarBossCentroDeportivo(ActionEvent actionEvent) throws IOException {
 
-        BossEmpresaDTO bossEmpresa = new BossEmpresaDTO();
-        bossEmpresa.setEmpresaNombre(EmpresaBossEmpID.getText());
-        bossEmpresa.setMail(MailBossEmpID.getText());
-        bossEmpresa.setPassword(ContraseñaBossEmpID.getText());
-        bossEmpresa.setTelefono(Long.parseLong(TelefonoBossEmpID.getText()));
-        bossEmpresa.setNombre(nombreBossID.getText());
+        BossCentroDepDTO bossCentroDeportivo = new BossCentroDepDTO();
+        bossCentroDeportivo.setcentroDepNombre(CentroDeportivoBossEmpID.getText());
+        bossCentroDeportivo.setMail(MailBossEmpID.getText());
+        bossCentroDeportivo.setPassword(ContraseñaBossEmpID.getText());
+        bossCentroDeportivo.setTelefono(Long.parseLong(TelefonoBossEmpID.getText()));
+        bossCentroDeportivo.setNombre(nombreBossID.getText());
 
         Gson gson=new Gson();
-        String body= gson.toJson(bossEmpresa);
-        HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/manager-empresas/").header("Content-Type","application/json").body(new JsonNode(body)).asJson();//esto te crea y te manda al servidor la empresa
+        String body= gson.toJson(bossCentroDeportivo);
+        HttpResponse<JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/managercentrodep/").header("Content-Type","application/json").body(new JsonNode(body)).asJson();//esto te crea y te manda al servidor la empresa
         System.out.println(jsonNodeHttpResponse.getStatus());
         //HttpResponse<String> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/empresa/agregarEmpresa").header("Content-Type","application/json").body(new JsonNode(body)).asString();
     }
