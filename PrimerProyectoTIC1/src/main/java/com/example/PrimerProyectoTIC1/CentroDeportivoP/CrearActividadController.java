@@ -49,6 +49,8 @@ public class CrearActividadController implements Initializable{
     @FXML
     private Button salirBEmp;
 
+    Stage stage = (Stage) salirBEmp.getScene().getWindow();
+
     public CentroDeportivo1 obtenerCentroDelManager(){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/managercentrodep/centroDelManagerLoggeado").
                 header("Content-Type","application/json").asJson();
