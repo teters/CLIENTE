@@ -57,19 +57,24 @@
             </AnchorPane>
             <AnchorPane prefHeight="111.0" prefWidth="600.0">
                <children>
-                  <Button layoutX="95.0" layoutY="56.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
+                  <Button layoutX="95.0" layoutY="62.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
                      <font>
                         <Font name="Corbel Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button layoutX="274.0" layoutY="56.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Volver" textFill="WHITE">
+                  <Button layoutX="274.0" layoutY="62.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                      <font>
                         <Font name="Corbel Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button layoutX="453.0" layoutY="56.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+                  <Button layoutX="453.0" layoutY="62.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                      <font>
                         <Font name="Corbel Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="203.0" layoutY="14.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Para crear boss, haz clic aqui" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
                      </font>
                   </Button>
                </children>

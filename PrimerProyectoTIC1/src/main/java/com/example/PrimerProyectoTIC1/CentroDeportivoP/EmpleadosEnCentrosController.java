@@ -6,6 +6,8 @@ import com.example.PrimerProyectoTIC1.CheckinDTO;
 import com.example.PrimerProyectoTIC1.EmpleadoP.Empleado;
 
 import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
+import com.example.PrimerProyectoTIC1.ReservaDTO;
+import com.example.PrimerProyectoTIC1.ReservaDTOConDia;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import javafx.collections.FXCollections;
@@ -20,7 +22,9 @@ import kong.unirest.Unirest;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class EmpleadosEnCentrosController implements Initializable {
@@ -58,13 +62,13 @@ public class EmpleadosEnCentrosController implements Initializable {
         }
         return actividades;
     }
-    public List<Reserva> obtenerReservasConMail(String mail){
-        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/reservas/"+mail+"/").
+    public List<ReservaDTOConDia> obtenerReservasConMail(String mail){
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/reserva/"+mail+"/").
                 header("Content-Type","application/json").asJson();
         ObjectMapper mapper=new ObjectMapper();
-        List<Reserva> reservas=null;
+        List<ReservaDTOConDia> reservas=null;
         try {
-            Reserva[] reservasarray=mapper.readValue(response.getBody().toString(),Reserva[].class);
+            ReservaDTOConDia[] reservasarray=mapper.readValue(response.getBody().toString(),ReservaDTOConDia[].class);
             reservas= Arrays.asList(reservasarray);
         } catch (IOException e) {
             e.printStackTrace();
@@ -108,19 +112,29 @@ public class EmpleadosEnCentrosController implements Initializable {
             if (){}
         }*/
         boolean seHizo=false;
-        List<Reserva> reservas=obtenerReservasConMail(mailDeEmp.getText());
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LLLL/yyyy");
+        LocalDate date=null;
+        List<ReservaDTOConDia> reservas=obtenerReservasConMail(mailDeEmp.getText());
+        Long actividadId=obtenerActividadConNombre(actividadesList.getValue()).getId();
+        String mail=obtenerEmpleadoConMail(mailDeEmp.getText()).getMail();
         for (int i = 0; i < reservas.size(); i++) {
-            if(dias.getValue().equals(reservas.get(i).getDia())){
-                validarReserva.setVisible(false);
+            String dia=reservas.get(i).getDia();
+            Long id=reservas.get(i).getActividadId();
+            String dias1=dias.getValue();
+            if(dias.getValue().equals(dia) && actividadId.equals(id) && reservas.get(i).getMail_empleado().equals(mail)){
+                //validarReserva.setVisible(false);
                 seHizo=true;
             }
         }
-        if(!seHizo){
+        if(seHizo){
+            esValida.setText("Reserva valida");
+
+        }else {
             esValida.setText("No hay ninguna reserva del usuario ingresado para ese dia");
         }
 
-        esValida.setText("Reserva valida");
-        validarReserva.setVisible(false);
+
+        //validarReserva.setVisible(false);
     }
     public Actividad obtenerActividadConNombre(String nombre){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/actividad/"+nombre+"/").
@@ -179,7 +193,7 @@ public class EmpleadosEnCentrosController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList<String> list = FXCollections.observableArrayList();
-        list.addAll("lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo");
+        list.addAll("Lunes", "Martes", "Miercoles", "Jueves", "Jiernes", "Sabado", "Domingo");
         dias.setItems(list);
         ObservableList<String> actividadesCD = FXCollections.observableArrayList();
         CentroDeportivo1 centroManager=obtenerCentroDelManager();
