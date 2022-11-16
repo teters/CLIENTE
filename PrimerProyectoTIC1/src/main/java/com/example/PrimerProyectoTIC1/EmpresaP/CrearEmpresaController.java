@@ -65,9 +65,7 @@ public class CrearEmpresaController {
                 System.out.println("Has salido exitosamente.");
                 stage.close();
             }
-
-
-        }
+     }
 
 
 }
