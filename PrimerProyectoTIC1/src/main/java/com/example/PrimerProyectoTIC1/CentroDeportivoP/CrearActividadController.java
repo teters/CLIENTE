@@ -1,12 +1,6 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 
-import com.example.PrimerProyectoTIC1.Imagen;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
-import com.example.PrimerProyectoTIC1.OptionPaneController;
-
 import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,18 +12,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import kong.unirest.*;
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.List;
+
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class CrearActividadController implements Initializable{

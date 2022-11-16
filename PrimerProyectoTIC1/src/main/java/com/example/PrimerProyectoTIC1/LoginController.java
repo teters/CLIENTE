@@ -1,13 +1,13 @@
 package com.example.PrimerProyectoTIC1;
 
 import com.example.PrimerProyectoTIC1.AdminP.Admin;
+import com.example.PrimerProyectoTIC1.AdminP.OptionPaneController;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.BossCD1;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDepPaneController;
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
 import com.example.PrimerProyectoTIC1.EmpleadoP.AplicacionEmpleadoController;
 import com.example.PrimerProyectoTIC1.EmpleadoP.Empleado;
 import com.example.PrimerProyectoTIC1.EmpleadoP.VistaEmpleadoController;
-import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.google.gson.Gson;
 import javafx.event.ActionEvent;
@@ -20,11 +20,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import kong.unirest.*;
 
-import javax.swing.*;
 import java.io.IOException;
-import java.io.NotActiveException;
-import java.util.Arrays;
-import java.util.List;
 
 
 public class LoginController {

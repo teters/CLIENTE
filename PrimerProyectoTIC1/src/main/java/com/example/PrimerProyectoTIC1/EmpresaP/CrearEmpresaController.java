@@ -1,6 +1,6 @@
 package com.example.PrimerProyectoTIC1.EmpresaP;
 
-import com.example.PrimerProyectoTIC1.OptionPaneController;
+import com.example.PrimerProyectoTIC1.AdminP.OptionPaneController;
 import com.google.gson.Gson;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,7 +16,6 @@ import javafx.stage.Stage;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
-import kong.unirest.UnirestException;
 
 import java.io.IOException;
 

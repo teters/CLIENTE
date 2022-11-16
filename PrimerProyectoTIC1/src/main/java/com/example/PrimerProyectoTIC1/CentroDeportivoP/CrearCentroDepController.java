@@ -1,6 +1,6 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
-import com.example.PrimerProyectoTIC1.OptionPaneController;
+import com.example.PrimerProyectoTIC1.AdminP.OptionPaneController;
 import com.google.gson.Gson;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

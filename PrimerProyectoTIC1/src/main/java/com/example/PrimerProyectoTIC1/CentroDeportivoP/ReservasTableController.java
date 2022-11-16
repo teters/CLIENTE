@@ -1,7 +1,7 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 import com.example.PrimerProyectoTIC1.EmpleadoP.Reserva;
-import com.example.PrimerProyectoTIC1.OptionPaneController;
+import com.example.PrimerProyectoTIC1.AdminP.OptionPaneController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
