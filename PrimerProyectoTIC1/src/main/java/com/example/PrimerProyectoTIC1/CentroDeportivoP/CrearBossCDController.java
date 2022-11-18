@@ -35,7 +35,7 @@ public class CrearBossCDController {
     private TextField ContraseñaBossEmpID;
 
     @FXML
-    private TextField CentroDeportivoBossEmpID;
+    private TextField nombreCD;
 
     @FXML
     private Button salirBCEmp;
@@ -43,7 +43,7 @@ public class CrearBossCDController {
     public void agregarBossCentroDeportivo(ActionEvent actionEvent) throws IOException {
 
         BossCentroDepDTO bossCentroDeportivo = new BossCentroDepDTO();
-        bossCentroDeportivo.setcentroDepNombre(CentroDeportivoBossEmpID.getText());
+        bossCentroDeportivo.setcentroDepNombre(nombreCD.getText());
         bossCentroDeportivo.setMail(MailBossEmpID.getText());
         bossCentroDeportivo.setPassword(ContraseñaBossEmpID.getText());
         bossCentroDeportivo.setTelefono(Long.parseLong(TelefonoBossEmpID.getText()));
