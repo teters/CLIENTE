@@ -48,7 +48,7 @@ public class ReservasTableController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-         List<Reserva> items= Unirest.get("http://localhost:8080/empresas/ListaDeEmpresas").
+         List<Reserva> items= Unirest.get("http://localhost:8080/managercentrodep/reservas/centro/").
                 header("Content-Type","application/json").
                 asObject(new GenericType<List<Reserva>>(){}).getBody();
 

@@ -73,14 +73,8 @@ public class OptionPaneController {
 
     public void volver(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
-        alerta.setTitle("Salir");
-        alerta.setHeaderText("¿Estás seguro que quieres cerrar sesión?");
         Parent root = loader.load(OptionPaneController.class.getResource("Login.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        ButtonType buttonType = new ButtonType("Salir", ButtonBar.ButtonData.CANCEL_CLOSE);
-        alerta.getButtonTypes().setAll(buttonType);
-        Optional<ButtonType> result = alerta.showAndWait();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

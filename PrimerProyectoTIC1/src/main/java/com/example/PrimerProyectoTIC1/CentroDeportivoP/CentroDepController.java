@@ -47,7 +47,7 @@ public class CentroDepController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        List<CentroDeportivo1> items = Unirest.get("http://localhost:8080/empresa/listaDeCentrosDeportivos").
+        List<CentroDeportivo1> items = Unirest.get("http://localhost:8080/centrodeportivo/").
                 header("Content-Type","application/json")
                 .asObject(new GenericType<List<CentroDeportivo1>>(){})
                 .getBody();

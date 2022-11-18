@@ -1,32 +1,22 @@
 package com.example.PrimerProyectoTIC1.EmpleadoP;
 
 import com.example.PrimerProyectoTIC1.CentroDeportivoP.Actividad;
-import com.example.PrimerProyectoTIC1.CentroDeportivoP.CentroDeportivo1;
-import com.example.PrimerProyectoTIC1.EmpresaP.Empresa;
 import com.example.PrimerProyectoTIC1.Imagen;
-import com.example.PrimerProyectoTIC1.LoginController;
 import com.example.PrimerProyectoTIC1.ReservaDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import com.sun.glass.ui.ClipboardAssistance;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 import kong.unirest.*;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -84,6 +74,12 @@ public class VentanaActividadController {
         HttpResponse<String> response = Unirest.get("http://localhost:8080/centrodeportivo/"+centro_id+"/").
                 header("Content-Type","application/json").asString();
         ObjectMapper mapper=new ObjectMapper();
+        try {
+            imgAct.setImage(new Image(getFotos(actividad.getNombre())));
+        }catch (NullPointerException n ) {
+
+        }
+
         String nombre_centro=null;
        //     nombre_centro=mapper.readValue(response.getBody().toString(),String.class);
         nombre_centro=response.getBody();
@@ -227,7 +223,7 @@ public class VentanaActividadController {
         }
         return centro;
     }
-    public void getFotos(String nombreAct){
+    public ByteArrayInputStream getFotos(String nombreAct){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/imagen/"+nombreAct).
                 header("Content-Type","application/json").asJson();
         ObjectMapper mapper=new ObjectMapper();
@@ -244,7 +240,8 @@ public class VentanaActividadController {
         ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(decodedBytes);
 
 
-        }
+        return byteArrayInputStream;
+    }
     }
 
 

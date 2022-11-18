@@ -32,7 +32,7 @@ public class CrearActividadController implements Initializable{
     private TextArea descripcionActividad;
 
     @FXML
-    private ChoiceBox<String> fechaActividad;
+    private ComboBox<String> fechaActividad;
 
     @FXML
     private TextField horariosActividad;
@@ -119,7 +119,8 @@ public class CrearActividadController implements Initializable{
             String encodedString= Base64.getEncoder().encodeToString(fileContent);
             Imagen imagen=new Imagen();
             imagen.setContent(encodedString);
-            imagen.setNombreActividad(nombreActividad.getText());
+            String nombre=nombreActividad.getText();
+            imagen.setNombreActividad(nombre);
             Gson gson=new Gson();
             String body= gson.toJson(imagen);
             HttpResponse<JsonNode> response=Unirest.post("http://localhost:8080/imagen/").

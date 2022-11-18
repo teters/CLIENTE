@@ -35,7 +35,7 @@ public class EmpresaController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        List<Empresa> items= Unirest.get("http://localhost:8080/empresas/ListaDeEmpresas").
+        List<Empresa> items= Unirest.get("http://localhost:8080/empresas/").
                 header("Content-Type","application/json").
                 asObject(new GenericType<List<Empresa>>(){}).getBody();
 
