@@ -1,6 +1,7 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 
+import com.example.PrimerProyectoTIC1.Imagen;
 import com.google.gson.Gson;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,10 +16,12 @@ import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import kong.unirest.*;
+import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Base64;
 import java.util.ResourceBundle;
 
 public class CrearActividadController implements Initializable{
@@ -106,7 +109,24 @@ public class CrearActividadController implements Initializable{
     public void subirFotos(ActionEvent event){
         FileChooser fileChooser=new FileChooser();
         fileChooser.setTitle("Open Resource File");
-        File file =fileChooser.showOpenDialog(stage)
+        File file =fileChooser.showOpenDialog(stage);
+        if (file!=null){
+            System.out.println("tengo file");
+        }
+        try{
+            byte[] fileContent= FileUtils.readFileToByteArray(file);
+            String encodedString= Base64.getEncoder().encodeToString(fileContent);
+            Imagen imagen=new Imagen();
+            imagen.setContent(encodedString);
+            imagen.setNombreActividad(nombreActividad.getText());
+            Gson gson=new Gson();
+            String body= gson.toJson(imagen);
+            HttpResponse<JsonNode> response=Unirest.post("http://localhost:8080/imagen/").
+                    header("Content-Type","application/json").body(new JsonNode(body)).
+                    asJson();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 

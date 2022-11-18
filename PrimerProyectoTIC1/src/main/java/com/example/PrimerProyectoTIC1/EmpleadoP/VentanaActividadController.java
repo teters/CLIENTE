@@ -231,34 +231,22 @@ public class VentanaActividadController {
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/imagen/"+nombreAct).
                 header("Content-Type","application/json").asJson();
         ObjectMapper mapper=new ObjectMapper();
-        List<Imagen> imagens=null;
+        //List<Imagen> imagens=null;
+        Imagen imagen=null;
         try {
-            Imagen[] horariosArray=mapper.readValue(response.getBody().toString(),Imagen[].class);
-            imagens= Arrays.asList(horariosArray);
+            imagen=mapper.readValue(response.getBody().toString(),Imagen.class);
+            //imagens= Arrays.asList(horariosArray);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (int i = 0; i < imagens.size(); i++) {
-            ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(imagens.get(i).getContent());
-            BufferedImage bImage2 = null;
-            try {
-                bImage2 = ImageIO.read(byteArrayInputStream);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
-                String string=String.valueOf(i);
-                ImageIO.write(bImage2, "jpg", new File(nombreAct+string+".jpg") );
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        byte[] decodedBytes;
+        decodedBytes=Base64.getDecoder().decode(imagen.getContent());
+        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(decodedBytes);
+
+
         }
     }
 
 
 
 
-/*  byte[] decodedBytes = Base64.getDecoder().decode(actividad.getImg());
-        ByteArrayInputStream is = new ByteArrayInputStream(decodedBytes);
-        imgAct.setImage(new Image(is));*/
-}
