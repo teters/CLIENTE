@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.CrearCentroDepController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.CrearCentroDepController">
    <top>
       <AnchorPane prefHeight="101.0" prefWidth="600.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
          <children>
@@ -57,22 +57,22 @@
             </AnchorPane>
             <AnchorPane prefHeight="111.0" prefWidth="600.0">
                <children>
-                  <Button layoutX="95.0" layoutY="62.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
+                  <Button layoutX="95.0" layoutY="62.0" mnemonicParsing="false" onAction="#agregarCentroDeportivo" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
                      <font>
                         <Font name="Corbel Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button layoutX="274.0" layoutY="62.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Volver" textFill="WHITE">
+                  <Button layoutX="274.0" layoutY="62.0" mnemonicParsing="false" onAction="#volver" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                      <font>
                         <Font name="Corbel Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button layoutX="453.0" layoutY="62.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+                  <Button layoutX="453.0" layoutY="62.0" mnemonicParsing="false" onAction="#salir" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                      <font>
                         <Font name="Corbel Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button layoutX="203.0" layoutY="14.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Para crear boss, haz clic aqui" textFill="WHITE">
+                  <Button layoutX="203.0" layoutY="14.0" mnemonicParsing="false" onAction="#crearBossCD" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Para crear boss, haz clic aqui" textFill="WHITE">
                      <font>
                         <Font name="Corbel Bold" size="14.0" />
                      </font>
