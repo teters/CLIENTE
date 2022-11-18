@@ -32,7 +32,7 @@ public class CrearActividadController implements Initializable{
     private TextArea descripcionActividad;
 
     @FXML
-    private ChoiceBox<String> fechaActividad;
+    private ComboBox<String> fechaActividad;
 
     @FXML
     private TextField horariosActividad;
