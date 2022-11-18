@@ -26,6 +26,9 @@ public class OptionPaneController {
     private Button centroDepBtn;
 
     @FXML
+    private Button volverBtn;
+
+    @FXML
     private Button salirBtn;
 
 
