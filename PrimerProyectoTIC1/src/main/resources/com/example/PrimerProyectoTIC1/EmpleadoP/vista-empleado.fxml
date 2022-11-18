@@ -31,17 +31,7 @@
                         <Font name="Cambria Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button layoutX="27.0" layoutY="177.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="142.0" stylesheets="@../style.css" text="Eliminar actividad" textAlignment="CENTER" textFill="#dddddd" wrapText="true">
-                     <styleClass>
-                        <String fx:value="background" />
-                        <String fx:value="left-buttons" />
-                        <String fx:value="shadow" />
-                     </styleClass>
-                     <font>
-                        <Font name="Cambria Bold" size="18.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="27.0" layoutY="314.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="142.0" stylesheets="@../style.css" text="Ver mis datos" textFill="#dddddd">
+                  <Button layoutX="27.0" layoutY="233.0" mnemonicParsing="false" prefHeight="76.0" prefWidth="142.0" stylesheets="@../style.css" text="Ver mis datos" textFill="#dddddd">
                      <styleClass>
                         <String fx:value="background" />
                         <String fx:value="left-buttons" />
