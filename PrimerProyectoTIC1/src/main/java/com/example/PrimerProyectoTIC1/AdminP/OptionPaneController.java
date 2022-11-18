@@ -12,10 +12,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class OptionPaneController {
 
@@ -25,8 +27,6 @@ public class OptionPaneController {
     @FXML
     private Button centroDepBtn;
 
-    @FXML
-    private Button volverBtn;
 
     @FXML
     private Button salirBtn;
@@ -73,8 +73,14 @@ public class OptionPaneController {
 
     public void volver(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(OptionPaneController.class.getResource("option-pane.fxml"));
+        Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+        alerta.setTitle("Salir");
+        alerta.setHeaderText("¿Estás seguro que quieres cerrar sesión?");
+        Parent root = loader.load(OptionPaneController.class.getResource("Login.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        ButtonType buttonType = new ButtonType("Salir", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alerta.getButtonTypes().setAll(buttonType);
+        Optional<ButtonType> result = alerta.showAndWait();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
