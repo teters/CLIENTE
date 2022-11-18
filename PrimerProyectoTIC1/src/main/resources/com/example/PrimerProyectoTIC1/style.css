@@ -69,6 +69,11 @@
     -fx-background-color: #D3D3D3;
 }
 
+.boton-gris{
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 50;
+}
+
 .gris-oscuro{
     -fx-background-color: #828282;
 }

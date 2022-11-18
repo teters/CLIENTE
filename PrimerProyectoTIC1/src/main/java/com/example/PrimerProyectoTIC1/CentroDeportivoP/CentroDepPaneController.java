@@ -1,6 +1,7 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
 import com.example.PrimerProyectoTIC1.AdminP.OptionPaneController;
+import com.example.PrimerProyectoTIC1.LoginController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,7 +23,7 @@ public class CentroDepPaneController {
 
     public void volver(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(OptionPaneController.class.getResource("option-pane.fxml"));
+        Parent root = loader.load(LoginController.class.getResource("Login.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

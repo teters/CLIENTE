@@ -42,9 +42,6 @@ public class VentanaActividadController {
     @FXML
     private ChoiceBox<String> horarioAct;
 
-    /*@FXML
-    private ChoiceBox<String> centroDepAct;
-*/
 
     @FXML
     private Label descripcion;
