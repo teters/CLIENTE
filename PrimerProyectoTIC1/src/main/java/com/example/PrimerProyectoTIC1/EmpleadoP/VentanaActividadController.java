@@ -75,7 +75,8 @@ public class VentanaActividadController {
                 header("Content-Type","application/json").asString();
         ObjectMapper mapper=new ObjectMapper();
         try {
-            imgAct.setImage(new Image(getFotos(actividad.getNombre())));
+            Image i=new Image(getFotos(actividad.getNombre()));
+            imgAct.setImage(i);
         }catch (NullPointerException n ) {
 
         }
@@ -224,7 +225,7 @@ public class VentanaActividadController {
         return centro;
     }
     public ByteArrayInputStream getFotos(String nombreAct){
-        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/imagen/"+nombreAct).
+        HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/imagen/"+nombreAct+"/").
                 header("Content-Type","application/json").asJson();
         ObjectMapper mapper=new ObjectMapper();
         //List<Imagen> imagens=null;
