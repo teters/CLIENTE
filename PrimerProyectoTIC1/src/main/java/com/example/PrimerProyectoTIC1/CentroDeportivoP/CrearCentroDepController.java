@@ -33,6 +33,17 @@ public class CrearCentroDepController {
         HttpResponse<kong.unirest.JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/centrodeportivo/agregarcentrodeportivo").header("Content-Type","application/json").body(new JsonNode(body)).asJson();
     }
 
+
+    public void crearBossCD(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(OptionPaneController.class.getResource("crear-boss-CD1.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
     public void volver(ActionEvent e) throws IOException{
         FXMLLoader loader = new FXMLLoader();
         Parent root = loader.load(OptionPaneController.class.getResource("option-pane.fxml"));
