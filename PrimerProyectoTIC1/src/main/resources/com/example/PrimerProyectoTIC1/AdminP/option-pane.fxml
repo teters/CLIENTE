@@ -37,12 +37,12 @@
                   <String fx:value="button" />
                </styleClass>
             </Button>
-            <Button layoutY="287.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="332.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Volver" textFill="WHITE">
+            <Button layoutY="287.0" mnemonicParsing="false" onAction="#volver" prefHeight="63.0" prefWidth="332.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="332.0" layoutY="287.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="354.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+            <Button layoutX="332.0" layoutY="287.0" mnemonicParsing="false" onAction="#salir" prefHeight="64.0" prefWidth="354.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                <font>
                   <Font name="Corbel" size="15.0" />
                </font>

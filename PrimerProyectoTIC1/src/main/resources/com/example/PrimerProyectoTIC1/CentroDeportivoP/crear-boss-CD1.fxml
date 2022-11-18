@@ -122,7 +122,7 @@
                     <children>
                         <HBox prefHeight="82.0" prefWidth="242.0">
                             <children>
-                                <Label alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="168.0" text="IdEmpresa:" textFill="WHITE">
+                                <Label alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="195.0" text="IdCentroDeportivo:" textFill="WHITE">
                                     <font>
                                         <Font name="Corbel Bold Italic" size="18.0" />
                                     </font>
@@ -131,7 +131,7 @@
                         </HBox>
                         <HBox prefHeight="50.0" prefWidth="347.0">
                             <children>
-                                <TextField fx:id="nombre1" prefHeight="26.0" prefWidth="250.0" promptText="IdEmpresa" />
+                                <TextField fx:id="nombre1" prefHeight="26.0" prefWidth="250.0" promptText="IdCentroDeportivo" />
                             </children>
                         </HBox>
                     </children>

@@ -10,8 +10,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class OptionPaneController {
 
@@ -20,6 +24,9 @@ public class OptionPaneController {
 
     @FXML
     private Button centroDepBtn;
+
+    @FXML
+    private Button salirBtn;
 
 
 
@@ -59,6 +66,26 @@ public class OptionPaneController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void volver(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(OptionPaneController.class.getResource("option-pane.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void salir(ActionEvent event){
+        Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+        alerta.setTitle("Salir");
+        alerta.setHeaderText("¿Estás seguro que quieres salir?");
+        if (alerta.showAndWait().get() == ButtonType.OK){
+            Stage stage = (Stage) salirBtn.getScene().getWindow();
+            System.out.println("Has salido exitosamente.");
+            stage.close();
+        }
     }
 
 }
