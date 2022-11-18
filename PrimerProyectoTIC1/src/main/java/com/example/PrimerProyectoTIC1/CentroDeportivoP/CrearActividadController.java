@@ -134,7 +134,7 @@ public class CrearActividadController implements Initializable{
 
     public void volverEmp(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(CrearActividadController.class.getResource("crear-actividad.fxml"));
+        Parent root = loader.load(CrearActividadController.class.getResource("centro-dep-pane.fxml"));
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

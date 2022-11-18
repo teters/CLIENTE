@@ -37,7 +37,7 @@
                   <String fx:value="button" />
                </styleClass>
             </Button>
-            <Button layoutY="287.0" mnemonicParsing="false" onAction="#volver" prefHeight="63.0" prefWidth="332.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Volver" textFill="WHITE">
+            <Button layoutY="287.0" mnemonicParsing="false" onAction="#volver" prefHeight="63.0" prefWidth="332.0" styleClass="azul-sin-redondear-borde" stylesheets="@../option.css" text="Cerrar sesión" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
