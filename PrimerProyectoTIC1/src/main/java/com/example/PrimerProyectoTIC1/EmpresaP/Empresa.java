@@ -4,19 +4,21 @@ public class Empresa {
     private Long id;
     private String nombre;
     private String direccion;
+    private Long telefono;
 
-    public Empresa(Long telefono, String nombre,String direccion) {
-        this.id = telefono;
+
+    public Empresa(Long telefono, String nombre, String direccion) {
+        this.telefono = telefono;
         this.nombre = nombre;
         this.direccion=direccion;
     }
 
     public Long getTelefono() {
-        return id;
+        return telefono;
     }
 
     public void setTelefono(Long telefono) {
-        this.id = telefono;
+        this.telefono = telefono;
     }
 
     public String getNombre() {
