@@ -59,7 +59,7 @@
     <top>
         <AnchorPane prefHeight="121.0" prefWidth="752.0" styleClass="gris" stylesheets="@../style.css" BorderPane.alignment="CENTER">
             <children>
-                <Label layoutX="255.0" layoutY="23.0" prefHeight="79.0" prefWidth="243.0" text="Fitness App" textFill="WHITE">
+                <Label layoutX="255.0" layoutY="23.0" prefHeight="79.0" prefWidth="243.0" text="Fitness App" textFill="#828282">
                     <font>
                         <Font name="Corbel Bold Italic" size="50.0" />
                     </font>
@@ -77,12 +77,12 @@
          <children>
             <AnchorPane prefHeight="106.0" prefWidth="430.0">
                <children>
-                  <Button layoutX="140.0" layoutY="29.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="119.0" stylesheets="@../style.css" text="Volver">
+                  <Button layoutX="128.0" layoutY="29.0" mnemonicParsing="false" onAction="#volver" prefHeight="48.0" prefWidth="119.0" stylesheets="@../style.css" text="Volver">
                      <font>
                         <Font name="Corbel" size="24.0" />
                      </font>
                      <styleClass>
-                        <String fx:value="bottom-button" />
+                        <String fx:value="boton-gris" />
                         <String fx:value="shadow" />
                      </styleClass>
                   </Button>
@@ -90,12 +90,12 @@
             </AnchorPane>
             <AnchorPane prefHeight="106.0" prefWidth="432.0">
                <children>
-                  <Button layoutX="119.0" layoutY="28.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="119.0" stylesheets="@../style.css" text="Salir">
+                  <Button fx:id="salir" layoutX="129.0" layoutY="28.0" mnemonicParsing="false" onAction="#salir" prefHeight="31.0" prefWidth="119.0" stylesheets="@../style.css" text="Salir">
                      <font>
                         <Font size="24.0" />
                      </font>
                      <styleClass>
-                        <String fx:value="bottom-button" />
+                        <String fx:value="boton-gris" />
                         <String fx:value="shadow" />
                      </styleClass>
                   </Button>
@@ -109,6 +109,13 @@
       </HBox>
    </bottom>
    <center>
-      <AnchorPane prefHeight="286.0" prefWidth="418.0" styleClass="gris" stylesheets="@../style.css" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="182.0" prefWidth="383.0" styleClass="gris" stylesheets="@../style.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="219.0" fitWidth="336.0" layoutX="79.0" layoutY="14.0" opacity="0.78" pickOnBounds="true" preserveRatio="true" styleClass="image">
+               <image>
+                  <Image url="@../../../../imagenes/gym.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </center>
 </BorderPane>
