@@ -73,27 +73,39 @@
         </AnchorPane>
     </top>
    <bottom>
-      <HBox prefHeight="106.0" prefWidth="752.0" styleClass="green-oscuro" stylesheets="@../style.css" BorderPane.alignment="CENTER">
+      <HBox prefHeight="106.0" prefWidth="752.0" stylesheets="@../style.css" BorderPane.alignment="CENTER">
          <children>
             <AnchorPane prefHeight="106.0" prefWidth="430.0">
                <children>
-                  <Button layoutX="140.0" layoutY="29.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="119.0" styleClass="bottom-button" stylesheets="@../style.css" text="Volver">
+                  <Button layoutX="140.0" layoutY="29.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="119.0" stylesheets="@../style.css" text="Volver">
                      <font>
                         <Font name="Corbel" size="24.0" />
                      </font>
+                     <styleClass>
+                        <String fx:value="bottom-button" />
+                        <String fx:value="shadow" />
+                     </styleClass>
                   </Button>
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="106.0" prefWidth="432.0">
                <children>
-                  <Button layoutX="119.0" layoutY="28.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="119.0" styleClass="bottom-button" stylesheets="@../style.css" text="Salir">
+                  <Button layoutX="119.0" layoutY="28.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="119.0" stylesheets="@../style.css" text="Salir">
                      <font>
                         <Font size="24.0" />
                      </font>
+                     <styleClass>
+                        <String fx:value="bottom-button" />
+                        <String fx:value="shadow" />
+                     </styleClass>
                   </Button>
                </children>
             </AnchorPane>
          </children>
+         <styleClass>
+            <String fx:value="gris-oscuro" />
+            <String fx:value="shadow" />
+         </styleClass>
       </HBox>
    </bottom>
    <center>

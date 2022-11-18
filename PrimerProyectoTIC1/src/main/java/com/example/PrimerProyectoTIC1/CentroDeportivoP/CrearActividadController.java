@@ -52,7 +52,8 @@ public class CrearActividadController implements Initializable{
     @FXML
     private Button salirBEmp;
 
-    Stage stage = (Stage) salirBEmp.getScene().getWindow();
+    Stage stage = new Stage();
+
 
     public CentroDeportivo1 obtenerCentroDelManager(){
         HttpResponse<JsonNode> response = Unirest.get("http://localhost:8080/managercentrodep/centroDelManagerLoggeado").
@@ -158,7 +159,6 @@ public class CrearActividadController implements Initializable{
                 "Jueves", "Viernes","Sabado");
         fechaActividad.setItems(fecha);
     }
-
 
 
 }
