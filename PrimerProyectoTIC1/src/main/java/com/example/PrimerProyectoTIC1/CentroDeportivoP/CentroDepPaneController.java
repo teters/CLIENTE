@@ -20,6 +20,15 @@ public class CentroDepPaneController {
     private Button salirCD;
 
 
+    public void volver(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(OptionPaneController.class.getResource("option-pane.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void salir(ActionEvent event) {
         Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
         alerta.setTitle("Salir");
@@ -29,15 +38,6 @@ public class CentroDepPaneController {
             System.out.println("Has salido exitosamente.");
             stage.close();
         }
-    }
-
-    public void volver(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(OptionPaneController.class.getResource(".fxml"));
-        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
 
     public void crearActividades(ActionEvent event) throws Exception {

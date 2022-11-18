@@ -82,7 +82,7 @@ public class OptionPaneController {
         alerta.setTitle("Salir");
         alerta.setHeaderText("¿Estás seguro que quieres salir?");
         if (alerta.showAndWait().get() == ButtonType.OK){
-            Stage stage = (Stage) salirBtn.getScene().getWindow();
+                Stage stage = (Stage) salirBtn.getScene().getWindow();
             System.out.println("Has salido exitosamente.");
             stage.close();
         }
