@@ -74,7 +74,12 @@ public class VentanaActividadController {
         HttpResponse<String> response = Unirest.get("http://localhost:8080/centrodeportivo/"+centro_id+"/").
                 header("Content-Type","application/json").asString();
         ObjectMapper mapper=new ObjectMapper();
-        imgAct.setImage(new Image(getFotos(actividad.getNombre())));
+        try {
+            imgAct.setImage(new Image(getFotos(actividad.getNombre())));
+        }catch (NullPointerException n ) {
+
+        }
+
         String nombre_centro=null;
        //     nombre_centro=mapper.readValue(response.getBody().toString(),String.class);
         nombre_centro=response.getBody();
