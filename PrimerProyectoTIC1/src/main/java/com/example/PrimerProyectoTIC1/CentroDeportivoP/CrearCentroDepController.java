@@ -30,13 +30,13 @@ public class CrearCentroDepController {
         CentroDeportivo1 centroDeportivo = new CentroDeportivo1(nombreCentroDep.getText(),direccionCentroDep.getText());
         Gson gson=new Gson();
         String body= gson.toJson(centroDeportivo);
-        HttpResponse<kong.unirest.JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/centrodeportivo/agregarcentrodeportivo").header("Content-Type","application/json").body(new JsonNode(body)).asJson();
+        HttpResponse<kong.unirest.JsonNode> jsonNodeHttpResponse= Unirest.post("http://localhost:8080/centrodeportivo/").header("Content-Type","application/json").body(new JsonNode(body)).asJson();
     }
 
 
     public void crearBossCD(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(OptionPaneController.class.getResource("crear-boss-CD1.fxml"));
+        Parent root = loader.load(CrearBossCDController.class.getResource("crear-boss-CD1.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

@@ -35,7 +35,7 @@
                <children>
                   <AnchorPane prefHeight="67.0" prefWidth="464.0">
                      <children>
-                        <TextField layoutX="292.0" layoutY="21.0" prefHeight="26.0" prefWidth="252.0" promptText="Nombre" />
+                        <TextField fx:id="nombreCentroDep" layoutX="292.0" layoutY="21.0" prefHeight="26.0" prefWidth="252.0" promptText="Nombre" />
                         <Label layoutX="66.0" layoutY="25.0" prefHeight="22.0" prefWidth="208.0" text="Nombre Centro Deportivo" textFill="WHITE">
                            <font>
                               <Font name="Corbel Bold Italic" size="18.0" />
@@ -47,7 +47,7 @@
             </HBox>
             <AnchorPane prefHeight="67.0" prefWidth="464.0" stylesheets="@../option.css">
                <children>
-                  <TextField layoutX="293.0" layoutY="21.0" prefHeight="26.0" prefWidth="251.0" promptText="Dirección" />
+                  <TextField fx:id="direccionCentroDep" layoutX="293.0" layoutY="21.0" prefHeight="26.0" prefWidth="251.0" promptText="Dirección" />
                   <Label layoutX="46.0" layoutY="25.0" prefHeight="22.0" prefWidth="235.0" text="Dirección de Centro Deportivo" textFill="WHITE">
                      <font>
                         <Font name="Corbel Bold Italic" size="18.0" />

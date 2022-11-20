@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.CrearBossCD1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.CrearBossCDController">
     <top>
         <AnchorPane prefHeight="101.0" prefWidth="600.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
@@ -49,7 +49,7 @@
                                     <children>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                             <children>
-                                                <TextField fx:id="nombre" layoutY="17.0" prefHeight="26.0" prefWidth="147.0" promptText="Nombre" />
+                                                <TextField fx:id="nombreBossID" layoutY="17.0" prefHeight="26.0" prefWidth="147.0" promptText="Nombre" />
                                             </children>
                                         </AnchorPane>
                                     </children>
@@ -67,9 +67,9 @@
                                 <VBox prefHeight="60.0" prefWidth="178.0">
                                     <children>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                                            <children>
-                                                <PasswordField fx:id="password" layoutX="-24.0" layoutY="14.0" prefHeight="26.0" prefWidth="189.0" promptText="Mail" />
-                                            </children>
+                                 <children>
+                                    <TextField fx:id="MailBossEmpID" layoutX="-21.0" layoutY="14.0" prefHeight="25.0" prefWidth="191.0" promptText="Mail" />
+                                 </children>
                                         </AnchorPane>
                                     </children>
                                 </VBox>
@@ -92,7 +92,7 @@
                             <children>
                                 <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                     <children>
-                                        <TextField fx:id="telefono" layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="145.0" promptText="Telefono" />
+                                        <TextField fx:id="TelefonoBossEmpID" layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="145.0" promptText="Telefono" />
                                     </children>
                                 </AnchorPane>
                             </children>
@@ -111,7 +111,7 @@
                             <children>
                                 <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                     <children>
-                                        <PasswordField fx:id="saldo" layoutX="-17.0" layoutY="1.0" prefHeight="26.0" prefWidth="190.0" promptText="Saldo" />
+                                        <PasswordField fx:id="ContraseñaBossEmpID" layoutX="-17.0" layoutY="1.0" prefHeight="26.0" prefWidth="190.0" promptText="Contrasena" />
                                     </children>
                                 </AnchorPane>
                             </children>
@@ -122,7 +122,7 @@
                     <children>
                         <HBox prefHeight="82.0" prefWidth="242.0">
                             <children>
-                                <Label alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="195.0" text="IdCentroDeportivo:" textFill="WHITE">
+                                <Label alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="227.0" text="Nombre centro deportivo:" textFill="WHITE">
                                     <font>
                                         <Font name="Corbel Bold Italic" size="18.0" />
                                     </font>
@@ -131,7 +131,7 @@
                         </HBox>
                         <HBox prefHeight="50.0" prefWidth="347.0">
                             <children>
-                                <TextField fx:id="nombre1" prefHeight="26.0" prefWidth="250.0" promptText="IdCentroDeportivo" />
+                                <TextField fx:id="nombreCD" prefHeight="26.0" prefWidth="250.0" promptText="Nombre centro deportivo" />
                             </children>
                         </HBox>
                     </children>
@@ -142,17 +142,17 @@
     <bottom>
         <AnchorPane prefHeight="76.0" prefWidth="600.0" styleClass="azul" stylesheets="@../option.css" BorderPane.alignment="CENTER">
             <children>
-                <Button layoutX="95.0" layoutY="31.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
+                <Button layoutX="95.0" layoutY="31.0" mnemonicParsing="false" onAction="#agregarBossCentroDeportivo" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Agregar" textFill="WHITE">
                     <font>
                         <Font name="Corbel Bold" size="12.0" />
                     </font>
                 </Button>
-                <Button layoutX="274.0" layoutY="31.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Volver" textFill="WHITE">
+                <Button layoutX="274.0" layoutY="31.0" mnemonicParsing="false" onAction="#volver" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Volver" textFill="WHITE">
                     <font>
                         <Font name="Corbel Bold" size="12.0" />
                     </font>
                 </Button>
-                <Button layoutX="453.0" layoutY="31.0" mnemonicParsing="false" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE">
+                <Button fx:id="salirBCEmp" layoutX="453.0" layoutY="31.0" mnemonicParsing="false" onAction="#salir" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE">
                     <font>
                         <Font name="Corbel Bold" size="12.0" />
                     </font>
