@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="695.0" styleClass="azul" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.EmpleadosEnCentrosController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="695.0" styleClass="azul" stylesheets="@../option.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.CentroDeportivoP.EmpleadosEnCentrosController">
    <top>
       <AnchorPane prefHeight="97.0" prefWidth="600.0" styleClass="top" stylesheets="@../option.css" BorderPane.alignment="CENTER">
          <children>
@@ -78,8 +78,8 @@
                </children>
             </HBox>
             <Button layoutX="68.0" layoutY="286.0" mnemonicParsing="false" onAction="#validar" prefHeight="31.0" prefWidth="111.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Validar reserva" textFill="WHITE" />
-            <Button layoutX="378.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Cancelar" textFill="WHITE" />
-            <Button layoutX="517.0" layoutY="285.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE" />
+            <Button layoutX="378.0" layoutY="285.0" mnemonicParsing="false" onAction="#volver" prefHeight="33.0" prefWidth="73.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Volver" textFill="WHITE" />
+            <Button fx:id="salirBtn" layoutX="517.0" layoutY="285.0" mnemonicParsing="false" onAction="#salir" prefHeight="33.0" prefWidth="63.0" styleClass="botones-centro-dep" stylesheets="@../option.css" text="Salir" textFill="WHITE" />
             <HBox layoutX="1.0" layoutY="68.0" prefHeight="75.0" prefWidth="678.0">
                <children>
                   <VBox prefHeight="65.0" prefWidth="222.0">
