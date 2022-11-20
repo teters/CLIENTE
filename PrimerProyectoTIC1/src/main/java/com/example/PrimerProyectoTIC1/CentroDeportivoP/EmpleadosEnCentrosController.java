@@ -1,5 +1,6 @@
 package com.example.PrimerProyectoTIC1.CentroDeportivoP;
 
+import com.example.PrimerProyectoTIC1.AdminP.OptionPaneController;
 import com.example.PrimerProyectoTIC1.CheckIn;
 
 import com.example.PrimerProyectoTIC1.CheckinDTO;
@@ -14,8 +15,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
@@ -43,6 +49,9 @@ public class EmpleadosEnCentrosController implements Initializable {
 
     @FXML
     private Label esValida;
+
+    @FXML
+    private Button salirBtn;
 
 
     List<String> listaActividades = new ArrayList<>();
@@ -205,4 +214,28 @@ public class EmpleadosEnCentrosController implements Initializable {
 
 
     }
+
+    public void volver(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(OptionPaneController.class.getResource("centro-dep-pane.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void salir(ActionEvent event){
+        Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+        alerta.setTitle("Salir");
+        alerta.setHeaderText("¿Estás seguro que quieres salir?");
+        if (alerta.showAndWait().get() == ButtonType.OK){
+            Stage stage = (Stage) salirBtn.getScene().getWindow();
+            System.out.println("Has salido exitosamente.");
+            stage.close();
+        }
+    }
+
+
+
+
 }
