@@ -76,7 +76,7 @@ public class ReservasTableController implements Initializable {
     @FXML
     void volver(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(OptionPaneController.class.getResource("option-pane.fxml"));
+        Parent root = loader.load(CentroDepPaneController.class.getResource("centro-dep-pane.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
