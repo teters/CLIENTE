@@ -5,10 +5,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="252.0" prefWidth="483.0" styleClass="azul" stylesheets="@option.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.SobreNosotrosController">
    <children>
-      <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="101.0" prefHeight="98.0" prefWidth="461.0" text="Somos una empresa desarrolladora de software que hace cosas. Si les gusta nuestro trabajo no dude en contactarnos. " textAlignment="CENTER" textFill="WHITE" wrapText="true">
+      <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="101.0" prefHeight="98.0" prefWidth="461.0" text="Somos una empresa desarrolladora de software. Si les gusta nuestro trabajo no dude en contactarnos. " textAlignment="CENTER" textFill="WHITE" wrapText="true">
          <font>
             <Font size="17.0" />
          </font>
