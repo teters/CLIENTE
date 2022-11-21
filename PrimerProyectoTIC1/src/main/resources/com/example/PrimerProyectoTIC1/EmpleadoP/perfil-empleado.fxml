@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.PerfilEmpleadoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.PrimerProyectoTIC1.EmpleadoP.PerfilEmpleadoController">
     <top>
         <AnchorPane prefHeight="92.0" prefWidth="774.0" styleClass="green-oscuro" stylesheets="@../style.css" BorderPane.alignment="CENTER">
             <children>
@@ -63,12 +63,12 @@
                   <Font name="Corbel Bold" size="26.0" />
                </font>
             </Label>
-            <Label layoutX="73.0" layoutY="315.0" text="Saldo disponible:" textFill="WHITE">
+            <Label layoutX="108.0" layoutY="289.0" text="Saldo disponible:" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="21.0" />
                </font>
             </Label>
-            <Label fx:id="saldo" layoutX="330.0" layoutY="302.0" prefHeight="52.0" prefWidth="115.0" text="\$------" textFill="WHITE">
+            <Label fx:id="saldo" layoutX="344.0" layoutY="276.0" prefHeight="52.0" prefWidth="115.0" text="\$------" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="33.0" />
                </font>
@@ -88,7 +88,7 @@
                   <Font name="Corbel Bold" size="22.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="236.0" prefHeight="51.0" prefWidth="305.0" text="Tu carnet de salud se vence el..." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Label layoutX="61.0" layoutY="194.0" prefHeight="68.0" prefWidth="264.0" text="Tu carnet de salud se vence el..." textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="Corbel Bold" size="22.0" />
                </font>
@@ -98,19 +98,9 @@
                   <Font name="Corbel Bold" size="22.0" />
                </font>
             </Label>
-            <Label fx:id="fechaVenc" alignment="CENTER" contentDisplay="CENTER" layoutX="341.0" layoutY="246.0" prefHeight="32.0" prefWidth="172.0" text="11/11/2022" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="fechaVenc" alignment="CENTER" contentDisplay="CENTER" layoutX="342.0" layoutY="212.0" prefHeight="32.0" prefWidth="172.0" text="11/11/2022" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="22.0" />
-               </font>
-            </Label>
-            <Label layoutX="94.0" layoutY="174.0" prefHeight="40.0" prefWidth="92.0" text="Empresa:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-               <font>
-                  <Font name="Corbel Bold" size="22.0" />
-               </font>
-            </Label>
-            <Label fx:id="empresa" layoutX="237.0" layoutY="174.0" prefHeight="40.0" prefWidth="329.0" text="Doofenschmirtz Malvados y Asoc." textAlignment="CENTER" textFill="WHITE" wrapText="true">
-               <font>
-                  <Font name="Corbel Bold" size="22.0" />
                </font>
             </Label>
             <ImageView fitHeight="91.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">

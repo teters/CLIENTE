@@ -217,7 +217,7 @@ public class EmpleadosEnCentrosController implements Initializable {
 
     public void volver(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(OptionPaneController.class.getResource("centro-dep-pane.fxml"));
+        Parent root = loader.load(CentroDepPaneController.class.getResource("centro-dep-pane.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
